@@ -90,9 +90,14 @@ function App() {
             <AlroExamplesField />
           </div>
           {selectedExample && (
-            <div className="overflow-y-auto rounded border bg-white p-4">
-              {selectedExample.uuid}
-              <Alros />
+            <div className="flex h-full flex-col gap-4 overflow-hidden rounded border bg-white p-4">
+              <h1>
+                Alternative routes for <b>{selectedExample.name}</b>:
+              </h1>
+
+              <div className="overflow-y-auto">
+                <Alros />
+              </div>
             </div>
           )}
         </div>
