@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@ol/ol.css';
+
+::-webkit-scrollbar {
+  height: 3px;
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+}
+
+html {
+  color-scheme: light;
+}
+:root {
+  color-scheme: light dark;
+}
+
+
+body, #root {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  margin: 0;
+}

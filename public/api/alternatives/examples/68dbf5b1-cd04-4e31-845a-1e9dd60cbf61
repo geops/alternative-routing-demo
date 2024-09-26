@@ -1,0 +1,408 @@
+{
+  "status": "foundAlternatives",
+  "annotatedAlternativeRoutes": [
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T09:18:00Z",
+              "end": "2024-09-26T10:30:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "538"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 09:17",
+      "estimatedTravelTime": 4380,
+      "headway": null,
+      "begin": "2024-09-26T09:17:00Z",
+      "end": "2024-09-26T09:17:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T09:51:00Z",
+              "end": "2024-09-26T10:55:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "628"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 09:50",
+      "estimatedTravelTime": 3900,
+      "headway": null,
+      "begin": "2024-09-26T09:50:00Z",
+      "end": "2024-09-26T09:50:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T09:56:00Z",
+              "end": "2024-09-26T10:58:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "1004"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 09:55-10:51",
+      "estimatedTravelTime": 3780,
+      "headway": 3360,
+      "begin": "2024-09-26T09:55:00Z",
+      "end": "2024-09-26T10:51:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T10:25:00Z",
+              "end": "2024-09-26T11:35:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "788"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 10:24-11:55",
+      "estimatedTravelTime": 4260,
+      "headway": 5460,
+      "begin": "2024-09-26T10:24:00Z",
+      "end": "2024-09-26T11:55:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T10:25:00Z",
+              "end": "2024-09-26T11:35:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "788"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 12:21",
+      "estimatedTravelTime": 4260,
+      "headway": null,
+      "begin": "2024-09-26T12:21:00Z",
+      "end": "2024-09-26T12:21:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T10:58:00Z",
+              "end": "2024-09-26T12:04:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "506"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 10:57",
+      "estimatedTravelTime": 4020,
+      "headway": null,
+      "begin": "2024-09-26T10:57:00Z",
+      "end": "2024-09-26T10:57:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T11:03:00Z",
+              "end": "2024-09-26T12:08:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "626"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 11:02",
+      "estimatedTravelTime": 3960,
+      "headway": null,
+      "begin": "2024-09-26T11:02:00Z",
+      "end": "2024-09-26T11:02:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T11:19:00Z",
+              "end": "2024-09-26T12:29:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "586"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 11:18-14:18",
+      "estimatedTravelTime": 4260,
+      "headway": 10800,
+      "begin": "2024-09-26T11:18:00Z",
+      "end": "2024-09-26T14:18:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T12:04:00Z",
+              "end": "2024-09-26T13:09:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "624"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 12:03-12:49",
+      "estimatedTravelTime": 3960,
+      "headway": 2760,
+      "begin": "2024-09-26T12:03:00Z",
+      "end": "2024-09-26T12:49:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T12:04:00Z",
+              "end": "2024-09-26T13:09:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "624"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 13:57",
+      "estimatedTravelTime": 3960,
+      "headway": null,
+      "begin": "2024-09-26T13:57:00Z",
+      "end": "2024-09-26T13:57:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T12:53:00Z",
+              "end": "2024-09-26T14:06:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "1106"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 12:52-14:50",
+      "estimatedTravelTime": 4440,
+      "headway": 7080,
+      "begin": "2024-09-26T12:52:00Z",
+      "end": "2024-09-26T14:50:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T12:58:00Z",
+              "end": "2024-09-26T14:10:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "504"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 12:57-14:54",
+      "estimatedTravelTime": 4380,
+      "headway": 7020,
+      "begin": "2024-09-26T12:57:00Z",
+      "end": "2024-09-26T14:54:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T13:19:00Z",
+              "end": "2024-09-26T14:30:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "584"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 13:18",
+      "estimatedTravelTime": 4320,
+      "headway": null,
+      "begin": "2024-09-26T13:18:00Z",
+      "end": "2024-09-26T13:18:00Z"
+    }
+  ]
+}

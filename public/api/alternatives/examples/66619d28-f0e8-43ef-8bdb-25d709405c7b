@@ -1,0 +1,1012 @@
+{
+  "status": "foundAlternatives",
+  "annotatedAlternativeRoutes": [
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8098263",
+            "name": "München Hbf (tief)"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T09:41:00Z",
+              "end": "2024-09-26T10:24:00Z",
+              "line": {
+                "administrationID": "800725",
+                "category": "S",
+                "line": "1"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8002078",
+            "name": "Freising"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8002078",
+            "name": "Freising"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T10:28:00Z",
+              "end": "2024-09-26T11:41:00Z",
+              "line": {
+                "administrationID": "800767",
+                "category": "RE",
+                "line": "22"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 09:38-12:38",
+      "estimatedTravelTime": 7380,
+      "headway": 3600,
+      "begin": "2024-09-26T09:38:00Z",
+      "end": "2024-09-26T12:38:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8098263",
+            "name": "München Hbf (tief)"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T09:41:00Z",
+              "end": "2024-09-26T10:24:00Z",
+              "line": {
+                "administrationID": "800725",
+                "category": "S",
+                "line": "1"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8002078",
+            "name": "Freising"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8002078",
+            "name": "Freising"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T10:28:00Z",
+              "end": "2024-09-26T11:41:00Z",
+              "line": {
+                "administrationID": "800767",
+                "category": "RE",
+                "line": "22"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 16:38-19:38",
+      "estimatedTravelTime": 7380,
+      "headway": 3600,
+      "begin": "2024-09-26T16:38:00Z",
+      "end": "2024-09-26T19:38:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T09:56:00Z",
+              "end": "2024-09-26T10:58:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "1004"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T11:11:00Z",
+              "end": "2024-09-26T12:13:00Z",
+              "line": {
+                "administrationID": "800746",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 09:55-15:50",
+      "estimatedTravelTime": 8280,
+      "headway": 21300,
+      "begin": "2024-09-26T09:55:00Z",
+      "end": "2024-09-26T15:50:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T09:56:00Z",
+              "end": "2024-09-26T10:58:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "1004"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T11:11:00Z",
+              "end": "2024-09-26T12:13:00Z",
+              "line": {
+                "administrationID": "800746",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 17:54",
+      "estimatedTravelTime": 8280,
+      "headway": null,
+      "begin": "2024-09-26T17:54:00Z",
+      "end": "2024-09-26T17:54:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T11:19:00Z",
+              "end": "2024-09-26T12:29:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "586"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T12:35:00Z",
+              "end": "2024-09-26T13:24:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "27"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 11:18",
+      "estimatedTravelTime": 7560,
+      "headway": null,
+      "begin": "2024-09-26T11:18:00Z",
+      "end": "2024-09-26T11:18:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T12:04:00Z",
+              "end": "2024-09-26T13:09:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "624"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T13:11:00Z",
+              "end": "2024-09-26T14:13:00Z",
+              "line": {
+                "administrationID": "800746",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 12:03",
+      "estimatedTravelTime": 7800,
+      "headway": null,
+      "begin": "2024-09-26T12:03:00Z",
+      "end": "2024-09-26T12:03:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T12:53:00Z",
+              "end": "2024-09-26T14:06:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "1106"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T14:11:00Z",
+              "end": "2024-09-26T15:16:00Z",
+              "line": {
+                "administrationID": "800746",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 12:52",
+      "estimatedTravelTime": 8640,
+      "headway": null,
+      "begin": "2024-09-26T12:52:00Z",
+      "end": "2024-09-26T12:52:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8098263",
+            "name": "München Hbf (tief)"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T13:41:00Z",
+              "end": "2024-09-26T14:24:00Z",
+              "line": {
+                "administrationID": "800725",
+                "category": "S",
+                "line": "1"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8002078",
+            "name": "Freising"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8002078",
+            "name": "Freising"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T14:36:00Z",
+              "end": "2024-09-26T15:45:00Z",
+              "line": {
+                "administrationID": "800767",
+                "category": "RE",
+                "line": "22"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 13:38",
+      "estimatedTravelTime": 7620,
+      "headway": null,
+      "begin": "2024-09-26T13:38:00Z",
+      "end": "2024-09-26T13:38:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T13:58:00Z",
+              "end": "2024-09-26T15:05:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "1002"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T15:07:00Z",
+              "end": "2024-09-26T16:12:00Z",
+              "line": {
+                "administrationID": "800746",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 13:57",
+      "estimatedTravelTime": 8100,
+      "headway": null,
+      "begin": "2024-09-26T13:57:00Z",
+      "end": "2024-09-26T13:57:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T14:19:00Z",
+              "end": "2024-09-26T15:31:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "1222"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T15:35:00Z",
+              "end": "2024-09-26T16:29:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "95"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 14:18-15:21",
+      "estimatedTravelTime": 7860,
+      "headway": 3780,
+      "begin": "2024-09-26T14:18:00Z",
+      "end": "2024-09-26T15:21:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T14:26:00Z",
+              "end": "2024-09-26T16:03:00Z",
+              "line": {
+                "administrationID": "800767",
+                "category": "RE",
+                "line": "3"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000301",
+            "name": "Plattling"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8000301",
+            "name": "Plattling"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T16:06:00Z",
+              "end": "2024-09-26T16:35:00Z",
+              "line": {
+                "administrationID": "81",
+                "category": "ICE",
+                "line": "22"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 14:25",
+      "estimatedTravelTime": 7800,
+      "headway": null,
+      "begin": "2024-09-26T14:25:00Z",
+      "end": "2024-09-26T14:25:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8098263",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T14:29:00Z",
+              "end": "2024-09-26T15:12:00Z",
+              "line": {
+                "administrationID": "800725",
+                "category": "S",
+                "line": "1"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8002078",
+            "name": "Freising"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8002078",
+            "name": "Freising"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T15:29:00Z",
+              "end": "2024-09-26T16:41:00Z",
+              "line": {
+                "administrationID": "800767",
+                "category": "RE",
+                "line": "22"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 14:26",
+      "estimatedTravelTime": 8100,
+      "headway": null,
+      "begin": "2024-09-26T14:26:00Z",
+      "end": "2024-09-26T14:26:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T15:01:00Z",
+              "end": "2024-09-26T16:45:00Z",
+              "line": {
+                "administrationID": "800746",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 15:00",
+      "estimatedTravelTime": 6300,
+      "headway": null,
+      "begin": "2024-09-26T15:00:00Z",
+      "end": "2024-09-26T15:00:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8098263",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T15:46:00Z",
+              "end": "2024-09-26T16:26:00Z",
+              "line": {
+                "administrationID": "800725",
+                "category": "S",
+                "line": "1"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8002078",
+            "name": "Freising"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8002078",
+            "name": "Freising"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T16:29:00Z",
+              "end": "2024-09-26T17:41:00Z",
+              "line": {
+                "administrationID": "800767",
+                "category": "RE",
+                "line": "22"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 15:43",
+      "estimatedTravelTime": 7080,
+      "headway": null,
+      "begin": "2024-09-26T15:43:00Z",
+      "end": "2024-09-26T15:43:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T16:01:00Z",
+              "end": "2024-09-26T17:02:00Z",
+              "line": {
+                "administrationID": "800767",
+                "category": "RB",
+                "line": "33"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000217",
+            "name": "Landshut(Bay)Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8000217",
+            "name": "Landshut(Bay)Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T17:15:00Z",
+              "end": "2024-09-26T18:00:00Z",
+              "line": {
+                "administrationID": "800767",
+                "category": "RE",
+                "line": "3"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000301",
+            "name": "Plattling"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8000301",
+            "name": "Plattling"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T18:04:00Z",
+              "end": "2024-09-26T18:33:00Z",
+              "line": {
+                "administrationID": "81",
+                "category": "ICE",
+                "line": "20"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 16:00",
+      "estimatedTravelTime": 9180,
+      "headway": null,
+      "begin": "2024-09-26T16:00:00Z",
+      "end": "2024-09-26T16:00:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T17:18:00Z",
+              "end": "2024-09-26T18:29:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "580"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T18:36:00Z",
+              "end": "2024-09-26T19:31:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "927"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 17:17",
+      "estimatedTravelTime": 8040,
+      "headway": null,
+      "begin": "2024-09-26T17:17:00Z",
+      "end": "2024-09-26T17:17:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T18:48:00Z",
+              "end": "2024-09-26T19:56:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "520"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T20:37:00Z",
+              "end": "2024-09-26T21:38:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "929"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 18:47",
+      "estimatedTravelTime": 10260,
+      "headway": null,
+      "begin": "2024-09-26T18:47:00Z",
+      "end": "2024-09-26T18:47:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8098263",
+            "name": "München Hbf (tief)"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T20:41:00Z",
+              "end": "2024-09-26T21:24:00Z",
+              "line": {
+                "administrationID": "800725",
+                "category": "S",
+                "line": "1"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8002078",
+            "name": "Freising"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8002078",
+            "name": "Freising"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T21:28:00Z",
+              "end": "2024-09-26T22:41:00Z",
+              "line": {
+                "administrationID": "800767",
+                "category": "RE",
+                "line": "22"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 20:38",
+      "estimatedTravelTime": 7380,
+      "headway": null,
+      "begin": "2024-09-26T20:38:00Z",
+      "end": "2024-09-26T20:38:00Z"
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8098263",
+            "name": "München Hbf (tief)"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T21:41:00Z",
+              "end": "2024-09-26T22:24:00Z",
+              "line": {
+                "administrationID": "800725",
+                "category": "S",
+                "line": "1"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8002078",
+            "name": "Freising"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8002078",
+            "name": "Freising"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2024-09-26T22:37:00Z",
+              "end": "2024-09-26T23:51:00Z",
+              "line": {
+                "administrationID": "800767",
+                "category": "RE",
+                "line": "22"
+              },
+              "type": "UNKNOWN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000309",
+            "name": "Regensburg Hbf"
+          }
+        }
+      ],
+      "intervals": "Th 21:38",
+      "estimatedTravelTime": 7980,
+      "headway": null,
+      "begin": "2024-09-26T21:38:00Z",
+      "end": "2024-09-26T21:38:00Z"
+    }
+  ]
+}
