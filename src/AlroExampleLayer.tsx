@@ -2,9 +2,11 @@ import { GeoJSON } from "ol/format";
 import { Vector } from "ol/layer";
 import VectorSource from "ol/source/Vector";
 import { Stroke, Style } from "ol/style";
+// @ts-expect-error - no type definition
 import randomColor from "randomcolor";
 import { useEffect } from "react";
 
+import { FIT_OPTIONS } from "./Constant";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
 
@@ -48,7 +50,8 @@ function AlroExampleLayer() {
         if (featureCollection?.features?.length > 0) {
           source.addFeatures(format.readFeatures(featureCollection));
           layer.setMap(map);
-          map.getView().fit(source.getExtent(), { padding: [50, 50, 50, 50] });
+          map.getView().cancelAnimations();
+          map.getView().fit(source.getExtent(), { ...FIT_OPTIONS });
         }
         setLoading(false);
       })

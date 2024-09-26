@@ -6,6 +6,7 @@ import VectorSource from "ol/source/Vector";
 import { Stroke, Style } from "ol/style";
 import { useEffect } from "react";
 
+import { FIT_OPTIONS } from "./Constant";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
 import { AlternativeRoutePart } from "./types";
@@ -49,6 +50,7 @@ function AlrosLayer() {
       return routingApi.route(
         {
           mot: "rail",
+          // @ts-expect-error - bad type definition
           prefagencies: "db",
           via: "!" + part.from.evaNumber + "|!" + part.to.evaNumber,
         },
@@ -56,17 +58,23 @@ function AlrosLayer() {
       );
     });
     Promise.all(promises).then((responses: RoutingResponse[]) => {
+      // @ts-expect-error - bad type definition
       const featureCollection = responses.reduce((acc, response) => {
+        const features = Array.isArray(acc?.features) ? acc.features : [];
         return {
           ...acc,
-          features: [...acc.features, ...response.features],
+          features: [
+            ...features,
+            ...(Array.isArray(response.features) ? response.features : []),
+          ],
         };
       });
       source.clear();
-      if (featureCollection?.features?.length > 0) {
+      if (featureCollection) {
         source.addFeatures(format.readFeatures(featureCollection));
         layer.setMap(map);
-        map.getView().fit(source.getExtent(), { padding: [50, 50, 50, 50] });
+        map.getView().cancelAnimations();
+        map.getView().fit(source.getExtent(), { ...FIT_OPTIONS });
       }
       setLoading(false);
     });

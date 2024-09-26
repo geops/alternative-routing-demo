@@ -2,7 +2,7 @@ import { MaplibreLayer } from "mobility-toolbox-js/ol";
 import { Map as OlMap, View } from "ol";
 import { useMemo, useState } from "react";
 
-import AlroExampleLayer from "./AlroExampleLayer";
+// import AlroExampleLayer from "./AlroExampleLayer";
 import AlroExamplesField from "./AlroExamplesField";
 import AlroLayer from "./AlroLayer";
 import Alros from "./Alros";
@@ -10,6 +10,7 @@ import AlrosLayer from "./AlrosLayer";
 import { AlroContext, AlroExample } from "./hooks/useAlroContext";
 import { MapContext } from "./hooks/useMapContext";
 import Map from "./Map";
+import RouteLayer from "./RouteLayer";
 import { AnnotatedAlternativeRoutes } from "./types";
 
 const map = new OlMap({
@@ -38,9 +39,7 @@ const alroExamples: AlroExample[] = [
 
 function App() {
   const [url] = useState(import.meta.env.VITE_ALRO_API_URL as string);
-  const [selectedExample, setSelectedExample] = useState<AlroExample>(
-    alroExamples[0],
-  );
+  const [selectedExample, setSelectedExample] = useState<AlroExample>();
   const [selectedAlro, setSelectedAlro] =
     useState<AnnotatedAlternativeRoutes>();
   const [isLoading, setLoading] = useState<boolean>(false);
@@ -81,6 +80,7 @@ function App() {
         <MapContext.Provider value={mapContextValue}>
           <Map className="z-0 size-full" />
           {/* <AlroExampleLayer /> */}
+          <RouteLayer />
           <AlrosLayer />
           <AlroLayer />
         </MapContext.Provider>
@@ -89,10 +89,12 @@ function App() {
           <div className="w-full rounded border bg-white p-4">
             <AlroExamplesField />
           </div>
-          <div className="overflow-y-auto rounded border bg-white p-4">
-            {selectedExample.uuid}
-            <Alros />
-          </div>
+          {selectedExample && (
+            <div className="overflow-y-auto rounded border bg-white p-4">
+              {selectedExample.uuid}
+              <Alros />
+            </div>
+          )}
         </div>
       </AlroContext.Provider>
     </>

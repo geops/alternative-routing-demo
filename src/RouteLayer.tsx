@@ -6,15 +6,15 @@ import VectorSource from "ol/source/Vector";
 import { Stroke, Style } from "ol/style";
 import { useEffect } from "react";
 
+import { FIT_OPTIONS } from "./Constant";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
-import { AlternativeRoutePart } from "./types";
 
 const routingApi = new RoutingAPI({
   apiKey: import.meta.env.VITE_API_KEY,
 });
 
-function AlrosLayer() {
+function RouteLayer() {
   const { alros, setLoading } = useAlroContext();
   const { map } = useMapContext();
 
@@ -28,7 +28,7 @@ function AlrosLayer() {
       source,
       style: () => {
         return new Style({
-          stroke: new Stroke({ color: "green", width: 10 }),
+          stroke: new Stroke({ color: "red", width: 15 }),
         });
       },
     });
@@ -38,44 +38,36 @@ function AlrosLayer() {
       return;
     }
     setLoading(true);
-    const routeParts: AlternativeRoutePart[] = [alros.alternativeRouteParts[0]];
-    alros.map((alro) => {
-      routeParts.push(...alro.alternativeRouteParts);
-    });
-    const abortControllers = routeParts.map(() => {
-      return new AbortController();
-    });
-    const promises = routeParts.map((part) => {
-      return routingApi.route(
+    routingApi
+      .route(
         {
           mot: "rail",
+          //  @ts-expect-error - bad type definition
           prefagencies: "db",
-          via: "!" + part.from.evaNumber + "|!" + part.to.evaNumber,
+          via:
+            "!" +
+            alros[0].alternativeRouteParts[0].from.evaNumber +
+            "|!" +
+            alros[0].alternativeRouteParts[
+              alros[0].alternativeRouteParts.length - 1
+            ].to.evaNumber,
         },
         { signal: abortController.signal },
-      );
-    });
-    Promise.all(promises).then((responses: RoutingResponse[]) => {
-      const featureCollection = responses.reduce((acc, response) => {
-        return {
-          ...acc,
-          features: [...acc.features, ...response.features],
-        };
+      )
+      .then((featureCollection: RoutingResponse) => {
+        source.clear();
+        if (featureCollection) {
+          source.addFeatures(format.readFeatures(featureCollection));
+          layer.setMap(map);
+          map.getView().cancelAnimations();
+          map.getView().fit(source.getExtent(), { ...FIT_OPTIONS });
+        }
+        setLoading(false);
       });
-      source.clear();
-      if (featureCollection?.features?.length > 0) {
-        source.addFeatures(format.readFeatures(featureCollection));
-        layer.setMap(map);
-        map.getView().fit(source.getExtent(), { padding: [50, 50, 50, 50] });
-      }
-      setLoading(false);
-    });
 
     return () => {
       setLoading(false);
-      abortControllers?.forEach((abortController) => {
-        return abortController.abort();
-      });
+      abortController.abort();
       source.clear();
       layer.setMap(null);
     };
@@ -83,4 +75,4 @@ function AlrosLayer() {
   return null;
 }
 
-export default AlrosLayer;
+export default RouteLayer;

@@ -25,6 +25,7 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
           }
         }}
       >
+        <option value="">Select an example</option>
         {examples.map(({ name, uuid }) => {
           return (
             <option key={uuid} value={uuid}>
