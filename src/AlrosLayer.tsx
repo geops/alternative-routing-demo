@@ -81,7 +81,6 @@ function AlrosLayer() {
         // layer.setMap(map);
         map.getView().cancelAnimations();
         map.getView().fit(source.getExtent(), { ...FIT_OPTIONS });
-        console.log("ici");
         sourceGeojson?.setData(
           (featureCollection as GeoJSON.GeoJSON) || EMPTY_FEATURE_COLLECTION,
         );

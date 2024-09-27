@@ -8,6 +8,8 @@ import AlroLayer from "./AlroLayer";
 import Alros from "./Alros";
 import AlrosLayer from "./AlrosLayer";
 import {
+  ALRO_LAYER_LAYER_ID,
+  ALRO_LAYER_SOURCE_ID,
   ALROS_LAYER_LAYER_ID,
   ALROS_LAYER_SOURCE_ID,
   BEFORE_ID,
@@ -104,7 +106,57 @@ const alrosLayer = new MaplibreStyleLayer({
   visible: false,
 });
 
-const layers = [baseLayer, routeLayer, alrosLayer];
+const alroLayer = new MaplibreStyleLayer({
+  beforeId: BEFORE_ID,
+  maplibreLayer: baseLayer,
+  sources: {
+    [ALRO_LAYER_SOURCE_ID]: {
+      data: {
+        features: [],
+        type: "FeatureCollection",
+      },
+      type: "geojson",
+    },
+  },
+  styleLayers: [
+    {
+      id: ALRO_LAYER_LAYER_ID + "-2",
+      paint: { "background-color": "#ffffff", "background-opacity": 0.8 },
+      type: "background",
+    },
+
+    {
+      id: ALRO_LAYER_LAYER_ID + "-3",
+      paint: {
+        "line-color": ["get", "color"],
+        "line-width": 8,
+      },
+      source: ALRO_LAYER_SOURCE_ID,
+      type: "line",
+    },
+    {
+      id: ALRO_LAYER_LAYER_ID + "-1",
+      paint: {
+        "line-color": "#c28f3f",
+        "line-width": 2,
+      },
+      source: ALRO_LAYER_SOURCE_ID,
+      type: "line",
+    },
+    {
+      id: ALRO_LAYER_LAYER_ID,
+      paint: {
+        "line-color": "#fce3b4",
+        "line-width": 2,
+      },
+      source: ALRO_LAYER_SOURCE_ID,
+      type: "line",
+    },
+  ],
+  visible: false,
+});
+
+const layers = [baseLayer, routeLayer, alrosLayer, alroLayer];
 
 const alroExamples: AlroExample[] = [
   {
@@ -127,7 +179,7 @@ function App() {
   const [alros, setAlros] = useState<AnnotatedAlternativeRoutes[]>([]);
 
   const mapContextValue = useMemo(() => {
-    return { alrosLayer, baseLayer, layers, map, routeLayer };
+    return { alroLayer, alrosLayer, baseLayer, layers, map, routeLayer };
   }, []);
 
   const alroContextValue = useMemo(() => {

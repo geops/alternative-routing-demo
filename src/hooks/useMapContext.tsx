@@ -5,6 +5,7 @@ import { createContext } from "react";
 import { useContext } from "react";
 
 export type MapContextType = {
+  alroLayer?: MaplibreStyleLayer; // The selected alternative route layer
   alrosLayer?: MaplibreStyleLayer; // The alternative routes layer
   baseLayer?: MaplibreLayer;
   layers?: Layer[];

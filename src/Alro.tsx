@@ -1,4 +1,5 @@
 import { Button } from "@headlessui/react";
+import { Fragment } from "react";
 
 import AlroPartsSchema from "./AlroPartsSchema";
 import useAlroContext from "./hooks/useAlroContext";
@@ -24,7 +25,6 @@ function Alro({
         (everyHours ? `${everyHours}h` : "") +
         (everyMinutes ? `${everyMinutes}min` : "")
       : "";
-
   return (
     <>
       {/* @ts-expect-error - no idea */}
@@ -32,17 +32,18 @@ function Alro({
         {...props}
         onClick={() => {
           if (selectedAlro === alro) {
-            return setSelectedAlro();
+            setSelectedAlro();
+          } else {
+            setSelectedAlro(alro);
           }
-          return setSelectedAlro(alro);
         }}
       >
         <p className="font-bold">
           {texts.map((text, index) => {
             return (
-              <>
+              <Fragment key={text}>
                 {text} {index !== texts.length - 1 ? <br></br> : null}
-              </>
+              </Fragment>
             );
           })}
         </p>

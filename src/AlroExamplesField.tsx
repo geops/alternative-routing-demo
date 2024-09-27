@@ -5,7 +5,8 @@ import { Listbox, ListboxLabel, ListboxOption } from "./ui/listbox";
 let timeout: number;
 
 function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
-  const { examples, setLoading, setSelectedExample } = useAlroContext();
+  const { examples, setLoading, setSelectedAlro, setSelectedExample } =
+    useAlroContext();
 
   if (!((examples.length || 0) > 1)) {
     return null;
@@ -25,6 +26,7 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
           if (found) {
             clearTimeout(timeout);
             setLoading(true);
+            setSelectedAlro();
             setSelectedExample(found);
 
             timeout = setTimeout(() => {
