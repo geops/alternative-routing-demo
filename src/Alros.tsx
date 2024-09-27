@@ -5,7 +5,7 @@ import useAlroContext from "./hooks/useAlroContext";
 import { AlternativeRoutesResponse, AnnotatedAlternativeRoutes } from "./types";
 
 function Alros() {
-  const { alros, selectedExample, setAlros, setLoading, url } =
+  const { alros, selectedAlro, selectedExample, setAlros, url } =
     useAlroContext();
 
   useEffect(() => {
@@ -15,7 +15,6 @@ function Alros() {
     if (!uuid || !selectedExample) {
       return;
     }
-    setLoading(true);
     const dataString = window.localStorage.getItem(selectedExample.uuid);
     if (dataString) {
       setAlros(JSON.parse(dataString));
@@ -37,22 +36,25 @@ function Alros() {
           //   JSON.stringify(newAlros),
           // );
           setAlros(newAlros);
-        })
-        .finally(() => {
-          setLoading(false);
         });
     }
     return () => {
-      setLoading(false);
       setAlros([]);
     };
-  }, [selectedExample, setAlros, setLoading, url]);
+  }, [selectedExample, setAlros, url]);
 
   return (
     <div className="flex flex-col gap-4">
-      {alros?.map((alro: AnnotatedAlternativeRoutes, index) => {
+      {alros?.map((alro: AnnotatedAlternativeRoutes) => {
         return (
-          <Alro alro={alro} className="rounded border p-4" key={index}></Alro>
+          <Alro
+            alro={alro}
+            className={
+              "rounded border p-4 text-left hover:border-blue-500 hover:border-2 " +
+              (alro === selectedAlro ? " bg-gray-200" : "bg-white")
+            }
+            key={JSON.stringify(alro)}
+          ></Alro>
         );
       })}
     </div>

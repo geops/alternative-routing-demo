@@ -690,6 +690,11 @@ video {
   margin-bottom: 0.25rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -799,6 +804,10 @@ video {
 
 .h-6 {
   height: 1.5rem;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .h-full {
@@ -927,6 +936,10 @@ video {
 
 .cursor-default {
   cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .select-none {
@@ -1101,8 +1114,16 @@ video {
   white-space: nowrap;
 }
 
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+
 .whitespace-nowrap {
   white-space: nowrap;
+}
+
+.text-nowrap {
+  text-wrap: nowrap;
 }
 
 .text-balance {
@@ -1162,6 +1183,10 @@ video {
   border-width: 0px;
 }
 
+.border-4 {
+  border-width: 4px;
+}
+
 .border-\[4\.5px\] {
   border-width: 4.5px;
 }
@@ -1174,8 +1199,17 @@ video {
   border-left-width: 1px;
 }
 
+.border-l-4 {
+  border-left-width: 4px;
+}
+
 .border-t {
   border-top-width: 1px;
+}
+
+.border-\[\#ff7a00\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 122 0 / var(--tw-border-opacity));
 }
 
 .border-transparent {
@@ -1232,6 +1266,11 @@ video {
 
 .bg-fuchsia-400\/15 {
   background-color: rgb(232 121 249 / 0.15);
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .bg-green-500\/15 {
@@ -1551,9 +1590,18 @@ video {
   line-height: 1.5rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .text-xs\/6 {
   font-size: 0.75rem;
   line-height: 1.5rem;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .font-medium {
@@ -1792,6 +1840,10 @@ video {
 
 .ring-zinc-950\/5 {
   --tw-ring-color: rgb(9 9 11 / 0.05);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .backdrop-blur-xl {
@@ -2814,6 +2866,10 @@ body, #root {
   margin: 0;
 }
 
+*[data-floating-ui-focusable] {
+  z-index: 9000;
+}
+
 .\*\:col-start-1 > * {
   grid-column-start: 1;
 }
@@ -3013,6 +3069,15 @@ body, #root {
 
 .even\:bg-zinc-950\/\[2\.5\%\]:nth-child(even) {
   background-color: rgb(9 9 11 / 2.5%);
+}
+
+.hover\:border-2:hover {
+  border-width: 2px;
+}
+
+.hover\:border-blue-500:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity));
 }
 
 .hover\:bg-zinc-950\/5:hover {

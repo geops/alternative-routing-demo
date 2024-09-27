@@ -1,3 +1,4 @@
+import { GeoJSONSource } from "maplibre-gl";
 import { RoutingAPI } from "mobility-toolbox-js/ol";
 import { RoutingResponse } from "mobility-toolbox-js/types";
 import { GeoJSON } from "ol/format";
@@ -6,7 +7,11 @@ import VectorSource from "ol/source/Vector";
 import { Stroke, Style } from "ol/style";
 import { useEffect } from "react";
 
-import { FIT_OPTIONS } from "./Constant";
+import {
+  EMPTY_FEATURE_COLLECTION,
+  FIT_OPTIONS,
+  ROUTE_LAYER_SOURCE_ID,
+} from "./Constant";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
 
@@ -15,8 +20,8 @@ const routingApi = new RoutingAPI({
 });
 
 function RouteLayer() {
-  const { alros, setLoading } = useAlroContext();
-  const { map } = useMapContext();
+  const { alros } = useAlroContext();
+  const { map, routeLayer } = useMapContext();
 
   useEffect(() => {
     const format = new GeoJSON({
@@ -33,11 +38,13 @@ function RouteLayer() {
       },
     });
     const abortController = new AbortController();
+    const sourceGeojson = routeLayer?.maplibreLayer?.mapLibreMap?.getSource(
+      ROUTE_LAYER_SOURCE_ID,
+    ) as GeoJSONSource;
 
     if (!map || !alros?.length) {
       return;
     }
-    setLoading(true);
     routingApi
       .route(
         {
@@ -58,20 +65,24 @@ function RouteLayer() {
         source.clear();
         if (featureCollection) {
           source.addFeatures(format.readFeatures(featureCollection));
-          layer.setMap(map);
+          // layer.setMap(map);
           map.getView().cancelAnimations();
           map.getView().fit(source.getExtent(), { ...FIT_OPTIONS });
+          sourceGeojson?.setData(
+            (featureCollection as GeoJSON.GeoJSON) || EMPTY_FEATURE_COLLECTION,
+          );
+          routeLayer?.setVisible(true);
         }
-        setLoading(false);
       });
 
     return () => {
-      setLoading(false);
       abortController.abort();
       source.clear();
       layer.setMap(null);
+      sourceGeojson?.setData(EMPTY_FEATURE_COLLECTION);
+      routeLayer?.setVisible(false);
     };
-  }, [map, alros, setLoading]);
+  }, [map, alros, routeLayer?.maplibreLayer?.mapLibreMap, routeLayer]);
   return null;
 }
 

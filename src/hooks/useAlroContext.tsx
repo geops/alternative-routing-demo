@@ -16,8 +16,8 @@ export type AlroContextType = {
   selectedExample?: AlroExample;
   setAlros: (alros: AnnotatedAlternativeRoutes[]) => void;
   setLoading: (loading: boolean) => void;
-  setSelectedAlro: (alro: AnnotatedAlternativeRoutes) => void;
-  setSelectedExample: (example: AlroExample) => void;
+  setSelectedAlro: (alro?: AnnotatedAlternativeRoutes) => void;
+  setSelectedExample: (example?: AlroExample) => void;
   url?: string;
 };
 

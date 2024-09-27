@@ -17,7 +17,7 @@ const routingApi = new RoutingAPI({
 });
 
 function AlroLayer() {
-  const { selectedAlro, setLoading } = useAlroContext();
+  const { selectedAlro } = useAlroContext();
   const { map } = useMapContext();
 
   useEffect(() => {
@@ -39,7 +39,6 @@ function AlroLayer() {
     if (!map || !selectedAlro) {
       return;
     }
-    setLoading(true);
     const abortControllers = selectedAlro?.alternativeRouteParts.map(() => {
       return new AbortController();
     });
@@ -70,18 +69,16 @@ function AlroLayer() {
         map.getView().cancelAnimations();
         map.getView().fit(source.getExtent(), { ...FIT_OPTIONS });
       }
-      setLoading(false);
     });
 
     return () => {
-      setLoading(false);
       abortControllers?.forEach((abortController) => {
         return abortController.abort();
       });
       source.clear();
       layer.setMap(null);
     };
-  }, [map, selectedAlro, setLoading]);
+  }, [map, selectedAlro]);
   return null;
 }
 

@@ -11,7 +11,7 @@ import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
 
 function AlroExampleLayer() {
-  const { selectedExample, setLoading, url } = useAlroContext();
+  const { selectedExample, url } = useAlroContext();
   const { map } = useMapContext();
 
   useEffect(() => {
@@ -34,7 +34,6 @@ function AlroExampleLayer() {
     if (!uuid || !map || !selectedExample) {
       return;
     }
-    setLoading(true);
     fetch(
       url +
         "/api/alternatives/examples/" +
@@ -53,18 +52,13 @@ function AlroExampleLayer() {
           map.getView().cancelAnimations();
           map.getView().fit(source.getExtent(), { ...FIT_OPTIONS });
         }
-        setLoading(false);
-      })
-      .finally(() => {
-        setLoading(false);
       });
     return () => {
-      setLoading(false);
       abortController.abort();
       source.clear();
       layer.setMap(null);
     };
-  }, [map, selectedExample, setLoading, url]);
+  }, [map, selectedExample, url]);
   return null;
 }
 

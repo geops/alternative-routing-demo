@@ -1,19 +1,19 @@
-import { MaplibreLayer } from "mobility-toolbox-js/ol";
+import { MaplibreLayer, MaplibreStyleLayer } from "mobility-toolbox-js/ol";
 import { Map } from "ol";
 import { Layer } from "ol/layer";
 import { createContext } from "react";
 import { useContext } from "react";
 
 export type MapContextType = {
+  alrosLayer?: MaplibreStyleLayer; // The alternative routes layer
   baseLayer?: MaplibreLayer;
   layers?: Layer[];
   map?: Map;
+  routeLayer?: MaplibreStyleLayer; // The disrupted route layer
 };
 
 export const MapContext = createContext<MapContextType>({
-  baseLayer: undefined,
   layers: [],
-  map: undefined,
 } as MapContextType);
 
 function useMapContext(): MapContextType {

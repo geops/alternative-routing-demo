@@ -1,12 +1,17 @@
+import { GeoJSONSource } from "maplibre-gl";
 import { RoutingAPI } from "mobility-toolbox-js/ol";
 import { RoutingResponse } from "mobility-toolbox-js/types";
 import { GeoJSON } from "ol/format";
-import { Vector } from "ol/layer";
+// import { Vector } from "ol/layer";
 import VectorSource from "ol/source/Vector";
-import { Stroke, Style } from "ol/style";
+// import { Stroke, Style } from "ol/style";
 import { useEffect } from "react";
 
-import { FIT_OPTIONS } from "./Constant";
+import {
+  ALROS_LAYER_SOURCE_ID,
+  EMPTY_FEATURE_COLLECTION,
+  FIT_OPTIONS,
+} from "./Constant";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
 import { AlternativeRoutePart } from "./types";
@@ -16,8 +21,8 @@ const routingApi = new RoutingAPI({
 });
 
 function AlrosLayer() {
-  const { alros, setLoading } = useAlroContext();
-  const { map } = useMapContext();
+  const { alros } = useAlroContext();
+  const { alrosLayer, map } = useMapContext();
 
   useEffect(() => {
     const format = new GeoJSON({
@@ -25,20 +30,21 @@ function AlrosLayer() {
       featureProjection: "EPSG:3857",
     });
     const source = new VectorSource();
-    const layer = new Vector({
-      source,
-      style: () => {
-        return new Style({
-          stroke: new Stroke({ color: "green", width: 10 }),
-        });
-      },
-    });
+    // const layer = new Vector({
+    //   source,
+    //   style: () => {
+    //     return new Style({
+    //       stroke: new Stroke({ color: "green", width: 10 }),
+    //     });
+    //   },
+    // });
     const abortController = new AbortController();
-
+    const sourceGeojson = alrosLayer?.maplibreLayer?.mapLibreMap?.getSource(
+      ALROS_LAYER_SOURCE_ID,
+    ) as GeoJSONSource;
     if (!map || !alros?.length) {
       return;
     }
-    setLoading(true);
     const routeParts: AlternativeRoutePart[] = [];
     alros.map((alro) => {
       routeParts.push(...alro.alternativeRouteParts);
@@ -72,22 +78,27 @@ function AlrosLayer() {
       source.clear();
       if (featureCollection) {
         source.addFeatures(format.readFeatures(featureCollection));
-        layer.setMap(map);
+        // layer.setMap(map);
         map.getView().cancelAnimations();
         map.getView().fit(source.getExtent(), { ...FIT_OPTIONS });
+        console.log("ici");
+        sourceGeojson?.setData(
+          (featureCollection as GeoJSON.GeoJSON) || EMPTY_FEATURE_COLLECTION,
+        );
+        alrosLayer?.setVisible(true);
       }
-      setLoading(false);
     });
 
     return () => {
-      setLoading(false);
       abortControllers?.forEach((abortController) => {
         return abortController.abort();
       });
       source.clear();
-      layer.setMap(null);
+      // layer.setMap(null);
+      alrosLayer?.setVisible(false);
+      sourceGeojson?.setData(EMPTY_FEATURE_COLLECTION);
     };
-  }, [map, alros, setLoading]);
+  }, [map, alros, alrosLayer?.maplibreLayer?.mapLibreMap, alrosLayer]);
   return null;
 }
 

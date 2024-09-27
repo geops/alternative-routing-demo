@@ -1,4 +1,4 @@
-import { MaplibreLayer } from "mobility-toolbox-js/ol";
+import { MaplibreLayer, MaplibreStyleLayer } from "mobility-toolbox-js/ol";
 import { Map as OlMap, View } from "ol";
 import { useMemo, useState } from "react";
 
@@ -7,8 +7,16 @@ import AlroExamplesField from "./AlroExamplesField";
 import AlroLayer from "./AlroLayer";
 import Alros from "./Alros";
 import AlrosLayer from "./AlrosLayer";
+import {
+  ALROS_LAYER_LAYER_ID,
+  ALROS_LAYER_SOURCE_ID,
+  BEFORE_ID,
+  ROUTE_LAYER_LAYER_ID,
+  ROUTE_LAYER_SOURCE_ID,
+} from "./Constant";
 import { AlroContext, AlroExample } from "./hooks/useAlroContext";
 import { MapContext } from "./hooks/useMapContext";
+import Loading from "./Loading";
 import Map from "./Map";
 import RouteLayer from "./RouteLayer";
 import { AnnotatedAlternativeRoutes } from "./types";
@@ -20,10 +28,83 @@ const map = new OlMap({
     zoom: 2,
   }),
 });
-const layer = new MaplibreLayer({
+
+const baseLayer = new MaplibreLayer({
   apiKey: import.meta.env.VITE_API_KEY,
 });
-const layers = [layer];
+
+const routeLayer = new MaplibreStyleLayer({
+  beforeId: BEFORE_ID,
+  maplibreLayer: baseLayer,
+  sources: {
+    [ROUTE_LAYER_SOURCE_ID]: {
+      data: {
+        features: [],
+        type: "FeatureCollection",
+      },
+      type: "geojson",
+    },
+  },
+  styleLayers: [
+    {
+      id: ROUTE_LAYER_LAYER_ID,
+      paint: {
+        "line-color": "#f6b2b5",
+        "line-width": 14,
+      },
+      source: ROUTE_LAYER_SOURCE_ID,
+      type: "line",
+    },
+    {
+      id: ROUTE_LAYER_LAYER_ID + "-1",
+      paint: {
+        "line-color": "#e00007",
+        "line-dasharray": [0.5, 0.5],
+        "line-width": 8,
+      },
+      source: ROUTE_LAYER_SOURCE_ID,
+      type: "line",
+    },
+  ],
+  visible: false,
+});
+
+const alrosLayer = new MaplibreStyleLayer({
+  beforeId: BEFORE_ID,
+  maplibreLayer: baseLayer,
+  sources: {
+    [ALROS_LAYER_SOURCE_ID]: {
+      data: {
+        features: [],
+        type: "FeatureCollection",
+      },
+      type: "geojson",
+    },
+  },
+  styleLayers: [
+    {
+      id: ALROS_LAYER_LAYER_ID + "-1",
+      paint: {
+        "line-color": "#c28f3f",
+        "line-width": 4,
+      },
+      source: ALROS_LAYER_SOURCE_ID,
+      type: "line",
+    },
+    {
+      id: ALROS_LAYER_LAYER_ID,
+      paint: {
+        "line-color": "#fce3b4",
+        "line-width": 2,
+      },
+      source: ALROS_LAYER_SOURCE_ID,
+      type: "line",
+    },
+  ],
+  visible: false,
+});
+
+const layers = [baseLayer, routeLayer, alrosLayer];
 
 const alroExamples: AlroExample[] = [
   {
@@ -46,7 +127,7 @@ function App() {
   const [alros, setAlros] = useState<AnnotatedAlternativeRoutes[]>([]);
 
   const mapContextValue = useMemo(() => {
-    return { baseLayer: layer, layers, map };
+    return { alrosLayer, baseLayer, layers, map, routeLayer };
   }, []);
 
   const alroContextValue = useMemo(() => {
@@ -91,12 +172,13 @@ function App() {
           </div>
           {selectedExample && (
             <div className="flex h-full flex-col gap-4 overflow-hidden rounded border bg-white p-4">
-              <h1>
+              {/* <h1>
                 Alternative routes for <b>{selectedExample.name}</b>:
-              </h1>
+              </h1> */}
 
               <div className="overflow-y-auto">
-                <Alros />
+                {isLoading && <Loading />}
+                {!isLoading && <Alros />}
               </div>
             </div>
           )}
