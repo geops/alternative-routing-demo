@@ -32,7 +32,7 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
 
             timeout = setTimeout(() => {
               setLoading(false);
-            }, 500);
+            }, 2000);
           }
         }}
         placeholder="Störung wählen ..."

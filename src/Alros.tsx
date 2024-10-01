@@ -26,7 +26,7 @@ function Alros() {
       (url || "") +
         "api/alternatives/examples/" +
         selectedExample.uuid +
-        "?format=json",
+        "_demo.json?format=json",
       { signal: abortController.signal },
     )
       .then((response) => {
