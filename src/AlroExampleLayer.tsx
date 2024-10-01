@@ -6,12 +6,12 @@ import { Stroke, Style } from "ol/style";
 import randomColor from "randomcolor";
 import { useEffect } from "react";
 
-import { FIT_OPTIONS } from "./Constant";
+import { FIT_OPTIONS, FIT_OPTIONS_SM } from "./Constant";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
 
 function AlroExampleLayer() {
-  const { selectedExample, url } = useAlroContext();
+  const { isSm, selectedExample, url } = useAlroContext();
   const { map } = useMapContext();
 
   useEffect(() => {
@@ -50,7 +50,9 @@ function AlroExampleLayer() {
           source.addFeatures(format.readFeatures(featureCollection));
           layer.setMap(map);
           map.getView().cancelAnimations();
-          map.getView().fit(source.getExtent(), { ...FIT_OPTIONS });
+          map.getView().fit(source.getExtent(), {
+            ...(isSm ? FIT_OPTIONS_SM : FIT_OPTIONS),
+          });
         }
       });
     return () => {
@@ -58,7 +60,7 @@ function AlroExampleLayer() {
       source.clear();
       layer.setMap(null);
     };
-  }, [map, selectedExample, url]);
+  }, [isSm, map, selectedExample, url]);
   return null;
 }
 

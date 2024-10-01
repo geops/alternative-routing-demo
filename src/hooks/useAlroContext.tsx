@@ -12,6 +12,7 @@ export type AlroContextType = {
   alros: AnnotatedAlternativeRoutes[];
   examples: AlroExample[];
   isLoading: boolean;
+  isSm: boolean;
   selectedAlro?: AnnotatedAlternativeRoutes;
   selectedExample?: AlroExample;
   setAlros: (alros: AnnotatedAlternativeRoutes[]) => void;
@@ -25,6 +26,7 @@ export const AlroContext = createContext<AlroContextType>({
   alros: [],
   examples: [],
   isLoading: false,
+  isSm: false,
   setAlros: () => {},
   setLoading: () => {},
   setSelectedAlro: () => {},

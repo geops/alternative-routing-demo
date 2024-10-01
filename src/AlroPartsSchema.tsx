@@ -39,7 +39,6 @@ function AlroPartsSchema({ alro }: { alro: AnnotatedAlternativeRoutes }) {
           img.src = "/images/io/" + imagesByCategory[icon];
           img.onload = () => {
             if (!mbMap.getImage(icon)) {
-              console.log(category, imagesByCategory[icon]);
               mbMap.addImage(icon, img);
             }
           };

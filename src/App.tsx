@@ -1,6 +1,6 @@
 import { MaplibreLayer, MaplibreStyleLayer } from "mobility-toolbox-js/ol";
 import { Map as OlMap, View } from "ol";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 // import AlroExampleLayer from "./AlroExampleLayer";
 import AlroExamplesField from "./AlroExamplesField";
@@ -23,6 +23,7 @@ import Loading from "./Loading";
 import Map from "./Map";
 import RouteLayer from "./RouteLayer";
 import { AnnotatedAlternativeRoutes } from "./types";
+import { Button } from "./ui/button";
 
 const map = new OlMap({
   controls: [],
@@ -311,7 +312,9 @@ const alroExamples: AlroExample[] = [
 
 function App() {
   const [url] = useState(import.meta.env.VITE_ALRO_API_URL as string);
+  const [isToggle, setToggle] = useState<boolean>();
   const [selectedExample, setSelectedExample] = useState<AlroExample>();
+  const [isSm, setSm] = useState<boolean>(false);
   const [selectedAlro, setSelectedAlro] =
     useState<AnnotatedAlternativeRoutes>();
   const [isLoading, setLoading] = useState<boolean>(false);
@@ -326,26 +329,35 @@ function App() {
       alros,
       examples: alroExamples,
       isLoading,
+      isSm,
       selectedAlro,
       selectedExample: selectedExample,
       setAlros,
       setLoading,
       setSelectedAlro,
       setSelectedExample,
+      setSm,
       url,
     };
-  }, [
-    url,
-    alros,
-    isLoading,
-    selectedAlro,
-    selectedExample,
-    setSelectedAlro,
-    setAlros,
-    setLoading,
-    setSelectedExample,
-  ]);
+  }, [alros, isLoading, isSm, selectedAlro, selectedExample, url]);
 
+  useEffect(() => {
+    // sm	640px	@media (min-width: 640px) { ... }
+    // md	768px	@media (min-width: 768px) { ... }
+    // lg	1024px	@media (min-width: 1024px) { ... }
+    // xl	1280px	@media (min-width: 1280px) { ... }
+    // 2xl	1536px	@media (min-width: 1536px) { ... }
+    const resizeObserver = new ResizeObserver((entries) => {
+      const newSm = entries[0].contentRect.width < 640;
+      if (isSm !== newSm) {
+        setSm(newSm);
+      }
+    });
+    resizeObserver.observe(document.getElementById("root") as HTMLElement);
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [isSm]);
   return (
     <>
       <AlroContext.Provider value={alroContextValue}>
@@ -356,15 +368,57 @@ function App() {
           <AlrosLayer />
           <AlroLayer />
 
-          <div className="absolute left-0 top-0 z-10 flex max-h-full w-1/4 flex-col gap-4 p-4">
+          <div className="absolute left-0 top-0 z-10 flex max-h-full w-full flex-col justify-between gap-4 sm:w-2/5  sm:p-4 xl:w-[500px]">
             <div className="w-full rounded border bg-white p-4">
               <AlroExamplesField />
             </div>
             {selectedExample && (
-              <div className="flex h-full flex-col gap-4 overflow-hidden rounded border bg-white p-4">
-                {/* <h1>
-                Alternative routes for <b>{selectedExample.name}</b>:
-              </h1> */}
+              <div
+                className={
+                  "fixed bottom-0 flex h-64 w-full flex-col gap-2 overflow-hidden rounded border bg-white p-4 sm:relative sm:h-full" +
+                  (isSm && isToggle ? " !h-2/3" : "")
+                }
+              >
+                {isSm && (
+                  <Button
+                    onClick={() => {
+                      setToggle(!isToggle);
+                    }}
+                    plain
+                  >
+                    {!isToggle ? (
+                      <svg
+                        className="size-6"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={1.5}
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    ) : (
+                      <svg
+                        className="size-6"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={1.5}
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    )}
+                  </Button>
+                )}
 
                 <div className="overflow-y-auto">
                   {isLoading && <Loading />}

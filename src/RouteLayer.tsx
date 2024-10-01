@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import {
   EMPTY_FEATURE_COLLECTION,
   FIT_OPTIONS,
+  FIT_OPTIONS_SM,
   ROUTE_LAYER_SOURCE_ID,
 } from "./Constant";
 import useAlroContext from "./hooks/useAlroContext";
@@ -20,7 +21,7 @@ const routingApi = new RoutingAPI({
 });
 
 function RouteLayer() {
-  const { alros } = useAlroContext();
+  const { alros, isSm } = useAlroContext();
   const { map, routeLayer } = useMapContext();
 
   useEffect(() => {
@@ -67,7 +68,9 @@ function RouteLayer() {
           source.addFeatures(format.readFeatures(featureCollection));
           // layer.setMap(map);
           map.getView().cancelAnimations();
-          map.getView().fit(source.getExtent(), { ...FIT_OPTIONS });
+          map.getView().fit(source.getExtent(), {
+            ...(isSm ? FIT_OPTIONS_SM : FIT_OPTIONS),
+          });
           sourceGeojson?.setData(
             (featureCollection as GeoJSON.GeoJSON) || EMPTY_FEATURE_COLLECTION,
           );

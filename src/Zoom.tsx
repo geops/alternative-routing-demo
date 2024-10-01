@@ -23,7 +23,6 @@ function Map(props: JSX.IntrinsicElements["div"]) {
       unByKey(key);
     };
   }, [map]);
-  console.log(zoom, map?.getView().getMinZoom());
   return (
     <div {...props}>
       <Button

@@ -601,6 +601,10 @@ video {
   left: -1rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .bottom-2 {
   bottom: 0.5rem;
 }
@@ -819,6 +823,10 @@ video {
   height: 100%;
 }
 
+.\!h-2\/3 {
+  height: 66.666667% !important;
+}
+
 .h-0\.5 {
   height: 0.125rem;
 }
@@ -829,6 +837,10 @@ video {
 
 .h-6 {
   height: 1.5rem;
+}
+
+.h-64 {
+  height: 16rem;
 }
 
 .h-8 {
@@ -865,10 +877,6 @@ video {
 
 .w-0\.5 {
   width: 0.125rem;
-}
-
-.w-1\/4 {
-  width: 25%;
 }
 
 .w-10 {
@@ -1050,6 +1058,10 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .justify-items-center {
@@ -3858,6 +3870,10 @@ body, #root {
 }
 
 @media (min-width: 640px) {
+  .sm\:relative {
+    position: relative;
+  }
+
   .sm\:mx-3 {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
@@ -3898,8 +3914,16 @@ body, #root {
     height: 1.25rem;
   }
 
+  .sm\:h-full {
+    height: 100%;
+  }
+
   .sm\:min-h-9 {
     min-height: 2.25rem;
+  }
+
+  .sm\:w-2\/5 {
+    width: 40%;
   }
 
   .sm\:w-8 {
@@ -4239,6 +4263,12 @@ body, #root {
 
   .lg\:ring-zinc-950\/5 {
     --tw-ring-color: rgb(9 9 11 / 0.05);
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:w-\[500px\] {
+    width: 500px;
   }
 }
 

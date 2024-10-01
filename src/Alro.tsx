@@ -33,7 +33,6 @@ function Alro({
         plain
         {...props}
         onClick={() => {
-          console.log("click", selectedAlro === alro, alro);
           if (selectedAlro === alro) {
             setSelectedAlro();
           } else {

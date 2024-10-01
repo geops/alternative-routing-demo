@@ -1,6 +1,11 @@
 export const FIT_OPTIONS = {
   duration: 500,
-  padding: [50, 50, 50, 400],
+  padding: [50, 50, 50, 500],
+};
+
+export const FIT_OPTIONS_SM = {
+  duration: 500,
+  padding: [220, 20, 220, 20],
 };
 
 export const EMPTY_FEATURE_COLLECTION: GeoJSON.GeoJSON = {

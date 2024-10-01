@@ -12,6 +12,7 @@ import {
   ALRO_LAYER_SOURCE_ID,
   EMPTY_FEATURE_COLLECTION,
   FIT_OPTIONS,
+  FIT_OPTIONS_SM,
   STATIONS_HIGHLIGHT_LAYER_ID,
 } from "./Constant";
 import getColorFromAlroPart from "./getColorFromAlroPart";
@@ -23,7 +24,7 @@ const routingApi = new RoutingAPI({
 });
 
 function AlroLayer() {
-  const { selectedAlro, selectedExample } = useAlroContext();
+  const { isSm, selectedAlro, selectedExample } = useAlroContext();
   const { alroLayer, map } = useMapContext();
 
   useEffect(() => {
@@ -86,7 +87,6 @@ function AlroLayer() {
         response.features[0].properties.color = getColorFromAlroPart(alroPart);
         // @ts-expect-error - bad type definition
         response.features[0].properties.icon = category || line;
-        console.log("icon ", category, "+", line);
         return response;
       });
       // @ts-expect-error - bad type definition
@@ -117,7 +117,9 @@ function AlroLayer() {
         source.addFeatures(format.readFeatures(featureCollection));
         // layer.setMap(map);
         map.getView().cancelAnimations();
-        map.getView().fit(source.getExtent(), { ...FIT_OPTIONS });
+        map.getView().fit(source.getExtent(), {
+          ...(isSm ? FIT_OPTIONS_SM : FIT_OPTIONS),
+        });
         sourceGeojson?.setData(
           (featureCollection as GeoJSON.GeoJSON) || EMPTY_FEATURE_COLLECTION,
         );
