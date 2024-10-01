@@ -1,7 +1,10 @@
+import { imagesByCategory } from "./Constant";
 import getColorFromAlroPart from "./getColorFromAlroPart";
+import useMapContext from "./hooks/useMapContext";
 import { AlternativeRoutePart, AnnotatedAlternativeRoutes } from "./types";
 
 function AlroPartsSchema({ alro }: { alro: AnnotatedAlternativeRoutes }) {
+  const { baseLayer } = useMapContext();
   let parts: AlternativeRoutePart[] = alro.alternativeRouteParts;
   let totalTimeIntravel = 0;
   parts = parts.map((part) => {
@@ -28,6 +31,20 @@ function AlroPartsSchema({ alro }: { alro: AnnotatedAlternativeRoutes }) {
         const color = getColorFromAlroPart(part);
         const percent = (time * 100) / totalTimeIntravel;
         const text = `${category || ""} ${line || ""}`;
+
+        const mbMap = baseLayer?.mapLibreMap;
+        const icon = category || line;
+        if (icon && mbMap && !mbMap.getImage(icon)) {
+          const img = document.createElement("img");
+          img.src = "/images/io/" + imagesByCategory[icon];
+          img.onload = () => {
+            if (!mbMap.getImage(icon)) {
+              console.log(category, imagesByCategory[icon]);
+              mbMap.addImage(icon, img);
+            }
+          };
+        }
+
         return (
           <div
             className="flex h-8 items-center justify-center overflow-hidden rounded-md border-4 bg-white font-bold"

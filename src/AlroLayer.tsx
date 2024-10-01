@@ -12,6 +12,7 @@ import {
   ALRO_LAYER_SOURCE_ID,
   EMPTY_FEATURE_COLLECTION,
   FIT_OPTIONS,
+  STATIONS_HIGHLIGHT_LAYER_ID,
 } from "./Constant";
 import getColorFromAlroPart from "./getColorFromAlroPart";
 import useAlroContext from "./hooks/useAlroContext";
@@ -52,6 +53,7 @@ function AlroLayer() {
     //   },
     // });
     const abortController = new AbortController();
+    const stationIds: string[] = [];
 
     const sourceGeojson = alroLayer?.maplibreLayer?.mapLibreMap?.getSource(
       ALRO_LAYER_SOURCE_ID,
@@ -64,6 +66,7 @@ function AlroLayer() {
       return new AbortController();
     });
     const promises = selectedAlro?.alternativeRouteParts.map((part) => {
+      stationIds.push(part.from.evaNumber, part.to.evaNumber);
       return routingApi.route(
         {
           mot: "rail",
@@ -76,10 +79,14 @@ function AlroLayer() {
     });
     Promise.all(promises).then((responses: RoutingResponse[]) => {
       responses = responses.map((response, index) => {
+        const alroPart = selectedAlro?.alternativeRouteParts[index];
+        const { category, line } =
+          alroPart?.replacementTransports?.[0]?.line || {};
         // @ts-expect-error - bad type definition
-        response.features[0].properties.color = getColorFromAlroPart(
-          selectedAlro?.alternativeRouteParts[index],
-        );
+        response.features[0].properties.color = getColorFromAlroPart(alroPart);
+        // @ts-expect-error - bad type definition
+        response.features[0].properties.icon = category || line;
+        console.log("icon ", category, "+", line);
         return response;
       });
       // @ts-expect-error - bad type definition
@@ -92,6 +99,21 @@ function AlroLayer() {
       });
       source.clear();
       if (featureCollection) {
+        const features = format.readFeatures(featureCollection);
+        features?.forEach((feature) => {
+          if (feature?.getGeometry()?.getType() === "LineString") {
+            // featureCollection?.features?.push({
+            //   geometry: {
+            //     coordinates: toLonLat(
+            //       (feature?.getGeometry() as LineString)?.getCoordinateAt(0.5),
+            //     ),
+            //     type: "Point",
+            //   },
+            //   properties: { icon: feature.get("icon") },
+            //   type: "Feature",
+            // });
+          }
+        });
         source.addFeatures(format.readFeatures(featureCollection));
         // layer.setMap(map);
         map.getView().cancelAnimations();
@@ -99,7 +121,30 @@ function AlroLayer() {
         sourceGeojson?.setData(
           (featureCollection as GeoJSON.GeoJSON) || EMPTY_FEATURE_COLLECTION,
         );
-        console.log("No feature collection", featureCollection);
+        // console.log(stationIds);
+        // Munchen tief bahnhof  8020348
+        // Munchen tief bahnhof  8020348
+
+        // stationIds.map((stationId) => {
+        //   return ["==", "uic_ref", stationId];
+        // }),
+
+        alroLayer?.maplibreLayer?.mapLibreMap?.setFilter(
+          STATIONS_HIGHLIGHT_LAYER_ID,
+          [
+            "any",
+            // @ts-expect-error - bad type definition
+            ...stationIds.map((stationId) => {
+              let id = stationId;
+              // Munchen tief bahnhof  8098263
+              // Munchen GL.27-36 bahnhof  8098261
+              if (id === "8098263" || id === "8098261") {
+                id = "8000261";
+              }
+              return ["==", "uic_ref", id];
+            }),
+          ],
+        );
 
         alroLayer?.setVisible(true);
       } else {

@@ -15,6 +15,7 @@ import {
   BEFORE_ID,
   ROUTE_LAYER_LAYER_ID,
   ROUTE_LAYER_SOURCE_ID,
+  STATIONS_HIGHLIGHT_LAYER_ID,
 } from "./Constant";
 import { AlroContext, AlroExample } from "./hooks/useAlroContext";
 import { MapContext } from "./hooks/useMapContext";
@@ -49,20 +50,19 @@ const routeLayer = new MaplibreStyleLayer({
   },
   styleLayers: [
     {
-      id: ROUTE_LAYER_LAYER_ID,
+      id: ROUTE_LAYER_LAYER_ID + "-1",
       paint: {
-        "line-color": "#f6b2b5",
-        "line-width": 14,
+        "line-color": "#c28f3f",
+        "line-width": 8,
       },
       source: ROUTE_LAYER_SOURCE_ID,
       type: "line",
     },
     {
-      id: ROUTE_LAYER_LAYER_ID + "-1",
+      id: ROUTE_LAYER_LAYER_ID,
       paint: {
-        "line-color": "#e00007",
-        "line-dasharray": [0.5, 0.5],
-        "line-width": 8,
+        "line-color": "#fce3b4",
+        "line-width": 4,
       },
       source: ROUTE_LAYER_SOURCE_ID,
       type: "line",
@@ -87,7 +87,7 @@ const alrosLayer = new MaplibreStyleLayer({
     {
       id: ALROS_LAYER_LAYER_ID + "-1",
       paint: {
-        "line-color": "#c28f3f",
+        "line-color": "#3d84e1",
         "line-width": 4,
       },
       source: ALROS_LAYER_SOURCE_ID,
@@ -96,7 +96,7 @@ const alrosLayer = new MaplibreStyleLayer({
     {
       id: ALROS_LAYER_LAYER_ID,
       paint: {
-        "line-color": "#fce3b4",
+        "line-color": "#b4d5f6",
         "line-width": 2,
       },
       source: ALROS_LAYER_SOURCE_ID,
@@ -107,7 +107,6 @@ const alrosLayer = new MaplibreStyleLayer({
 });
 
 const alroLayer = new MaplibreStyleLayer({
-  beforeId: BEFORE_ID,
   maplibreLayer: baseLayer,
   sources: {
     [ALRO_LAYER_SOURCE_ID]: {
@@ -125,11 +124,39 @@ const alroLayer = new MaplibreStyleLayer({
       type: "background",
     },
 
+    // {
+    //   id: ALRO_LAYER_LAYER_ID + "-3",
+    //   paint: {
+    //     "line-color": ["get", "color"],
+    //     "line-width": 8,
+    //   },
+    //   source: ALRO_LAYER_SOURCE_ID,
+    //   type: "line",
+    // },
+
     {
-      id: ALRO_LAYER_LAYER_ID + "-3",
+      id: ALRO_LAYER_LAYER_ID + "-5",
       paint: {
-        "line-color": ["get", "color"],
+        "line-color": "#c28f3f",
         "line-width": 8,
+      },
+      source: ROUTE_LAYER_SOURCE_ID,
+      type: "line",
+    },
+    {
+      id: ALRO_LAYER_LAYER_ID + "-6",
+      paint: {
+        "line-color": "#fce3b4",
+        "line-width": 4,
+      },
+      source: ROUTE_LAYER_SOURCE_ID,
+      type: "line",
+    },
+    {
+      id: ALRO_LAYER_LAYER_ID,
+      paint: {
+        "line-color": "#3d84e1",
+        "line-width": 4,
       },
       source: ALRO_LAYER_SOURCE_ID,
       type: "line",
@@ -137,26 +164,138 @@ const alroLayer = new MaplibreStyleLayer({
     {
       id: ALRO_LAYER_LAYER_ID + "-1",
       paint: {
-        "line-color": "#c28f3f",
+        "line-color": "#b4d5f6",
         "line-width": 2,
       },
       source: ALRO_LAYER_SOURCE_ID,
       type: "line",
     },
     {
-      id: ALRO_LAYER_LAYER_ID,
-      paint: {
-        "line-color": "#fce3b4",
-        "line-width": 2,
+      id: ALRO_LAYER_LAYER_ID + "-3",
+      layout: {
+        "icon-allow-overlap": true,
+        "icon-image": ["get", "icon"],
+        // "icon-keep-upright": true,
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 0.25,
+        "symbol-avoid-edges": true,
+        "symbol-placement": "line-center",
       },
       source: ALRO_LAYER_SOURCE_ID,
-      type: "line",
+      type: "symbol",
+    },
+    {
+      id: STATIONS_HIGHLIGHT_LAYER_ID,
+      layout: {
+        "icon-allow-overlap": false,
+        "icon-ignore-placement": false,
+        "icon-image": {
+          stops: [
+            [7, "20-circle-grey-notch"],
+            [8, "10-contour-grey-notch"],
+          ],
+        },
+        "icon-optional": false,
+        "icon-size": {
+          stops: [
+            [7, 0.5],
+            [8, 0.6],
+            [9, 0.6],
+            [10, 0.65],
+          ],
+        },
+        "text-allow-overlap": false,
+        "text-anchor": [
+          "match",
+          ["get", "label_anchor"],
+          "NW",
+          "bottom-right",
+          "W",
+          "right",
+          "SW",
+          "top-right",
+          "N",
+          "bottom",
+          "S",
+          "top",
+          "NE",
+          "bottom-left",
+          "E",
+          "left",
+          "SE",
+          "top-left",
+          "bottom-left",
+        ],
+        "text-field": "{display_name}",
+        "text-font": ["SBB Web Bold", "Arial"],
+        "text-ignore-placement": false,
+        "text-justify": [
+          "match",
+          ["get", "label_anchor"],
+          "NW",
+          "right",
+          "W",
+          "right",
+          "SW",
+          "right",
+          "N",
+          "left",
+          "S",
+          "left",
+          "NE",
+          "left",
+          "E",
+          "left",
+          "SE",
+          "left",
+          "left",
+        ],
+        "text-letter-spacing": 0.1,
+        "text-line-height": 1,
+        "text-max-width": ["coalesce", ["get", "label_max_width"], 8],
+        "text-offset": [
+          "match",
+          ["get", "label_anchor"],
+          "NW",
+          ["literal", [-0.3, -0.3]],
+          "W",
+          ["literal", [-0.5, 0]],
+          "SW",
+          ["literal", [-0.4, 0.5]],
+          "N",
+          ["literal", [0, -0.5]],
+          "S",
+          ["literal", [0, 0.5]],
+          "NE",
+          ["literal", [0.3, -0.3]],
+          "E",
+          ["literal", [0.5, 0]],
+          "SE",
+          ["literal", [0.4, 0.5]],
+          ["literal", [0.3, -0.3]],
+        ],
+        "text-size": {
+          stops: [
+            [7, 14.5],
+            [9, 16.5],
+          ],
+        },
+      },
+      paint: {
+        "text-halo-blur": 1,
+        "text-halo-color": "rgba(247, 244, 244, 1)",
+        "text-halo-width": 3,
+        "text-opacity": 1,
+      },
+      source: "base",
+      "source-layer": "osm_points",
+      type: "symbol",
     },
   ],
   visible: false,
 });
 
-const layers = [baseLayer, routeLayer, alrosLayer, alroLayer];
+const layers = [baseLayer, alrosLayer, routeLayer, alroLayer];
 
 const alroExamples: AlroExample[] = [
   {
@@ -216,25 +355,25 @@ function App() {
           <RouteLayer />
           <AlrosLayer />
           <AlroLayer />
-        </MapContext.Provider>
 
-        <div className="absolute left-0 top-0 z-10 flex max-h-full w-96 flex-col gap-4 p-4">
-          <div className="w-full rounded border bg-white p-4">
-            <AlroExamplesField />
-          </div>
-          {selectedExample && (
-            <div className="flex h-full flex-col gap-4 overflow-hidden rounded border bg-white p-4">
-              {/* <h1>
+          <div className="absolute left-0 top-0 z-10 flex max-h-full w-1/4 flex-col gap-4 p-4">
+            <div className="w-full rounded border bg-white p-4">
+              <AlroExamplesField />
+            </div>
+            {selectedExample && (
+              <div className="flex h-full flex-col gap-4 overflow-hidden rounded border bg-white p-4">
+                {/* <h1>
                 Alternative routes for <b>{selectedExample.name}</b>:
               </h1> */}
 
-              <div className="overflow-y-auto">
-                {isLoading && <Loading />}
-                {!isLoading && <Alros />}
+                <div className="overflow-y-auto">
+                  {isLoading && <Loading />}
+                  {!isLoading && <Alros />}
+                </div>
               </div>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
+        </MapContext.Provider>
       </AlroContext.Provider>
     </>
   );

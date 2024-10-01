@@ -1,9 +1,9 @@
-import { Button } from "@headlessui/react";
 import { Fragment } from "react";
 
 import AlroPartsSchema from "./AlroPartsSchema";
 import useAlroContext from "./hooks/useAlroContext";
 import { AnnotatedAlternativeRoutes } from "./types";
+import { Button } from "./ui/button";
 
 function Alro({
   alro,
@@ -29,8 +29,11 @@ function Alro({
     <>
       {/* @ts-expect-error - no idea */}
       <Button
+        outline
+        plain
         {...props}
         onClick={() => {
+          console.log("click", selectedAlro === alro, alro);
           if (selectedAlro === alro) {
             setSelectedAlro();
           } else {
@@ -38,27 +41,29 @@ function Alro({
           }
         }}
       >
-        <p className="font-bold">
-          {texts.map((text, index) => {
-            return (
-              <Fragment key={text}>
-                {text} {index !== texts.length - 1 ? <br></br> : null}
-              </Fragment>
-            );
-          })}
-        </p>
-        <p className="text-sm">
-          {[alro.intervals, everyText]
-            .filter((val) => {
-              return !!val;
-            })
-            .join(", ")}
-        </p>
-        <p className="text-sm">
-          Duration: {hours ? hours + "h " : ""}
-          {minutes ? minutes + "min" : ""}
-        </p>
-        <AlroPartsSchema alro={alro}></AlroPartsSchema>
+        <div className="w-full">
+          <p className="font-bold">
+            {texts.map((text, index) => {
+              return (
+                <Fragment key={text}>
+                  {text} {index !== texts.length - 1 ? <br></br> : null}
+                </Fragment>
+              );
+            })}
+          </p>
+          <p className="text-sm font-normal">
+            {[alro.intervals, everyText]
+              .filter((val) => {
+                return !!val;
+              })
+              .join(", ")}
+          </p>
+          <p className="text-sm font-normal">
+            Dauer: {hours ? hours + "h " : ""}
+            {minutes ? minutes + "min" : ""}
+          </p>
+          <AlroPartsSchema alro={alro}></AlroPartsSchema>
+        </div>
       </Button>
     </>
   );

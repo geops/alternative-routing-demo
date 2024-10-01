@@ -50,7 +50,7 @@ function Alros() {
           <Alro
             alro={alro}
             className={
-              "rounded border p-4 text-left hover:border-blue-500 hover:border-2 " +
+              "rounded border p-4 text-left hover:border-blue-500 hover:border-2 cursor-pointer" +
               (alro === selectedAlro ? " bg-gray-200" : "bg-white")
             }
             key={JSON.stringify(alro)}

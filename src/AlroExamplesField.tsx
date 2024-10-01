@@ -14,11 +14,11 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
 
   return (
     <Field {...props}>
-      <Label className="flex items-center">
-        DB Challenge Alternative Routing
+      <Label className="">
+        <h1 className="text-xs font-light">DB Challenge</h1>
+        <h2 className="font-bold">Alternative Routing</h2>
       </Label>
       <Listbox
-        className=""
         onChange={(value) => {
           const found = examples.find(({ uuid }) => {
             return uuid === value;
@@ -34,12 +34,12 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
             }, 500);
           }
         }}
-        placeholder="Select a disruption ..."
+        placeholder="Störung wählen ..."
       >
         {examples.map(({ name, uuid }) => {
           return (
             <ListboxOption key={uuid} value={uuid}>
-              <ListboxLabel className="cursor-pointer border-l-4 border-[#ff7a00] pl-2">
+              <ListboxLabel className="cursor-pointer">
                 <div className="font-bold">{name}</div>
                 <div className="text-xs">
                   Streckenstörung &gt; Reparatur Strecke [38]<br></br>
