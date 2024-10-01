@@ -827,6 +827,10 @@ video {
   height: 66.666667% !important;
 }
 
+.\!h-4 {
+  height: 1rem !important;
+}
+
 .h-0\.5 {
   height: 0.125rem;
 }

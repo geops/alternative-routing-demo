@@ -2,14 +2,17 @@ import { Fragment } from "react";
 
 import AlroPartsSchema from "./AlroPartsSchema";
 import useAlroContext from "./hooks/useAlroContext";
+import useMapContext from "./hooks/useMapContext";
 import { AnnotatedAlternativeRoutes } from "./types";
 import { Button } from "./ui/button";
+import zoomOnFeatureCollection from "./zoomOnFeatureCollection";
 
 function Alro({
   alro,
   ...props
 }: { alro: AnnotatedAlternativeRoutes } & JSX.IntrinsicElements["button"]) {
-  const { selectedAlro, setSelectedAlro } = useAlroContext();
+  const { isSm, selectedAlro, setSelectedAlro } = useAlroContext();
+  const { map } = useMapContext();
   const { alternativeRouteParts, estimatedTravelTime = 0 } = alro;
   const hours = Math.floor((estimatedTravelTime || 0) / 3600);
   const minutes = Math.floor(((estimatedTravelTime || 0) % 3600) / 60);
@@ -37,6 +40,8 @@ function Alro({
             setSelectedAlro();
           } else {
             setSelectedAlro(alro);
+            // @ts-expect-error - ignore deprecated
+            zoomOnFeatureCollection(map, alro.geom, isSm);
           }
         }}
       >
@@ -50,14 +55,14 @@ function Alro({
               );
             })}
           </p>
-          <p className="text-sm font-normal">
+          <p className="text-xs font-normal">
             {[alro.intervals, everyText]
               .filter((val) => {
                 return !!val;
               })
               .join(", ")}
           </p>
-          <p className="text-sm font-normal">
+          <p className="text-xs font-normal">
             Dauer: {hours ? hours + "h " : ""}
             {minutes ? minutes + "min" : ""}
           </p>

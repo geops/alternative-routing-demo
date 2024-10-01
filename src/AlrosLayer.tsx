@@ -1,106 +1,50 @@
 import { GeoJSONSource } from "maplibre-gl";
-import { RoutingAPI } from "mobility-toolbox-js/ol";
-import { RoutingResponse } from "mobility-toolbox-js/types";
-import { GeoJSON } from "ol/format";
-// import { Vector } from "ol/layer";
-import VectorSource from "ol/source/Vector";
-// import { Stroke, Style } from "ol/style";
 import { useEffect } from "react";
 
-import {
-  ALROS_LAYER_SOURCE_ID,
-  EMPTY_FEATURE_COLLECTION,
-  FIT_OPTIONS,
-  FIT_OPTIONS_SM,
-} from "./Constant";
+import { ALROS_LAYER_SOURCE_ID, EMPTY_FEATURE_COLLECTION } from "./Constant";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
-import { AlternativeRoutePart } from "./types";
-
-const routingApi = new RoutingAPI({
-  apiKey: import.meta.env.VITE_API_KEY,
-});
+import zoomOnFeatureCollection from "./zoomOnFeatureCollection";
 
 function AlrosLayer() {
   const { alros, isSm } = useAlroContext();
   const { alrosLayer, map } = useMapContext();
 
   useEffect(() => {
-    const format = new GeoJSON({
-      dataProjection: "EPSG:4326",
-      featureProjection: "EPSG:3857",
-    });
-    const source = new VectorSource();
-    // const layer = new Vector({
-    //   source,
-    //   style: () => {
-    //     return new Style({
-    //       stroke: new Stroke({ color: "green", width: 10 }),
-    //     });
-    //   },
-    // });
-    const abortController = new AbortController();
     const sourceGeojson = alrosLayer?.maplibreLayer?.mapLibreMap?.getSource(
       ALROS_LAYER_SOURCE_ID,
     ) as GeoJSONSource;
     if (!map || !alros?.length) {
       return;
     }
-    const routeParts: AlternativeRoutePart[] = [];
-    alros.map((alro) => {
-      routeParts.push(...alro.alternativeRouteParts);
-    });
-    const abortControllers = routeParts.map(() => {
-      return new AbortController();
-    });
-    const promises = routeParts.map((part) => {
-      return routingApi.route(
-        {
-          mot: "rail",
-          // @ts-expect-error - bad type definition
-          prefagencies: "db",
-          via: "!" + part.from.evaNumber + "|!" + part.to.evaNumber,
-        },
-        { signal: abortController.signal },
-      );
-    });
-    Promise.all(promises).then((responses: RoutingResponse[]) => {
+
+    const featureCollection = alros
+      .map(({ geom }) => {
+        return geom;
+      })
       // @ts-expect-error - bad type definition
-      const featureCollection = responses.reduce((acc, response) => {
+      .reduce((acc, response) => {
         const features = Array.isArray(acc?.features) ? acc.features : [];
         return {
           ...acc,
           features: [
             ...features,
+            // @ts-expect-error - bad type definition
             ...(Array.isArray(response.features) ? response.features : []),
           ],
         };
       });
-      source.clear();
-      if (featureCollection) {
-        source.addFeatures(format.readFeatures(featureCollection));
-        // layer.setMap(map);
-        map.getView().cancelAnimations();
-        map.getView().fit(source.getExtent(), {
-          ...(isSm ? FIT_OPTIONS_SM : FIT_OPTIONS),
-        });
-        sourceGeojson?.setData(
-          (featureCollection as GeoJSON.GeoJSON) || EMPTY_FEATURE_COLLECTION,
-        );
-        alrosLayer?.setVisible(true);
-      }
-    });
+    if (sourceGeojson && featureCollection?.features?.length) {
+      sourceGeojson?.setData(featureCollection as GeoJSON.GeoJSON);
+      alrosLayer?.setVisible(true);
+      zoomOnFeatureCollection(map, featureCollection, isSm);
+    }
 
     return () => {
-      abortControllers?.forEach((abortController) => {
-        return abortController.abort();
-      });
-      source.clear();
-      // layer.setMap(null);
       alrosLayer?.setVisible(false);
       sourceGeojson?.setData(EMPTY_FEATURE_COLLECTION);
     };
-  }, [map, alros, alrosLayer?.maplibreLayer?.mapLibreMap, alrosLayer]);
+  }, [map, alros, alrosLayer?.maplibreLayer?.mapLibreMap, alrosLayer, isSm]);
   return null;
 }
 

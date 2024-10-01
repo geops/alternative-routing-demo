@@ -1,10 +1,16 @@
+import { MouseEvent as ReactMouseEvent } from "react";
+
 import { imagesByCategory } from "./Constant";
 import getColorFromAlroPart from "./getColorFromAlroPart";
+import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
 import { AlternativeRoutePart, AnnotatedAlternativeRoutes } from "./types";
+import { Button } from "./ui/button";
+import { zoomOnFeature } from "./zoomOnFeatureCollection";
 
 function AlroPartsSchema({ alro }: { alro: AnnotatedAlternativeRoutes }) {
-  const { baseLayer } = useMapContext();
+  const { baseLayer, map } = useMapContext();
+  const { isSm, selectedAlro, setSelectedAlro } = useAlroContext();
   let parts: AlternativeRoutePart[] = alro.alternativeRouteParts;
   let totalTimeIntravel = 0;
   parts = parts.map((part) => {
@@ -24,7 +30,7 @@ function AlroPartsSchema({ alro }: { alro: AnnotatedAlternativeRoutes }) {
 
   return (
     <div className="my-2 flex w-full items-center gap-0.5">
-      {parts.map((part) => {
+      {parts.map((part, index) => {
         // @ts-expect-error time has bee added temporarly
         const { time } = part;
         const { category, line } = part?.replacementTransports?.[0]?.line || {};
@@ -45,9 +51,22 @@ function AlroPartsSchema({ alro }: { alro: AnnotatedAlternativeRoutes }) {
         }
 
         return (
-          <div
-            className="flex h-8 items-center justify-center overflow-hidden rounded-md border-4 bg-white font-bold"
+          <Button
+            className="flex h-8 cursor-pointer items-center justify-center overflow-hidden rounded-md border-4 bg-white font-bold"
             key={part.from.evaNumber}
+            onClick={(evt: ReactMouseEvent<HTMLButtonElement>) => {
+              const feature = alro?.geom?.features?.[index];
+              if (feature) {
+                if (selectedAlro === alro) {
+                  zoomOnFeature(map, feature, isSm);
+                } else {
+                  setSelectedAlro(alro);
+                  zoomOnFeature(map, feature, isSm);
+                }
+                evt.preventDefault();
+              }
+            }}
+            outline
             style={{
               borderColor: color,
               color,
@@ -58,7 +77,7 @@ function AlroPartsSchema({ alro }: { alro: AnnotatedAlternativeRoutes }) {
             <div className="overflow-hidden text-ellipsis text-nowrap">
               {text}
             </div>
-          </div>
+          </Button>
         );
       })}
     </div>

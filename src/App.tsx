@@ -17,12 +17,12 @@ import {
   ROUTE_LAYER_SOURCE_ID,
   STATIONS_HIGHLIGHT_LAYER_ID,
 } from "./Constant";
+import DisruptedRouteLayer from "./DisruptedRouteLayer";
 import { AlroContext, AlroExample } from "./hooks/useAlroContext";
 import { MapContext } from "./hooks/useMapContext";
 import Loading from "./Loading";
 import Map from "./Map";
-import RouteLayer from "./RouteLayer";
-import { AnnotatedAlternativeRoutes } from "./types";
+import { AnnotatedAlternativeRoutes, DemoMetadata } from "./types";
 import { Button } from "./ui/button";
 
 const map = new OlMap({
@@ -320,6 +320,8 @@ function App() {
   const [isLoading, setLoading] = useState<boolean>(false);
   const [alros, setAlros] = useState<AnnotatedAlternativeRoutes[]>([]);
 
+  const [demoMetadata, setDemoMetadata] = useState<DemoMetadata>();
+
   const mapContextValue = useMemo(() => {
     return { alroLayer, alrosLayer, baseLayer, layers, map, routeLayer };
   }, []);
@@ -327,19 +329,29 @@ function App() {
   const alroContextValue = useMemo(() => {
     return {
       alros,
+      demoMetadata,
       examples: alroExamples,
       isLoading,
       isSm,
       selectedAlro,
       selectedExample: selectedExample,
       setAlros,
+      setDemoMetadata,
       setLoading,
       setSelectedAlro,
       setSelectedExample,
       setSm,
       url,
     };
-  }, [alros, isLoading, isSm, selectedAlro, selectedExample, url]);
+  }, [
+    alros,
+    demoMetadata,
+    isLoading,
+    isSm,
+    selectedAlro,
+    selectedExample,
+    url,
+  ]);
 
   useEffect(() => {
     // sm	640px	@media (min-width: 640px) { ... }
@@ -364,7 +376,7 @@ function App() {
         <MapContext.Provider value={mapContextValue}>
           <Map className="z-0 size-full" />
           {/* <AlroExampleLayer /> */}
-          <RouteLayer />
+          <DisruptedRouteLayer />
           <AlrosLayer />
           <AlroLayer />
 
@@ -381,6 +393,7 @@ function App() {
               >
                 {isSm && (
                   <Button
+                    className="!h-4"
                     onClick={() => {
                       setToggle(!isToggle);
                     }}

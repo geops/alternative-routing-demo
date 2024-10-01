@@ -5,10 +5,10 @@ export const FIT_OPTIONS = {
 
 export const FIT_OPTIONS_SM = {
   duration: 500,
-  padding: [220, 20, 220, 20],
+  padding: [220, 20, 280, 20],
 };
 
-export const EMPTY_FEATURE_COLLECTION: GeoJSON.GeoJSON = {
+export const EMPTY_FEATURE_COLLECTION: GeoJSON.FeatureCollection = {
   features: [],
   type: "FeatureCollection",
 };
@@ -19,6 +19,7 @@ export const colorsByCategory: { [key: string]: string } = {
   "Bus Flixbus": "#9ccc65",
   default: "black",
   ECE: "#f44336",
+  IC: "#9c27b0",
   ICE: "#9c27b0",
   R: "#f44336",
   RB: "#f44336",
@@ -29,12 +30,13 @@ export const imagesByCategory: { [key: string]: string } = {
   BUS: "Nr.5_3_030-1_v1.png",
   "BUS EV": "Nr.2_3_002-1_v1.png",
   "Bus Flixbus": "Nr.5_3_030-1_v1.png",
-  default: "Nr.5_3_030-1_v1.png",
-  ECE: "3000_Zug_l.png",
-  ICE: "3000_Zug_l.png",
-  R: "3000_Zug_l.png",
-  RB: "3000_Zug_l.png",
-  RE: "3000_Zug_l.png",
+  default: "Nr.1_3_001-1_v1.png",
+  ECE: "Nr.1_3_001-1_v1.png",
+  IC: "Nr.1_3_001-1_v1.png",
+  ICE: "Nr.1_3_001-1_v1.png",
+  R: "Nr.1_3_001-1_v1.png",
+  RB: "Nr.1_3_001-1_v1.png",
+  RE: "Nr.1_3_001-1_v1.png",
   S: "Nr.3_3_010-1_v1.png",
 };
 

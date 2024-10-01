@@ -24,6 +24,7 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
             return uuid === value;
           });
           if (found) {
+            console.log("found", value);
             clearTimeout(timeout);
             setLoading(true);
             setSelectedAlro();
