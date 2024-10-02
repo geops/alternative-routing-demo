@@ -2351,7 +2351,8 @@ export interface operations {
           | "66619d28-f0e8-43ef-8bdb-25d709405c7b"
           | "68dbf5b1-cd04-4e31-845a-1e9dd60cbf61"
           | "9631c8a2-77e6-49a8-82cf-62a76f28ba06"
-          | "2fb895df-2d9e-4b45-ba30-c236e5f72ce7"
+          | "2fb895df-2d9e-4b45-ba30-c236e5f72ce7_1"
+          | "2fb895df-2d9e-4b45-ba30-c236e5f72ce7_2"
           | "0ef83988-372c-4633-867d-32930986ebde"
           | "09fd98c7-b64f-4bd9-90e1-5f418c0a28dd";
       };
