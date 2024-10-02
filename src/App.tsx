@@ -308,6 +308,18 @@ const alroExamples: AlroExample[] = [
     name: "München -> Oberstdorf",
     uuid: "9631c8a2-77e6-49a8-82cf-62a76f28ba06",
   },
+  {
+    name: "Dachau -> Petershausen",
+    uuid: "2fb895df-2d9e-4b45-ba30-c236e5f72ce7",
+  },
+  {
+    name: "Triesdorf -> Nürnberg Hbf",
+    uuid: "0ef83988-372c-4633-867d-32930986ebde",
+  },
+  {
+    name: "Ulm Hbf -> Günzburg",
+    uuid: "09fd98c7-b64f-4bd9-90e1-5f418c0a28dd",
+  },
 ];
 
 function App() {
