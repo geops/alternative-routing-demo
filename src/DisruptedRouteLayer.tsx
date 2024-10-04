@@ -21,7 +21,11 @@ import useMapContext from "./hooks/useMapContext";
 // });
 
 function DisruptedRouteLayer() {
-  const { alros, demoMetadata, isSm } = useAlroContext();
+  const {
+    //alros,
+    demoMetadata,
+    isSm,
+  } = useAlroContext();
   const { map, routeLayer } = useMapContext();
 
   useEffect(() => {
@@ -43,11 +47,13 @@ function DisruptedRouteLayer() {
       ROUTE_LAYER_SOURCE_ID,
     ) as GeoJSONSource;
 
-    if (!map || !alros?.length) {
+    if (!map) {
       return;
     }
     const featureCollection = demoMetadata?.disrupted_geom;
-    console.log(featureCollection);
+    // if (!alros?.length) {
+    //   return;
+    // }
     // routingApi
     //   .route(
     //     {
@@ -89,7 +95,7 @@ function DisruptedRouteLayer() {
     };
   }, [
     map,
-    alros,
+    // alros,
     routeLayer?.maplibreLayer?.mapLibreMap,
     routeLayer,
     demoMetadata?.disrupted_geom,
