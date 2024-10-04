@@ -60,7 +60,7 @@ function Alro({
           <p className="font-bold">
             {texts.map((text, index) => {
               return (
-                <Fragment key={text}>
+                <Fragment>
                   {text} {index !== texts.length - 1 ? <br></br> : null}
                 </Fragment>
               );
