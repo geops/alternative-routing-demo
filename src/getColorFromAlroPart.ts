@@ -9,7 +9,7 @@ function getColorFromObject(obj?: {
   const color =
     (category && colorsByCategory[category]) ||
     (line && colorsByCategory[line]) ||
-    "#fce3b4";
+    colorsByCategory["default"];
   return color;
 }
 
