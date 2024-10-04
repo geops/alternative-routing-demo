@@ -2,6 +2,12 @@
 
 This is a demo of how to use the alternative routing API.
 
+It uses a set of demo data stored in this repository.
+To get new data, get the zip file at https://dalro.geops.io/api/alternatives/examples/zip?format=demo ,
+Extract the files in the `public/api/alternatives/examples` folder.
+Then update the list in the `alroExamples` variable in  `src/App.tsx` file.
+
+
 ## Get your geops API key
 
 3 psossibilities:

@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 
 import AlroPartsSchema from "./AlroPartsSchema";
+import getColorFromAlroPart from "./getColorFromAlroPart";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
 import { AnnotatedAlternativeRoutes } from "./types";
@@ -18,7 +19,17 @@ function Alro({
   const minutes = Math.floor(((estimatedTravelTime || 0) % 3600) / 60);
   const texts = alternativeRouteParts.map((part) => {
     // console.log(part.replacementTransports[0].line?.category);
-    return `${part.replacementTransports[0].line?.category || ""} ${part.from.name} – ${part.to.name}`;
+    return (
+      <>
+        <span style={{ color: getColorFromAlroPart(part) }}>
+          {part.replacementTransports[0].line?.category || ""}{" "}
+          {part.replacementTransports[0].line?.line || ""}{" "}
+        </span>
+        <span>
+          {part.from.name} – {part.to.name}
+        </span>
+      </>
+    );
   });
   const everyHours = Math.floor((alro.headway || 0) / 3600);
   const everyMinutes = Math.floor(((alro.headway || 0) % 3600) / 60);
