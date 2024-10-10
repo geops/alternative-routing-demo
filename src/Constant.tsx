@@ -28,6 +28,7 @@ export const colorsByCategory: { [key: string]: string } = {
 };
 export const imagesByCategory: { [key: string]: string } = {
   BUS: "Nr.5_3_030-1_v1.png",
+  bus: "Nr.5_3_030-1_v1.png",
   "BUS EV": "Nr.2_3_002-1_v1.png",
   "Bus Flixbus": "Nr.5_3_030-1_v1.png",
   default: "Nr.5_3_030-1_v1.png",
@@ -35,6 +36,7 @@ export const imagesByCategory: { [key: string]: string } = {
   IC: "Nr.1_3_001-1_v1.png",
   ICE: "Nr.1_3_001-1_v1.png",
   R: "Nr.1_3_001-1_v1.png",
+  rail: "Nr.1_3_001-1_v1.png",
   RB: "Nr.1_3_001-1_v1.png",
   RE: "Nr.1_3_001-1_v1.png",
   S: "Nr.3_3_010-1_v1.png",

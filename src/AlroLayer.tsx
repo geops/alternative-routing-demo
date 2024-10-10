@@ -8,6 +8,7 @@ import {
   STATIONS_HIGHLIGHT_LAYER_ID,
 } from "./Constant";
 import { getColorFromFeature } from "./getColorFromAlroPart";
+import { getIconNameFromFeature } from "./getIconName";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
 
@@ -43,10 +44,9 @@ function AlroLayer() {
     if (sourceGeojson && featureCollection?.features?.length) {
       featureCollection.features.forEach((feature: GeoJSONFeature) => {
         if (feature.properties) {
-          const { category, line } = feature.properties;
           // @ts-expect-error - bad type def
           feature.properties.color = getColorFromFeature(feature);
-          feature.properties.icon = category || line;
+          feature.properties.icon = getIconNameFromFeature(feature);
         }
       });
       sourceGeojson.setData(featureCollection as GeoJSON.GeoJSON);

@@ -1,7 +1,7 @@
 import { MouseEvent as ReactMouseEvent } from "react";
 
-import { imagesByCategory } from "./Constant";
 import getColorFromAlroPart from "./getColorFromAlroPart";
+import { addImageFromAlroPart } from "./getIconName";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
 import { AlternativeRoutePart, AnnotatedAlternativeRoutes } from "./types";
@@ -38,17 +38,7 @@ function AlroPartsSchema({ alro }: { alro: AnnotatedAlternativeRoutes }) {
         const percent = (time * 100) / totalTimeIntravel;
         const text = `${category || ""} ${line || ""}`;
 
-        const mbMap = baseLayer?.mapLibreMap;
-        const icon = category || line;
-        if (icon && mbMap && !mbMap.getImage(icon)) {
-          const img = document.createElement("img");
-          img.src = "/images/io/" + imagesByCategory[icon];
-          img.onload = () => {
-            if (!mbMap.getImage(icon)) {
-              mbMap.addImage(icon, img);
-            }
-          };
-        }
+        addImageFromAlroPart(part, baseLayer?.mapLibreMap);
 
         return (
           <Button
