@@ -12,13 +12,19 @@ import { AlternativeRoutePart } from "./types";
 export function getIconNameFromFeature(feature: GeoJSONFeature) {
   const { category, line, mot } = feature?.properties || {};
   let icon = category || line;
-  const imgSrc = imagesByCategory[icon];
-  if (!imgSrc) {
+  let imgSrc = imagesByCategory[icon];
+  if (!imgSrc && mot) {
     icon = mot;
   }
-  console.log(icon);
+
+  imgSrc = imagesByCategory[icon];
+
+  if (!imgSrc) {
+    icon = "default";
+  }
   return icon;
 }
+
 /**
  * Get th icon name of the alroPart.
  *
@@ -26,15 +32,27 @@ export function getIconNameFromFeature(feature: GeoJSONFeature) {
  * @param map
  */
 function getIconNameFromAlroPart(alroPart: AlternativeRoutePart) {
-  const { type } = alroPart?.replacementTransports?.[0] || {};
+  // @ts-expect-error - mot doesn't exist yet
+  const { mot, type } = alroPart?.replacementTransports?.[0] || {};
   const { category, line } = alroPart?.replacementTransports?.[0]?.line || {};
   let icon = category || line;
   // @ts-expect-error - bad types
-  const imgSrc = imagesByCategory[icon];
-  console.log("icon", icon, imgSrc, type);
-  if (!imgSrc) {
+  let imgSrc = imagesByCategory[icon];
+  if (!imgSrc && type) {
     icon = type.toLowerCase();
   }
+
+  // @ts-expect-error - bad types
+  imgSrc = imagesByCategory[icon];
+
+  if (!imgSrc && mot) {
+    icon = mot;
+  }
+
+  if (!imgSrc) {
+    icon = "default";
+  }
+
   return icon;
 }
 
@@ -44,10 +62,10 @@ function getIconNameFromAlroPart(alroPart: AlternativeRoutePart) {
  * @param alroPart
  * @param map
  */
-export const addImageFromAlroPart = (
+export function addImageFromAlroPart(
   alroPart: AlternativeRoutePart,
   mbMap?: maplibregl.Map,
-) => {
+) {
   if (!mbMap) {
     return;
   }
@@ -63,6 +81,6 @@ export const addImageFromAlroPart = (
       }
     };
   }
-};
+}
 
 export default getIconNameFromAlroPart;
