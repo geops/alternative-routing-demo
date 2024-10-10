@@ -46,7 +46,7 @@ export const imagesByCategory: { [key: string]: string } = {
 };
 
 /** This corresponding object has been given by Alex in https://jira.geops.com/browse/DBALTRT-37 */
-export const typeToMot = {
+export const typeToMot: { [key: string]: string } = {
   BUS: "bus",
   CITY_TRAIN: "rail",
   FERRY: "ferry",

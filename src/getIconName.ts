@@ -1,6 +1,6 @@
 import { GeoJSONFeature } from "ol/format/GeoJSON";
 
-import { imagesByCategory } from "./Constant";
+import { imagesByCategory, typeToMot } from "./Constant";
 import { AlternativeRoutePart } from "./types";
 
 /**
@@ -39,7 +39,7 @@ function getIconNameFromAlroPart(alroPart: AlternativeRoutePart) {
   // @ts-expect-error - bad types
   let imgSrc = imagesByCategory[icon];
   if (!imgSrc && type) {
-    icon = type.toLowerCase();
+    icon = typeToMot[type];
   }
 
   // @ts-expect-error - bad types
