@@ -33,6 +33,7 @@ export const imagesByCategory: { [key: string]: string } = {
   "Bus Flixbus": "Nr.5_3_030-1_v1.png",
   default: "Nr.5_3_030-1_v1.png",
   ECE: "Nr.1_3_001-1_v1.png",
+  ferry: "3004_Schiff_r_v1.png",
   IC: "Nr.1_3_001-1_v1.png",
   ICE: "Nr.1_3_001-1_v1.png",
   R: "Nr.1_3_001-1_v1.png",
@@ -40,6 +41,21 @@ export const imagesByCategory: { [key: string]: string } = {
   RB: "Nr.1_3_001-1_v1.png",
   RE: "Nr.1_3_001-1_v1.png",
   S: "Nr.3_3_010-1_v1.png",
+  subway: "Nr.4_3_020-1_v1.png",
+  tram: "Nr.6_3_040-1_v1.png",
+};
+
+/** This corresponding object has been given by Alex in https://jira.geops.com/browse/DBALTRT-37 */
+export const typeToMot = {
+  BUS: "bus",
+  CITY_TRAIN: "rail",
+  FERRY: "ferry",
+  HIGH_SPEED_TRAIN: "rail",
+  INTER_REGIONAL_TRAIN: "rail",
+  INTERCITY_TRAIN: "rail",
+  REGIONAL_TRAIN: "rail",
+  SUBWAY: "subway",
+  TRAM: "tram",
 };
 
 export const BEFORE_ID = "placeName_town_bg";
