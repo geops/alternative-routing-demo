@@ -12,7 +12,7 @@ Then update the list in the `alroExamples` variable in  `src/App.tsx` file.
 
 ## Get your geops API key
 
-3 psossibilities:
+3 possibilities:
 
 - Use the official one, you can find it in the corresponding vercel project
 - Get your own API key on [developer.geops.io](https://developer.geops.io/), APIs needed: Routing, Stops, Maps.
