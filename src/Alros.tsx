@@ -1,45 +1,9 @@
-import { useEffect } from "react";
-
 import Alro from "./Alro";
 import useAlroContext from "./hooks/useAlroContext";
-import { AlternativeRoutesResponse, AnnotatedAlternativeRoutes } from "./types";
+import { AnnotatedAlternativeRoutes } from "./types";
 
 function Alros() {
-  const {
-    alros,
-    selectedAlro,
-    selectedExample,
-    setAlros,
-    setDemoMetadata,
-    url,
-  } = useAlroContext();
-
-  useEffect(() => {
-    const uuid = selectedExample?.uuid;
-    const abortController = new AbortController();
-
-    if (!uuid || !selectedExample) {
-      return;
-    }
-
-    fetch(
-      (url || "") +
-        "api/alternatives/examples/" +
-        selectedExample.uuid +
-        "_demo.json?format=json",
-      { signal: abortController.signal },
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((data: AlternativeRoutesResponse) => {
-        const newAlros = data?.annotatedAlternativeRoutes || [];
-        setAlros(newAlros);
-        // ignore deprecated
-        // setDemoMetadata(data?.demo_metadata);
-      });
-    return () => {};
-  }, [selectedExample, setAlros, setDemoMetadata, url]);
+  const { alros, selectedAlro } = useAlroContext();
 
   console.log("Rerendering Alros with alros:", alros);
   return (

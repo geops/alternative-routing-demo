@@ -1,3 +1,4 @@
+import * as Headless from "@headlessui/react";
 import { MaplibreLayer, MaplibreStyleLayer } from "mobility-toolbox-js/ol";
 import { Map as OlMap, View } from "ol";
 import { useEffect, useMemo, useState } from "react";
@@ -435,6 +436,23 @@ function App() {
           <div className="absolute left-0 top-0 z-10 flex max-h-full w-full flex-col justify-between gap-4 sm:w-2/5  sm:p-4 xl:w-[500px]">
             <div className="w-full rounded border bg-white p-4">
               <AlroExamplesField />
+              <div> or</div>
+              <Headless.Textarea
+                className="size-full h-[100px] resize flex-col gap-2 rounded border px-2"
+                onChange={(evt) => {
+                  const json = evt.target.value;
+                  try {
+                    const parsed = JSON.parse(
+                      json,
+                    ) as AlternativeRoutesResponse;
+                    setAlros(parsed.annotatedAlternativeRoutes);
+                    console.log("Parsed JSON:", parsed);
+                  } catch (error) {
+                    console.error("Invalid JSON:", error);
+                  }
+                }}
+                placeholder="Paste Alternative Routes JSON here"
+              ></Headless.Textarea>
             </div>
             {!!alros?.length && (
               <div
@@ -491,21 +509,6 @@ function App() {
                 </div>
               </div>
             )}
-          </div>
-          <div className="absolute right-24 top-4 z-10 flex  resize flex-col gap-2 rounded border">
-            <textarea
-              className="size-full p-4"
-              onChange={(evt) => {
-                const json = evt.target.value;
-                try {
-                  const parsed = JSON.parse(json) as AlternativeRoutesResponse;
-                  setAlros(parsed.annotatedAlternativeRoutes);
-                  console.log("Parsed JSON:", parsed);
-                } catch (error) {
-                  console.error("Invalid JSON:", error);
-                }
-              }}
-            ></textarea>
           </div>
         </MapContext.Provider>
       </AlroContext.Provider>

@@ -817,11 +817,6 @@ video {
   height: 1.1875rem;
 }
 
-.size-\[600px\] {
-  width: 600px;
-  height: 600px;
-}
-
 .size-\[max\(100\%\2c 2\.75rem\)\] {
   width: max(100%,2.75rem);
   height: max(100%,2.75rem);
@@ -1004,6 +999,10 @@ video {
 
 .resize-y {
   resize: vertical;
+}
+
+.resize {
+  resize: both;
 }
 
 .scroll-py-1 {

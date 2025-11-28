@@ -2,6 +2,7 @@ import { MouseEvent as ReactMouseEvent } from "react";
 
 import getColorFromAlroPart from "./getColorFromAlroPart";
 import { addImageFromAlroPart } from "./getIconName";
+import getReplacementTransportsAsText from "./getReplacementTransportsAsText";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
 import { AlternativeRoutePart, AnnotatedAlternativeRoutes } from "./types";
@@ -62,10 +63,14 @@ function AlroPartsSchema({ alro }: { alro: AnnotatedAlternativeRoutes }) {
               color,
               width: `${percent}%`,
             }}
-            title={`${text || ""}`}
+            title={
+              getReplacementTransportsAsText(part.replacementTransports) ||
+              `${text || ""}`
+            }
           >
             <div className="overflow-hidden text-ellipsis text-nowrap">
-              {text}
+              {getReplacementTransportsAsText(part.replacementTransports) ||
+                `${text || ""}`}
             </div>
           </Button>
         );
