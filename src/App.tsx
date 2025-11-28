@@ -1,4 +1,5 @@
 import * as Headless from "@headlessui/react";
+import clsx from "clsx";
 import { MaplibreLayer, MaplibreStyleLayer } from "mobility-toolbox-js/ol";
 import { Map as OlMap, View } from "ol";
 import { useEffect, useMemo, useState } from "react";
@@ -436,9 +437,11 @@ function App() {
           <div className="absolute left-0 top-0 z-10 flex max-h-full w-full flex-col justify-between gap-4 sm:w-2/5  sm:p-4 xl:w-[500px]">
             <div className="w-full rounded border bg-white p-4">
               <AlroExamplesField />
-              <div> or</div>
+              <div className="my-2 text-xs font-light"> or</div>
               <Headless.Textarea
-                className="size-full h-[100px] resize flex-col gap-2 rounded border px-2"
+                className={clsx(
+                  "size-full h-[100px] resize flex-col gap-2 rounded-[calc(theme(borderRadius.lg)-1px)] border px-2 text-base/6 text-zinc-500 shadow sm:text-sm/6",
+                )}
                 onChange={(evt) => {
                   const json = evt.target.value;
                   try {

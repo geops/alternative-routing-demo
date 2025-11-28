@@ -625,10 +625,6 @@ video {
   right: 0.5rem;
 }
 
-.right-24 {
-  right: 6rem;
-}
-
 .right-4 {
   right: 1rem;
 }
@@ -853,6 +849,10 @@ video {
 
 .h-8 {
   height: 2rem;
+}
+
+.h-\[100px\] {
+  height: 100px;
 }
 
 .h-full {
@@ -1213,6 +1213,10 @@ video {
 
 .rounded-\[20\%\] {
   border-radius: 20%;
+}
+
+.rounded-\[calc\(theme\(borderRadius\.lg\)-1px\)\] {
+  border-radius: calc(0.5rem - 1px);
 }
 
 .rounded-full {
