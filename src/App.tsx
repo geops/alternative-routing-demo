@@ -22,7 +22,11 @@ import { AlroContext, AlroExample } from "./hooks/useAlroContext";
 import { MapContext } from "./hooks/useMapContext";
 import Loading from "./Loading";
 import Map from "./Map";
-import { AnnotatedAlternativeRoutes, DemoMetadata } from "./types";
+import {
+  AlternativeRoutesResponse,
+  AnnotatedAlternativeRoutes,
+  DemoMetadata,
+} from "./types";
 import { Button } from "./ui/button";
 
 const map = new OlMap({
@@ -386,6 +390,38 @@ function App() {
       resizeObserver.disconnect();
     };
   }, [isSm]);
+
+  // load example data when example is changed
+  useEffect(() => {
+    const uuid = selectedExample?.uuid;
+    const abortController = new AbortController();
+
+    if (!uuid || !selectedExample) {
+      return;
+    }
+
+    fetch(
+      (url || "") +
+        "api/alternatives/examples/" +
+        selectedExample.uuid +
+        "_demo.json?format=json",
+      { signal: abortController.signal },
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data: AlternativeRoutesResponse) => {
+        const newAlros = data?.annotatedAlternativeRoutes || [];
+        setAlros(newAlros);
+        // ignore deprecated
+        // setDemoMetadata(data?.demo_metadata);
+      });
+    return () => {
+      abortController.abort();
+      setAlros([]);
+    };
+  }, [selectedExample, setAlros, url]);
+
   return (
     <>
       <AlroContext.Provider value={alroContextValue}>
@@ -400,7 +436,7 @@ function App() {
             <div className="w-full rounded border bg-white p-4">
               <AlroExamplesField />
             </div>
-            {selectedExample && (
+            {!!alros?.length && (
               <div
                 className={
                   "fixed bottom-0 flex h-64 w-full flex-col gap-2 overflow-hidden rounded border bg-white p-4 sm:relative sm:h-full" +
@@ -455,6 +491,21 @@ function App() {
                 </div>
               </div>
             )}
+          </div>
+          <div className="absolute right-24 top-4 z-10 flex  resize flex-col gap-2 rounded border">
+            <textarea
+              className="size-full p-4"
+              onChange={(evt) => {
+                const json = evt.target.value;
+                try {
+                  const parsed = JSON.parse(json) as AlternativeRoutesResponse;
+                  setAlros(parsed.annotatedAlternativeRoutes);
+                  console.log("Parsed JSON:", parsed);
+                } catch (error) {
+                  console.error("Invalid JSON:", error);
+                }
+              }}
+            ></textarea>
           </div>
         </MapContext.Provider>
       </AlroContext.Provider>

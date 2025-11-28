@@ -24,12 +24,14 @@ function AlrosLayer() {
       })
       // @ts-expect-error - bad type definition
       .reduce((acc, response) => {
+        if (!response) {
+          return {};
+        }
         const features = Array.isArray(acc?.features) ? acc.features : [];
         return {
           ...acc,
           features: [
             ...features,
-            // @ts-expect-error - bad type definition
             ...(Array.isArray(response.features) ? response.features : []),
           ],
         };

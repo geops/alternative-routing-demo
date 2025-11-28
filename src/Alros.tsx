@@ -35,14 +35,13 @@ function Alros() {
       .then((data: AlternativeRoutesResponse) => {
         const newAlros = data?.annotatedAlternativeRoutes || [];
         setAlros(newAlros);
-        // @ts-expect-error - ignore deprecated
-        setDemoMetadata(data?.demo_metadata);
+        // ignore deprecated
+        // setDemoMetadata(data?.demo_metadata);
       });
-    return () => {
-      setAlros([]);
-    };
+    return () => {};
   }, [selectedExample, setAlros, setDemoMetadata, url]);
 
+  console.log("Rerendering Alros with alros:", alros);
   return (
     <div className="flex flex-col gap-4">
       {alros?.map((alro: AnnotatedAlternativeRoutes) => {

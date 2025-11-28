@@ -625,6 +625,10 @@ video {
   right: 0.5rem;
 }
 
+.right-24 {
+  right: 6rem;
+}
+
 .right-4 {
   right: 1rem;
 }
@@ -811,6 +815,11 @@ video {
 .size-\[1\.1875rem\] {
   width: 1.1875rem;
   height: 1.1875rem;
+}
+
+.size-\[600px\] {
+  width: 600px;
+  height: 600px;
 }
 
 .size-\[max\(100\%\2c 2\.75rem\)\] {
