@@ -851,8 +851,8 @@ video {
   height: 2rem;
 }
 
-.h-\[100px\] {
-  height: 100px;
+.h-9 {
+  height: 2.25rem;
 }
 
 .h-full {
@@ -1509,6 +1509,11 @@ video {
 .py-0\.5 {
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-2 {

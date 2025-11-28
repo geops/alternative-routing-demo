@@ -440,7 +440,7 @@ function App() {
               <div className="my-2 text-xs font-light"> or</div>
               <Headless.Textarea
                 className={clsx(
-                  "size-full h-[100px] resize flex-col gap-2 rounded-[calc(theme(borderRadius.lg)-1px)] border px-2 text-base/6 text-zinc-500 shadow sm:text-sm/6",
+                  "h-9 w-full resize flex-col gap-2 rounded-[calc(theme(borderRadius.lg)-1px)] border px-2 py-1 text-base/6 text-zinc-500 shadow sm:text-sm/6",
                 )}
                 onChange={(evt) => {
                   const json = evt.target.value;
