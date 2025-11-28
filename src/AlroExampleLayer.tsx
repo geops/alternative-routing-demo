@@ -7,7 +7,7 @@ import randomColor from "randomcolor";
 import { useEffect } from "react";
 
 import { FIT_OPTIONS, FIT_OPTIONS_SM } from "./Constant";
-import useAlroContext from "./hooks/useAlroContext";
+import useAlroContext, { AlroExample } from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
 
 function AlroExampleLayer() {
@@ -15,7 +15,6 @@ function AlroExampleLayer() {
   const { map } = useMapContext();
 
   useEffect(() => {
-    const uuid = selectedExample?.uuid;
     const format = new GeoJSON({
       dataProjection: "EPSG:4326",
       featureProjection: "EPSG:3857",
@@ -31,30 +30,30 @@ function AlroExampleLayer() {
     });
     const abortController = new AbortController();
 
-    if (!uuid || !map || !selectedExample) {
+    if (!map || !selectedExample) {
       return;
     }
-    fetch(
-      url +
-        "/api/alternatives/examples/" +
-        selectedExample.uuid +
-        "?format=geojson",
-      { signal: abortController.signal },
-    )
-      .then((response) => {
-        return response.json();
+
+    const uuid = (selectedExample as AlroExample)?.uuid;
+    if (uuid) {
+      fetch(url + "/api/alternatives/examples/" + uuid + "?format=geojson", {
+        signal: abortController.signal,
       })
-      .then((featureCollection) => {
-        source.clear();
-        if (featureCollection?.features?.length > 0) {
-          source.addFeatures(format.readFeatures(featureCollection));
-          layer.setMap(map);
-          map.getView().cancelAnimations();
-          map.getView().fit(source.getExtent(), {
-            ...(isSm ? FIT_OPTIONS_SM : FIT_OPTIONS),
-          });
-        }
-      });
+        .then((response) => {
+          return response.json();
+        })
+        .then((featureCollection) => {
+          source.clear();
+          if (featureCollection?.features?.length > 0) {
+            source.addFeatures(format.readFeatures(featureCollection));
+            layer.setMap(map);
+            map.getView().cancelAnimations();
+            map.getView().fit(source.getExtent(), {
+              ...(isSm ? FIT_OPTIONS_SM : FIT_OPTIONS),
+            });
+          }
+        });
+    }
     return () => {
       abortController.abort();
       source.clear();

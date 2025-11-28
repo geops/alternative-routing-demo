@@ -1,4 +1,5 @@
-import useAlroContext from "./hooks/useAlroContext";
+import useAlroContext, { AlroExample } from "./hooks/useAlroContext";
+import { AlternativeRoutesResponse } from "./types";
 import { Field, Label } from "./ui/fieldset";
 import { Listbox, ListboxLabel, ListboxOption } from "./ui/listbox";
 
@@ -19,15 +20,12 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
         <h2 className="font-bold">Alternative Routing</h2>
       </Label>
       <Listbox
-        onChange={(value) => {
-          const found = examples.find(({ uuid }) => {
-            return uuid === value;
-          });
-          if (found) {
+        onChange={(value: AlroExample | AlternativeRoutesResponse) => {
+          if (value) {
             clearTimeout(timeout);
             setLoading(true);
             setSelectedAlro();
-            setSelectedExample(found);
+            setSelectedExample(value);
 
             timeout = setTimeout(() => {
               setLoading(false);
@@ -36,11 +34,23 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
         }}
         placeholder="Störung wählen ..."
       >
-        {examples.map(({ name, uuid }) => {
+        {examples.map((example) => {
+          const value = example;
+          let label = (example as AlroExample)?.name;
+          if (!label) {
+            const routeParts =
+              (example as AlternativeRoutesResponse)
+                .annotatedAlternativeRoutes?.[0]?.alternativeRouteParts || [];
+            const firstRoutePart = routeParts[0];
+            const lastRoutePart = routeParts[routeParts.length - 1];
+            if (firstRoutePart && lastRoutePart) {
+              label = firstRoutePart.from.name + " → " + lastRoutePart.to.name;
+            }
+          }
           return (
-            <ListboxOption key={uuid} value={uuid}>
+            <ListboxOption key={label} value={value}>
               <ListboxLabel className="cursor-pointer">
-                <div className="font-bold">{name}</div>
+                <div className="font-bold">{label}</div>
                 <div className="text-xs">
                   Streckenstörung &gt; Reparatur Strecke [38]<br></br>
                   Massive Beeinträchtigung
@@ -50,31 +60,6 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
           );
         })}
       </Listbox>
-      {/* <Select
-        onChange={(evt) => {
-          const found = examples.find(({ uuid }) => {
-            return uuid === evt.target.value;
-          });
-          if (found) {
-            clearTimeout(timeout);
-            setLoading(true);
-
-            timeout = setTimeout(() => {
-              setSelectedExample(found);
-              setLoading(false);
-            }, 4000);
-          }
-        }}
-      >
-        <option value="">Select an example</option>
-        {examples.map(({ name, uuid }) => {
-          return (
-            <option key={uuid} value={uuid}>
-              {name}
-            </option>
-          );
-        })}
-      </Select> */}
     </Field>
   );
 }

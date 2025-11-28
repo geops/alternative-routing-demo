@@ -1,0 +1,80 @@
+{
+  "status": "FOUND_ALTERNATIVES",
+  "annotatedAlternativeRoutes": [
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000010",
+            "name": "Aschaffenburg Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-11-10T03:28:00Z",
+              "end": "2025-11-10T04:24:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLBRB",
+                "line": "58"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000105",
+            "name": "Frankfurt(Main)Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8000105",
+            "name": "Frankfurt(Main)Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-11-10T04:26:00Z",
+              "end": "2025-11-10T06:23:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "222"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000086",
+            "name": "Duisburg Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8000086",
+            "name": "Duisburg Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-11-10T06:26:00Z",
+              "end": "2025-11-10T06:43:00Z",
+              "line": {
+                "administrationID": "800333",
+                "category": "RB",
+                "line": "33"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000098",
+            "name": "Essen Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 11820.0,
+      "headway": null,
+      "begin": "2025-11-10T03:27:00Z",
+      "end": "2025-11-10T06:44:00Z"
+    }
+  ]
+}

@@ -1,7 +1,11 @@
 import { createContext } from "react";
 import { useContext } from "react";
 
-import { AnnotatedAlternativeRoutes, DemoMetadata } from "../types";
+import {
+  AlternativeRoutesResponse,
+  AnnotatedAlternativeRoutes,
+  DemoMetadata,
+} from "../types";
 
 export type AlroExample = {
   name: string;
@@ -11,16 +15,18 @@ export type AlroExample = {
 export type AlroContextType = {
   alros: AnnotatedAlternativeRoutes[];
   demoMetadata?: DemoMetadata;
-  examples: AlroExample[];
+  examples: (AlroExample | AlternativeRoutesResponse)[];
   isLoading: boolean;
   isSm: boolean;
   selectedAlro?: AnnotatedAlternativeRoutes;
-  selectedExample?: AlroExample;
+  selectedExample?: AlroExample | AlternativeRoutesResponse;
   setAlros: (alros: AnnotatedAlternativeRoutes[]) => void;
   setDemoMetadata: (demoMetadata?: DemoMetadata) => void;
   setLoading: (loading: boolean) => void;
   setSelectedAlro: (alro?: AnnotatedAlternativeRoutes) => void;
-  setSelectedExample: (example?: AlroExample) => void;
+  setSelectedExample: (
+    example?: AlroExample | AlternativeRoutesResponse,
+  ) => void;
   url?: string;
 };
 
