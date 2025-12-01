@@ -9,7 +9,7 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
   const { examples, setLoading, setSelectedAlro, setSelectedExample } =
     useAlroContext();
 
-  if (!((examples.length || 0) > 1)) {
+  if (!((examples.length || 0) > 0)) {
     return null;
   }
 
