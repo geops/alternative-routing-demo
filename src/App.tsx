@@ -148,8 +148,7 @@ function App() {
                     const parsed = JSON.parse(
                       json,
                     ) as AlternativeRoutesResponse;
-                    setAlros(parsed.annotatedAlternativeRoutes);
-                    console.log("Parsed JSON:", parsed);
+                    setSelectedExample(parsed);
                   } catch (error) {
                     console.error("Invalid JSON:", error);
                   }
