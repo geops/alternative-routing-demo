@@ -2,6 +2,7 @@ import * as Headless from "@headlessui/react";
 import clsx from "clsx";
 import { useEffect, useMemo, useState } from "react";
 
+import AlroExampleLayer from "./AlroExampleLayer";
 import AlroExamplesField from "./AlroExamplesField";
 import AlroLayer from "./AlroLayer";
 import Alros from "./Alros";
@@ -128,7 +129,7 @@ function App() {
       <AlroContext.Provider value={alroContextValue}>
         <MapContext.Provider value={mapContextValue}>
           <Map className="z-0 size-full" />
-          {/* <AlroExampleLayer /> */}
+          <AlroExampleLayer />
           <DisruptedRouteLayer />
           <AlrosLayer />
           <AlroLayer />
