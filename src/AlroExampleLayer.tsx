@@ -13,6 +13,8 @@ import { AlternativeRoutesResponse } from "./types";
 
 const apiKey = import.meta.env.VITE_API_KEY;
 
+const styleCache: { [key: string]: Style } = {};
+
 function AlroExampleLayer() {
   const { isSm, selectedExample, url } = useAlroContext();
   const { map } = useMapContext();
@@ -25,10 +27,18 @@ function AlroExampleLayer() {
     const source = new VectorSource();
     const layer = new Vector({
       source,
-      style: () => {
-        return new Style({
+      style: (feature) => {
+        const stationFrom = feature.get("station_from")?.id;
+        const stationTo = feature.get("station_to")?.id;
+        const key = "" + stationFrom + "-" + stationTo;
+        if (styleCache[key]) {
+          return styleCache[key];
+        }
+        const style = new Style({
           stroke: new Stroke({ color: randomColor(), width: 5 }),
         });
+        styleCache[key] = style;
+        return style;
       },
     });
     const abortController = new AbortController();

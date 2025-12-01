@@ -5,6 +5,7 @@ import getColorFromAlroPart from "./getColorFromAlroPart";
 import getReplacementTransportsAsText from "./getReplacementTransportsAsText";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
+// import { alroLayer } from "./layers";
 import { AnnotatedAlternativeRoutes } from "./types";
 import { Button } from "./ui/button";
 import zoomOnFeatureCollection from "./zoomOnFeatureCollection";
@@ -54,6 +55,14 @@ function Alro({
             setSelectedAlro();
           } else {
             setSelectedAlro(alro);
+            // console.log("zooming to alro", alro);
+            // const features = alroLayer.getSource().getFeatures();
+            // features.filter((feature) => {
+            //   const stationFrom = feature.get("stationFrom");
+            //   const stationTo = feature.get("stationTo");
+            //   return false;
+            // });
+            // const source
             // @ts-expect-error - ignore deprecated
             zoomOnFeatureCollection(map, alro.geom, isSm);
           }
