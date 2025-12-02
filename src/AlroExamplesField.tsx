@@ -58,24 +58,19 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
               timeIntervalsText = `vom ${begin} bis ${end})`;
             }
 
-            const lineRelations =
+            const linesNames =
               addInfo?.disruption_scenario.lineDisruptions.flatMap(
                 // @ts-expect-error - we know
                 (lineDisruption) => {
                   // @ts-expect-error - we know
                   return lineDisruption.disruptedLines.map((disruptedLine) => {
-                    return disruptedLine.lineRelation;
+                    const relation = disruptedLine.lineRelation;
+                    return relation.category + " " + relation.line;
                   });
                 },
               );
 
-            const lines = [
-              ...new Set( // @ts-expect-error - we know
-                lineRelations.map((relation) => {
-                  return relation.category + " " + relation.line;
-                }),
-              ),
-            ];
+            const lines = [...new Set(linesNames)]; // unique
             affectedLinesText = `Betroffene Linien: ${lines.join(", ")}`;
           }
           return (
