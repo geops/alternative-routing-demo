@@ -40,6 +40,7 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
           let label = (example as AlroExample)?.name;
           let timeIntervalsText;
           let affectedLinesText;
+          // let affectedStopsText;
           if (!label) {
             const addInfo = // @ts-expect-error - we know
               (example as AlternativeRoutesResponse)?.additionalInfo;
@@ -72,6 +73,26 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
 
             const lines = [...new Set(linesNames)]; // unique
             affectedLinesText = `Affected lines: ${lines.join(", ")}`;
+
+            // const stopsNames =
+            //   addInfo?.disruption_scenario.lineDisruptions.flatMap(
+            //     // @ts-expect-error - we know
+            //     (lineDisruption) => {
+            //       return lineDisruption.disruptedLines.flatMap(
+            //         // @ts-expect-error - we know
+            //         (disruptedLine) => {
+            //           const sections = disruptedLine.sections;
+            //           // @ts-expect-error - we know
+            //           return sections.map((section) => {
+            //             return [section.fromEvaNumber, section.toEvaNumber];
+            //           });
+            //         },
+            //       );
+            //     },
+            //   );
+
+            // const stops = [...new Set(stopsNames)]; // unique
+            // affectedStopsText = `Affected stops: ${stops.join(", ")}`;
           }
           return (
             <ListboxOption key={label} value={value}>
@@ -81,6 +102,9 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
                 </div>
                 <div className="text-xs">{timeIntervalsText}</div>
                 <div className="text-xs">{affectedLinesText}</div>
+                {/* <div className="w-full flex-wrap text-xs">
+                  {affectedStopsText}
+                </div> */}
               </ListboxLabel>
             </ListboxOption>
           );
