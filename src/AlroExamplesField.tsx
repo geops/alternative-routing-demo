@@ -33,7 +33,7 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
             }, 2000);
           }
         }}
-        placeholder="Störung wählen ..."
+        placeholder="Choose disruption ..."
       >
         {examples.map((example) => {
           const value = example;

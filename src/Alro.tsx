@@ -43,6 +43,21 @@ function Alro({
         (everyHours ? `${everyHours}h` : "") +
         (everyMinutes ? `${everyMinutes}min` : "")
       : "";
+
+  let affectedStopsText: string | undefined;
+  let nbMMatchedStopsProRoute: string | undefined;
+  let nbRoutes: string | undefined;
+  // @ts-expect-error - we know
+  const addInfo = alro.additionalInfo;
+  if (addInfo) {
+    const coveredStops = addInfo.covered_stops.join(", ");
+    if (coveredStops) {
+      affectedStopsText = `Affected stops: ${coveredStops}`;
+    }
+    nbMMatchedStopsProRoute = `Nb matched stops (pro route): ${addInfo.number_of_matched_stops_per_route}`;
+    nbRoutes = `Nb routes: ${addInfo.number_of_routes}`;
+  }
+
   return (
     <>
       {/* @ts-expect-error - no idea */}
@@ -86,9 +101,16 @@ function Alro({
               .join(", ")}
           </p>
           <p className="text-xs font-normal">
-            Dauer: {hours ? hours + "h " : ""}
+            Duration: {hours ? hours + "h " : ""}
             {minutes ? minutes + "min" : ""}
           </p>
+          {!!affectedStopsText && (
+            <p className="text-xs font-normal">{affectedStopsText}</p>
+          )}
+          {!!nbMMatchedStopsProRoute && (
+            <p className="text-xs font-normal">{nbMMatchedStopsProRoute}</p>
+          )}
+          {!!nbRoutes && <p className="text-xs font-normal">{nbRoutes}</p>}
           <AlroPartsSchema alro={alro}></AlroPartsSchema>
         </div>
       </Button>
