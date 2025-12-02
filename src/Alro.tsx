@@ -35,18 +35,27 @@ function Alro({
       </>
     );
   });
-  const everyHours = Math.floor((alro.headway || 0) / 3600);
-  const everyMinutes = Math.floor(((alro.headway || 0) % 3600) / 60);
-  const everyText =
-    everyHours || everyMinutes
-      ? "every " +
-        (everyHours ? `${everyHours}h` : "") +
-        (everyMinutes ? `${everyMinutes}min` : "")
-      : "";
+  const headwayDetails: string[] =
+    // @ts-expect-error - we know
+    alro.headwayDetails?.map(
+      // @ts-expect-error - we know
+      ({ headway, interval }) => {
+        const everyHours = Math.floor((headway || 0) / 3600);
+        const everyMinutes = Math.floor(((headway || 0) % 3600) / 60);
+        const everyText =
+          everyHours || everyMinutes
+            ? "every " +
+              (everyHours ? `${everyHours}h` : "") +
+              (everyMinutes ? `${everyMinutes}min` : "")
+            : "";
+        return interval + ", " + everyText;
+      },
+    ) || [];
 
   let affectedStopsText: string | undefined;
   let nbMMatchedStopsProRoute: string | undefined;
   let nbRoutes: string | undefined;
+  let priority: string | undefined;
   // @ts-expect-error - we know
   const addInfo = alro.additionalInfo;
   if (addInfo) {
@@ -59,6 +68,9 @@ function Alro({
     }
     if (addInfo.number_of_routes) {
       nbRoutes = `Nr. journey: ${addInfo.number_of_routes}`;
+    }
+    if (addInfo.priority) {
+      priority = `Priority: ${addInfo.priority}`;
     }
   }
 
@@ -97,13 +109,10 @@ function Alro({
               );
             })}
           </p>
-          <p className="text-xs font-normal">
-            {[alro.intervals, everyText]
-              .filter((val) => {
-                return !!val;
-              })
-              .join(", ")}
-          </p>
+
+          {headwayDetails.map((val: string) => {
+            return <p className="text-xs font-normal">{val}</p>;
+          })}
           <p className="text-xs font-normal">
             Duration: {hours ? hours + "h " : ""}
             {minutes ? minutes + "min" : ""}
@@ -115,6 +124,7 @@ function Alro({
             <p className="text-xs font-normal">{nbMMatchedStopsProRoute}</p>
           )}
           {!!nbRoutes && <p className="text-xs font-normal">{nbRoutes}</p>}
+          {!!priority && <p className="text-xs font-normal">{priority}</p>}
           <AlroPartsSchema alro={alro}></AlroPartsSchema>
         </div>
       </Button>
