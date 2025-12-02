@@ -2,10 +2,8 @@ import { GeoJSONSource } from "maplibre-gl";
 // import { RoutingAPI } from "mobility-toolbox-js/ol";
 // import { RoutingResponse } from "mobility-toolbox-js/types";
 import { GeoJSON } from "ol/format";
-import { Vector } from "ol/layer";
 import VectorSource from "ol/source/Vector";
-import { Stroke, Style } from "ol/style";
-import { useEffect } from "react";
+import { memo, useEffect, useState } from "react";
 
 import {
   EMPTY_FEATURE_COLLECTION,
@@ -15,32 +13,51 @@ import {
 } from "./Constant";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
+import useRouting from "./hooks/useRouting";
+import { AlternativeRoutesResponse } from "./types";
 
-// const routingApi = new RoutingAPI({
-//   apiKey: import.meta.env.VITE_API_KEY,
-// });
+const format = new GeoJSON({
+  dataProjection: "EPSG:4326",
+  featureProjection: "EPSG:3857",
+});
 
+/**
+ * This layer display the disrupted route based on the selected example's disruption scenario.
+ */
 function DisruptedRouteLayer() {
-  const {
-    //alros,
-    isSm,
-  } = useAlroContext();
+  const { isSm, selectedExample } = useAlroContext();
   const { map, routeLayer } = useMapContext();
 
+  const [evaNummers, setEvaNummers] = useState<string[] | undefined>();
+  const featureCollection = useRouting(evaNummers);
+
   useEffect(() => {
-    const format = new GeoJSON({
-      dataProjection: "EPSG:4326",
-      featureProjection: "EPSG:3857",
-    });
-    const source = new VectorSource();
-    const layer = new Vector({
-      source,
-      style: () => {
-        return new Style({
-          stroke: new Stroke({ color: "red", width: 15 }),
-        });
-      },
-    });
+    const alroResponse = selectedExample as AlternativeRoutesResponse;
+    if (!alroResponse) {
+      setEvaNummers(undefined);
+      return;
+    }
+    const evaNummersByLine = // @ts-expect-error - bad type definition
+      alroResponse.additionalInfo?.disruption_scenario?.lineDisruptions.map(
+        // @ts-expect-error - bad type definition
+        (lineDisruption) => {
+          // @ts-expect-error - bad type definition
+          return lineDisruption.disruptedLines.flatMap((disruptedLine) => {
+            // @ts-expect-error - bad type definition
+            return disruptedLine.sections.flatMap((section) => {
+              return ["!" + section.fromEvaNumber, "!" + section.toEvaNumber];
+            });
+          });
+        },
+      );
+    if (!evaNummersByLine?.length) {
+      setEvaNummers(undefined);
+      return;
+    }
+    setEvaNummers(evaNummersByLine[0]);
+  }, [selectedExample]);
+
+  useEffect(() => {
     // const abortController = new AbortController();
     const sourceGeojson = routeLayer?.maplibreLayer?.mapLibreMap?.getSource(
       ROUTE_LAYER_SOURCE_ID,
@@ -49,33 +66,12 @@ function DisruptedRouteLayer() {
     if (!map) {
       return;
     }
-    const featureCollection = undefined;
-    // if (!alros?.length) {
-    //   return;
-    // }
-    // routingApi
-    //   .route(
-    //     {
-    //       mot: "rail",
-    //       //  @ts-expect-error - bad type definition
-    //       prefagencies: "db",
-    //       via:
-    //         "!" +
-    //         alros[0].alternativeRouteParts[0].from.evaNumber +
-    //         "|!" +
-    //         alros[0].alternativeRouteParts[
-    //           alros[0].alternativeRouteParts.length - 1
-    //         ].to.evaNumber,
-    //     },
-    //     { signal: abortController.signal },
-    //   )
-    //   .then((featureCollection: RoutingResponse) => {
-    source.clear();
     if (featureCollection) {
-      source.addFeatures(format.readFeatures(featureCollection));
-      // layer.setMap(map);
+      const extent = new VectorSource({
+        features: format.readFeatures(featureCollection),
+      }).getExtent();
       map.getView().cancelAnimations();
-      map.getView().fit(source.getExtent(), {
+      map.getView().fit(extent, {
         ...(isSm ? FIT_OPTIONS_SM : FIT_OPTIONS),
       });
       sourceGeojson?.setData(
@@ -83,23 +79,19 @@ function DisruptedRouteLayer() {
       );
       routeLayer?.setVisible(true);
     }
-    // });
 
     return () => {
-      // abortController.abort();
-      source.clear();
-      layer.setMap(null);
       sourceGeojson?.setData(EMPTY_FEATURE_COLLECTION);
       routeLayer?.setVisible(false);
     };
   }, [
     map,
-    // alros,
     routeLayer?.maplibreLayer?.mapLibreMap,
     routeLayer,
     isSm,
+    featureCollection,
   ]);
   return null;
 }
 
-export default DisruptedRouteLayer;
+export default memo(DisruptedRouteLayer);

@@ -1,5 +1,5 @@
 import { GeoJSONSource } from "maplibre-gl";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 
 import { ALROS_LAYER_SOURCE_ID, EMPTY_FEATURE_COLLECTION } from "./Constant";
 import useAlroContext from "./hooks/useAlroContext";
@@ -73,4 +73,4 @@ function AlrosLayer() {
   return null;
 }
 
-export default AlrosLayer;
+export default memo(AlrosLayer);

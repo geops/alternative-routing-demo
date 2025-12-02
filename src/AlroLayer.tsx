@@ -1,6 +1,6 @@
 import { GeoJSONSource } from "maplibre-gl";
 import { GeoJSONFeature } from "ol/format/GeoJSON";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 
 import {
   ALRO_LAYER_SOURCE_ID,
@@ -99,4 +99,4 @@ function AlroLayer() {
   return null;
 }
 
-export default AlroLayer;
+export default memo(AlroLayer);
