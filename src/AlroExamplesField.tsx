@@ -51,11 +51,11 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
             const begin = getDateString(timeIntervals?.begin);
             const end = getDateString(timeIntervals?.end);
             if (begin == end) {
-              timeIntervalsText = `der ${begin} vom ${getHoursString(
+              timeIntervalsText = `on ${begin} from ${getHoursString(
                 timeIntervals?.begin,
-              )} bis ${getHoursString(timeIntervals?.end)}`;
+              )} to ${getHoursString(timeIntervals?.end)}`;
             } else {
-              timeIntervalsText = `vom ${begin} bis ${end})`;
+              timeIntervalsText = `from ${begin} to ${end})`;
             }
 
             const linesNames =
@@ -71,7 +71,7 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
               );
 
             const lines = [...new Set(linesNames)]; // unique
-            affectedLinesText = `Betroffene Linien: ${lines.join(", ")}`;
+            affectedLinesText = `Affected lines: ${lines.join(", ")}`;
           }
           return (
             <ListboxOption key={label} value={value}>
