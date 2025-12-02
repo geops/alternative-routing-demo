@@ -64,7 +64,7 @@ function Alro({
       affectedStopsText = `Affected stops: ${coveredStops}`;
     }
     if (addInfo.number_of_matched_stops_per_route) {
-      nbMMatchedStopsProRoute = `Nr. covered stoped (pro journey): ${addInfo.number_of_matched_stops_per_route}`;
+      nbMMatchedStopsProRoute = `Nr. covered stops (pro journey): ${addInfo.number_of_matched_stops_per_route}`;
     }
     if (addInfo.number_of_routes) {
       nbRoutes = `Nr. journey: ${addInfo.number_of_routes}`;

@@ -1,6 +1,6 @@
 export const FIT_OPTIONS = {
   duration: 500,
-  padding: [50, 50, 50, 500],
+  padding: [100, 100, 100, 600],
 };
 
 export const FIT_OPTIONS_SM = {

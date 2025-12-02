@@ -1,6 +1,6 @@
 import { GeoJSONSource } from "maplibre-gl";
 import { GeoJSONFeature } from "ol/format/GeoJSON";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import {
   ALRO_LAYER_SOURCE_ID,
@@ -11,10 +11,28 @@ import { getColorFromFeature } from "./getColorFromAlroPart";
 import { getIconNameFromFeature } from "./getIconName";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
+import useRouting from "./hooks/useRouting";
+import zoomOnFeatureCollection from "./zoomOnFeatureCollection";
 
 function AlroLayer() {
   const { isSm, selectedAlro, selectedExample } = useAlroContext();
   const { alroLayer, map } = useMapContext();
+  const [evaNummers, setEvaNummers] = useState<string[] | undefined>();
+  const featureCollection = useRouting(evaNummers);
+
+  useEffect(() => {
+    if (!selectedAlro) {
+      setEvaNummers(undefined);
+      return;
+    }
+
+    const evaNummers = selectedAlro.alternativeRouteParts.flatMap(
+      (routePart) => {
+        return ["!" + routePart.from.evaNumber, "!" + routePart.to.evaNumber];
+      },
+    );
+    setEvaNummers(evaNummers);
+  }, [selectedAlro]);
 
   useEffect(() => {
     if (!selectedAlro || !selectedExample) {
@@ -26,7 +44,7 @@ function AlroLayer() {
       sourceGeojson?.setData(EMPTY_FEATURE_COLLECTION);
       return;
     }
-  }, [selectedAlro, selectedExample, alroLayer]);
+  }, [selectedAlro, selectedExample, alroLayer, map, isSm]);
 
   useEffect(() => {
     const stationIds: string[] = [];
@@ -39,8 +57,7 @@ function AlroLayer() {
       return;
     }
 
-    // @ts-expect-error - bad type definition
-    const { alternativeRouteParts, geom: featureCollection } = selectedAlro;
+    const { alternativeRouteParts } = selectedAlro;
 
     if (sourceGeojson && featureCollection?.features?.length) {
       featureCollection.features.forEach((feature: GeoJSONFeature) => {
@@ -73,10 +90,11 @@ function AlroLayer() {
         ],
       );
       alroLayer?.setVisible(true);
+      zoomOnFeatureCollection(map, featureCollection, isSm);
     } else {
       sourceGeojson?.setData(EMPTY_FEATURE_COLLECTION);
     }
-  }, [alroLayer, isSm, map, selectedAlro]);
+  }, [alroLayer, isSm, map, selectedAlro, featureCollection]);
 
   return null;
 }

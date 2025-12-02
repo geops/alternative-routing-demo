@@ -9,9 +9,6 @@ import { useEffect } from "react";
 import { FIT_OPTIONS, FIT_OPTIONS_SM } from "./Constant";
 import useAlroContext, { AlroExample } from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
-import { AlternativeRoutesResponse } from "./types";
-
-const apiKey = import.meta.env.VITE_API_KEY;
 
 const styleCache: { [key: string]: Style } = {};
 
@@ -66,33 +63,6 @@ function AlroExampleLayer() {
             });
           }
         });
-    } else {
-      const evaNummers = (
-        selectedExample as AlternativeRoutesResponse
-      ).annotatedAlternativeRoutes.flatMap((alro) => {
-        return alro.alternativeRouteParts.flatMap((routePart) => {
-          return ["!" + routePart.from.evaNumber, "!" + routePart.to.evaNumber];
-        });
-      });
-      if (evaNummers.length > 0) {
-        fetch(
-          `https://api.geops.io/routing/v1/?via=${evaNummers.join("|")}&mot=rail&resolve-hops=true&key=${apiKey}`,
-        )
-          .then((response) => {
-            return response.json();
-          })
-          .then((featureCollection) => {
-            source.clear();
-            if (featureCollection?.features?.length > 0) {
-              source.addFeatures(format.readFeatures(featureCollection));
-              layer.setMap(map);
-              map.getView().cancelAnimations();
-              map.getView().fit(source.getExtent(), {
-                ...(isSm ? FIT_OPTIONS_SM : FIT_OPTIONS),
-              });
-            }
-          });
-      }
     }
     return () => {
       abortController.abort();
