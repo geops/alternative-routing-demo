@@ -46,6 +46,7 @@ function AlroPartsSchema({ alro }: { alro: AnnotatedAlternativeRoutes }) {
             className="flex h-8 cursor-pointer items-center justify-center overflow-hidden rounded-md border-4 bg-white font-bold"
             key={part.from.evaNumber}
             onClick={(evt: ReactMouseEvent<HTMLButtonElement>) => {
+              // @ts-expect-error - geom is not used anymore
               const feature = alro?.geom?.features?.[index];
               if (feature) {
                 if (selectedAlro === alro) {

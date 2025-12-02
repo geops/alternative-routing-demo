@@ -20,11 +20,7 @@ import layers, {
 } from "./layers";
 import Loading from "./Loading";
 import Map from "./Map";
-import {
-  AlternativeRoutesResponse,
-  AnnotatedAlternativeRoutes,
-  DemoMetadata,
-} from "./types";
+import { AlternativeRoutesResponse, AnnotatedAlternativeRoutes } from "./types";
 import { Button } from "./ui/button";
 
 function App() {
@@ -39,8 +35,6 @@ function App() {
   const [isLoading, setLoading] = useState<boolean>(false);
   const [alros, setAlros] = useState<AnnotatedAlternativeRoutes[]>([]);
 
-  const [demoMetadata, setDemoMetadata] = useState<DemoMetadata>();
-
   const mapContextValue = useMemo(() => {
     return { alroLayer, alrosLayer, baseLayer, layers, map, routeLayer };
   }, []);
@@ -48,29 +42,19 @@ function App() {
   const alroContextValue = useMemo(() => {
     return {
       alros,
-      demoMetadata,
       examples,
       isLoading,
       isSm,
       selectedAlro,
       selectedExample: selectedExample,
       setAlros,
-      setDemoMetadata,
       setLoading,
       setSelectedAlro,
       setSelectedExample,
       setSm,
       url,
     };
-  }, [
-    alros,
-    demoMetadata,
-    isLoading,
-    isSm,
-    selectedAlro,
-    selectedExample,
-    url,
-  ]);
+  }, [alros, isLoading, isSm, selectedAlro, selectedExample, url]);
 
   useEffect(() => {
     // sm	640px	@media (min-width: 640px) { ... }

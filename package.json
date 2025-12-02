@@ -48,7 +48,7 @@
     "prepare": "husky",
     "preview": "vite preview",
     "tailwindcss": "tailwindcss -i ./src/input.css -o ./public/output.css",
-    "types:backend": "openapi-typescript https://dalro.geops.io/api/openapi.json --output src/types/alro.d.ts"
+    "types:backend": "openapi-typescript https://api.geops.io/alt_routing/v1/docs/openapi.json?key=5cc87b12d7c5370001c1d655762406e85f8842cf8d4087bd9119aa4d --output src/types/alro.d.ts"
   },
   "packageManager": "pnpm@9.11.0+sha256.1c0e33f70e5df9eede84a357bdfa0b1f9dba6e58194628d48a1055756f553754",
   "type": "module"

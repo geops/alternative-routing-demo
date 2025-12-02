@@ -19,10 +19,10 @@ function AlrosLayer() {
     }
 
     const featureCollection = alros
+      // @ts-expect-error - bad type definition
       .map(({ geom }) => {
         return geom;
       })
-      // @ts-expect-error - bad type definition
       .reduce((acc, response) => {
         if (!response) {
           return {};

@@ -39,6 +39,7 @@ function AlroLayer() {
       return;
     }
 
+    // @ts-expect-error - bad type definition
     const { alternativeRouteParts, geom: featureCollection } = selectedAlro;
 
     if (sourceGeojson && featureCollection?.features?.length) {

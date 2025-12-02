@@ -42,11 +42,12 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
           let affectedLinesText;
           // let affectedStopsText;
           if (!label) {
-            const addInfo = // @ts-expect-error - we know
-              (example as AlternativeRoutesResponse)?.additionalInfo;
+            const addInfo = (example as AlternativeRoutesResponse)
+              ?.additionalInfo;
+            // @ts-expect-error - we know
             label = addInfo?.requested_stops.join(" → ");
 
-            const timeIntervals =
+            const timeIntervals = // @ts-expect-error - we know
               addInfo.disruption_scenario.lineDisruptions[0].timeIntervals[0];
 
             const begin = getDateString(timeIntervals?.begin);
@@ -59,7 +60,7 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
               timeIntervalsText = `from ${begin} to ${end})`;
             }
 
-            const linesNames =
+            const linesNames = // @ts-expect-error - we know
               addInfo?.disruption_scenario.lineDisruptions.flatMap(
                 // @ts-expect-error - we know
                 (lineDisruption) => {

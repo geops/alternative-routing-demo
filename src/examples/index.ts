@@ -5,6 +5,7 @@ import ruoying_demo from "./ruoying_demo.json";
 console.log("Loaded ruoying_demo:", ruoying_demo);
 
 const examples: (AlroExample | AlternativeRoutesResponse)[] = [
+  // @ts-expect-error - bad type definitinons
   ruoying_demo as AlternativeRoutesResponse,
   // {
   //   name: "München -> Regensburg",

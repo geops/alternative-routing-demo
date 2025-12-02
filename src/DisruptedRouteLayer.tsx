@@ -23,7 +23,6 @@ import useMapContext from "./hooks/useMapContext";
 function DisruptedRouteLayer() {
   const {
     //alros,
-    demoMetadata,
     isSm,
   } = useAlroContext();
   const { map, routeLayer } = useMapContext();
@@ -50,7 +49,7 @@ function DisruptedRouteLayer() {
     if (!map) {
       return;
     }
-    const featureCollection = demoMetadata?.disrupted_geom;
+    const featureCollection = undefined;
     // if (!alros?.length) {
     //   return;
     // }
@@ -98,7 +97,6 @@ function DisruptedRouteLayer() {
     // alros,
     routeLayer?.maplibreLayer?.mapLibreMap,
     routeLayer,
-    demoMetadata?.disrupted_geom,
     isSm,
   ]);
   return null;

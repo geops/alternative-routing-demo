@@ -10,6 +10,4 @@ export type AnnotatedAlternativeRoutes =
 export type AlternativeRoutePart =
   AlroComps["schemas"]["AlternativeRoutes-Output"];
 
-export type DemoMetadata = AlroComps["schemas"]["DemoMetadata"];
-
 export type { AlroComps, AlroPaths };
