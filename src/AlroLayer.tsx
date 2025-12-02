@@ -7,8 +7,10 @@ import {
   EMPTY_FEATURE_COLLECTION,
   STATIONS_HIGHLIGHT_LAYER_ID,
 } from "./Constant";
-import { getColorFromFeature } from "./getColorFromAlroPart";
-import { getIconNameFromFeature } from "./getIconName";
+import getColorFromAlroPart, {
+  getColorFromFeature,
+} from "./getColorFromAlroPart";
+import getIconNameFromAlroPart, { getIconNameFromFeature } from "./getIconName";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
 import useRouting from "./hooks/useRouting";
@@ -62,9 +64,28 @@ function AlroLayer() {
     if (sourceGeojson && featureCollection?.features?.length) {
       featureCollection.features.forEach((feature: GeoJSONFeature) => {
         if (feature.properties) {
-          // @ts-expect-error - bad type def
-          feature.properties.color = getColorFromFeature(feature);
-          feature.properties.icon = getIconNameFromFeature(feature);
+          const alroPart = alternativeRouteParts.find((part) => {
+            return (
+              // @ts-expect-error - we know
+              part.from.name === feature.properties.station_from.name &&
+              // @ts-expect-error - we know
+              part.to.name === feature.properties.station_to.name
+            );
+          });
+          if (alroPart) {
+            feature.properties.color = getColorFromAlroPart(alroPart);
+            feature.properties.icon = getIconNameFromAlroPart(alroPart);
+          } else {
+            // @ts-expect-error - we know
+            feature.properties.color = getColorFromFeature(feature);
+            feature.properties.icon = getIconNameFromFeature(feature);
+          }
+          console.log(
+            "feature",
+            feature.properties.color,
+            feature.properties,
+            evaNummers,
+          );
         }
       });
       sourceGeojson.setData(featureCollection as GeoJSON.GeoJSON);

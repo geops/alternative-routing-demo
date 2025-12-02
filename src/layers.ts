@@ -152,7 +152,7 @@ export const alroLayer = new MaplibreStyleLayer({
     {
       id: ALRO_LAYER_LAYER_ID + "-1",
       paint: {
-        "line-color": "#b4d5f6",
+        "line-color": ["get", "color"],
         "line-width": 2,
       },
       source: ALRO_LAYER_SOURCE_ID,
