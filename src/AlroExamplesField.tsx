@@ -1,3 +1,4 @@
+import getDateString, { getHoursString } from "./getDateString";
 import useAlroContext, { AlroExample } from "./hooks/useAlroContext";
 import { AlternativeRoutesResponse } from "./types";
 import { Field, Label } from "./ui/fieldset";
@@ -37,24 +38,54 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
         {examples.map((example) => {
           const value = example;
           let label = (example as AlroExample)?.name;
+          let timeIntervalsText;
+          let affectedLinesText;
           if (!label) {
-            const routeParts =
-              (example as AlternativeRoutesResponse)
-                .annotatedAlternativeRoutes?.[0]?.alternativeRouteParts || [];
-            const firstRoutePart = routeParts[0];
-            const lastRoutePart = routeParts[routeParts.length - 1];
-            if (firstRoutePart && lastRoutePart) {
-              label = firstRoutePart.from.name + " → " + lastRoutePart.to.name;
+            const addInfo = // @ts-expect-error - we know
+              (example as AlternativeRoutesResponse)?.additionalInfo;
+            label = addInfo?.requested_stops.join(" → ");
+
+            const timeIntervals =
+              addInfo.disruption_scenario.lineDisruptions[0].timeIntervals[0];
+
+            const begin = getDateString(timeIntervals?.begin);
+            const end = getDateString(timeIntervals?.end);
+            if (begin == end) {
+              timeIntervalsText = `der ${begin} vom ${getHoursString(
+                timeIntervals?.begin,
+              )} bis ${getHoursString(timeIntervals?.end)}`;
+            } else {
+              timeIntervalsText = `vom ${begin} bis ${end})`;
             }
+
+            const lineRelations =
+              addInfo?.disruption_scenario.lineDisruptions.flatMap(
+                // @ts-expect-error - we know
+                (lineDisruption) => {
+                  // @ts-expect-error - we know
+                  return lineDisruption.disruptedLines.map((disruptedLine) => {
+                    return disruptedLine.lineRelation;
+                  });
+                },
+              );
+
+            const lines = [
+              ...new Set( // @ts-expect-error - we know
+                lineRelations.map((relation) => {
+                  return relation.category + " " + relation.line;
+                }),
+              ),
+            ];
+            affectedLinesText = `Betroffene Linien: ${lines.join(", ")}`;
           }
           return (
             <ListboxOption key={label} value={value}>
               <ListboxLabel className="cursor-pointer">
-                <div className="font-bold">{label}</div>
-                <div className="text-xs">
-                  Streckenstörung &gt; Reparatur Strecke [38]<br></br>
-                  Massive Beeinträchtigung
+                <div className="overflow-hidden text-ellipsis font-bold">
+                  {label}
                 </div>
+                <div className="text-xs">{timeIntervalsText}</div>
+                <div className="text-xs">{affectedLinesText}</div>
               </ListboxLabel>
             </ListboxOption>
           );

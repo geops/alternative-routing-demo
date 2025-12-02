@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 import useMapContext from "./hooks/useMapContext";
 import { Button } from "./ui/button";
 
-const className =
-  "cursor-pointer w-12 h-12 font-bold !rounded-full bg-white !hover:bg-gray-200";
+const className = "cursor-pointer w-12 h-12 font-bold !rounded-full bg-white "; //!hover:bg-gray-200";
 
 function Map(props: JSX.IntrinsicElements["div"]) {
   const { map } = useMapContext();
