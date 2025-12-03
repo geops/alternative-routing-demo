@@ -2,14 +2,13 @@ import * as Headless from "@headlessui/react";
 import clsx from "clsx";
 import { useEffect, useMemo, useState } from "react";
 
-// import AlroExampleLayer from "./AlroExampleLayer";
-import AlroExamplesField from "./AlroExamplesField";
 import AlroLayer from "./AlroLayer";
 import Alros from "./Alros";
 import AlrosLayer from "./AlrosLayer";
+import DisruptedRoute from "./DisruptedRoute";
 import DisruptedRouteLayer from "./DisruptedRouteLayer";
 import examples from "./examples";
-import { AlroContext, AlroExample } from "./hooks/useAlroContext";
+import { AlroContext } from "./hooks/useAlroContext";
 import { MapContext } from "./hooks/useMapContext";
 import layers, {
   alroLayer,
@@ -26,9 +25,8 @@ import { Button } from "./ui/button";
 function App() {
   const [url] = useState(import.meta.env.VITE_ALRO_API_URL as string);
   const [isToggle, setToggle] = useState<boolean>();
-  const [selectedExample, setSelectedExample] = useState<
-    AlroExample | AlternativeRoutesResponse
-  >();
+  const [selectedExample, setSelectedExample] =
+    useState<AlternativeRoutesResponse>();
   const [isSm, setSm] = useState<boolean>(false);
   const [selectedAlro, setSelectedAlro] =
     useState<AnnotatedAlternativeRoutes>();
@@ -83,23 +81,7 @@ function App() {
     }
     const newAlros = (selectedExample as AlternativeRoutesResponse)
       ?.annotatedAlternativeRoutes;
-    const uuid = (selectedExample as AlroExample)?.uuid;
-    if (uuid) {
-      fetch(
-        (url || "") +
-          "api/alternatives/examples/" +
-          uuid +
-          "_demo.json?format=json",
-        { signal: abortController.signal },
-      )
-        .then((response) => {
-          return response.json();
-        })
-        .then((data: AlternativeRoutesResponse) => {
-          const newAlros = data?.annotatedAlternativeRoutes || [];
-          setAlros(newAlros);
-        });
-    } else if (newAlros) {
+    if (newAlros) {
       setAlros(newAlros);
     }
     return () => {
@@ -118,9 +100,11 @@ function App() {
           <AlroLayer />
 
           <div className="absolute left-0 top-0 z-10 flex max-h-full w-full flex-col justify-between gap-4 sm:w-2/5  sm:p-4 xl:w-[500px]">
-            <div className="w-full rounded border bg-white p-4">
-              <AlroExamplesField />
-              <div className="my-2 text-xs font-light"> or</div>
+            <div className="flex w-full flex-col gap-4 rounded border bg-white p-4">
+              <div>
+                <h1 className="text-xs font-light">DB Challenge</h1>
+                <h2 className="font-bold">Alternative Routing</h2>
+              </div>
               <Headless.Textarea
                 className={clsx(
                   "h-9 w-full resize flex-col gap-2 rounded-[calc(theme(borderRadius.lg)-1px)] border px-2 py-1 text-base/6 text-zinc-500 shadow sm:text-sm/6",
@@ -138,6 +122,13 @@ function App() {
                 }}
                 placeholder="Paste Alternative Routes JSON here"
               ></Headless.Textarea>
+              <Button
+                onClick={() => {
+                  setSelectedExample(examples[0] as AlternativeRoutesResponse);
+                }}
+              >
+                Load demo data
+              </Button>
             </div>
             {!!alros?.length && (
               <div
@@ -189,8 +180,21 @@ function App() {
                 )}
 
                 <div className="overflow-y-auto">
-                  {isLoading && <Loading />}
-                  {!isLoading && <Alros />}
+                  {/* The hidden part gives the correctb space for the fixed part */}
+                  {
+                    <DisruptedRoute className="sticky top-0 z-50 shrink-0 grow-0 bg-white pb-4 shadow" />
+                  }
+                  <div className="flex flex-col gap-4">
+                    {isLoading && <Loading />}
+                    {!isLoading && <Alros />}
+                    {!isLoading && <Alros />}
+                    {!isLoading && <Alros />}
+                    {!isLoading && <Alros />}
+                    {!isLoading && <Alros />}
+                    {!isLoading && <Alros />}
+                    {!isLoading && <Alros />}
+                    {!isLoading && <Alros />}
+                  </div>
                 </div>
               </div>
             )}

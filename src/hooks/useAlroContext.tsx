@@ -6,24 +6,17 @@ import {
   AnnotatedAlternativeRoutes,
 } from "../types";
 
-export type AlroExample = {
-  name: string;
-  uuid: string;
-};
-
 export type AlroContextType = {
   alros: AnnotatedAlternativeRoutes[];
-  examples: (AlroExample | AlternativeRoutesResponse)[];
+  examples: AlternativeRoutesResponse[];
   isLoading: boolean;
   isSm: boolean;
   selectedAlro?: AnnotatedAlternativeRoutes;
-  selectedExample?: AlroExample | AlternativeRoutesResponse;
+  selectedExample?: AlternativeRoutesResponse;
   setAlros: (alros: AnnotatedAlternativeRoutes[]) => void;
   setLoading: (loading: boolean) => void;
   setSelectedAlro: (alro?: AnnotatedAlternativeRoutes) => void;
-  setSelectedExample: (
-    example?: AlroExample | AlternativeRoutesResponse,
-  ) => void;
+  setSelectedExample: (example?: AlternativeRoutesResponse) => void;
   url?: string;
 };
 

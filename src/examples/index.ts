@@ -1,10 +1,9 @@
-import { AlroExample } from "../hooks/useAlroContext";
 import { AlternativeRoutesResponse } from "../types";
 import ruoying_demo from "./ruoying_demo.json";
 
 console.log("Loaded ruoying_demo:", ruoying_demo);
 
-const examples: (AlroExample | AlternativeRoutesResponse)[] = [
+const examples: AlternativeRoutesResponse[] = [
   // @ts-expect-error - bad type definitinons
   ruoying_demo as AlternativeRoutesResponse,
   // {

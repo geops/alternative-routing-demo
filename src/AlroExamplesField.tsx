@@ -1,5 +1,5 @@
 import getDateString, { getHoursString } from "./getDateString";
-import useAlroContext, { AlroExample } from "./hooks/useAlroContext";
+import useAlroContext from "./hooks/useAlroContext";
 import { AlternativeRoutesResponse } from "./types";
 import { Field, Label } from "./ui/fieldset";
 import { Listbox, ListboxLabel, ListboxOption } from "./ui/listbox";
@@ -21,7 +21,7 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
         <h2 className="font-bold">Alternative Routing</h2>
       </Label>
       <Listbox
-        onChange={(value: AlroExample | AlternativeRoutesResponse) => {
+        onChange={(value: AlternativeRoutesResponse) => {
           if (value) {
             clearTimeout(timeout);
             setLoading(true);
@@ -37,13 +37,12 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
       >
         {examples.map((example) => {
           const value = example;
-          let label = (example as AlroExample)?.name;
+          let label;
           let timeIntervalsText;
           let affectedLinesText;
           // let affectedStopsText;
           if (!label) {
-            const addInfo = (example as AlternativeRoutesResponse)
-              ?.additionalInfo;
+            const addInfo = example?.additionalInfo;
             // @ts-expect-error - we know
             label = addInfo?.requested_stops.join(" → ");
 
