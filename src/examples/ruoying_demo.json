@@ -237,41 +237,41 @@
         }
       ],
       "intervals": "Mo 10:11-16:05",
-      "estimatedTravelTime": 4500.0,
+      "estimatedTravelTime": 4500,
       "begin": "2026-02-23T10:11:00+01:00",
       "end": "2026-02-23T16:05:00+01:00",
       "headwayDetails": [
         {
           "interval": "Mo 10:44-15:44",
-          "headway": 3600.0
+          "headway": 3600
         },
         {
           "interval": "Mo 10:47-14:47",
-          "headway": 7200.0
+          "headway": 7200
         },
         {
           "interval": "Mo 12:05-16:05",
-          "headway": 7200.0
+          "headway": 7200
         },
         {
           "interval": "Mo 10:11-10:21",
-          "headway": 600.0
+          "headway": 600
         },
         {
           "interval": "Mo 11:11-11:17",
-          "headway": 360.0
+          "headway": 360
         },
         {
           "interval": "Mo 12:20-13:09",
-          "headway": 2940.0
+          "headway": 2940
         },
         {
           "interval": "Mo 13:16-14:20",
-          "headway": 3840.0
+          "headway": 3840
         },
         {
           "interval": "Mo 15:11-15:16",
-          "headway": 300.0
+          "headway": 300
         }
       ],
       "additionalInfo": {
@@ -306,47 +306,65 @@
                 {
                   "fromEvaNumber": "8004747",
                   "singleDirection": true,
-                  "toEvaNumber": "8004775"
+                  "toEvaNumber": "8004775",
+                  "fromName": "Paindorf",
+                  "toName": "Petershausen(Obb)"
                 },
                 {
                   "fromEvaNumber": "8000678",
                   "singleDirection": true,
-                  "toEvaNumber": "8000183"
+                  "toEvaNumber": "8000183",
+                  "fromName": "Baar-Ebenhausen",
+                  "toName": "Ingolstadt Hbf"
                 },
                 {
                   "fromEvaNumber": "8000261",
                   "singleDirection": true,
-                  "toEvaNumber": "8001354"
+                  "toEvaNumber": "8001354",
+                  "fromName": "München Hbf",
+                  "toName": "Dachau Bahnhof"
                 },
                 {
                   "fromEvaNumber": "8004775",
                   "singleDirection": true,
-                  "toEvaNumber": "8001354"
+                  "toEvaNumber": "8001354",
+                  "fromName": "Petershausen(Obb)",
+                  "toName": "Dachau Bahnhof"
                 },
                 {
                   "fromEvaNumber": "8004781",
                   "singleDirection": true,
-                  "toEvaNumber": "8005008"
+                  "toEvaNumber": "8005008",
+                  "fromName": "Pfaffenhofen(Ilm)",
+                  "toName": "Reichertshausen(Ilm)"
                 },
                 {
                   "fromEvaNumber": "8000678",
                   "singleDirection": true,
-                  "toEvaNumber": "8000256"
+                  "toEvaNumber": "8000256",
+                  "fromName": "Baar-Ebenhausen",
+                  "toName": "Rohrbach(Ilm)"
                 },
                 {
                   "fromEvaNumber": "8003076",
                   "singleDirection": true,
-                  "toEvaNumber": "8000183"
+                  "toEvaNumber": "8000183",
+                  "fromName": "Ingolstadt Nord",
+                  "toName": "Ingolstadt Hbf"
                 },
                 {
                   "fromEvaNumber": "8000256",
                   "singleDirection": true,
-                  "toEvaNumber": "8004781"
+                  "toEvaNumber": "8004781",
+                  "fromName": "Rohrbach(Ilm)",
+                  "toName": "Pfaffenhofen(Ilm)"
                 },
                 {
                   "fromEvaNumber": "8005008",
                   "singleDirection": true,
-                  "toEvaNumber": "8004747"
+                  "toEvaNumber": "8004747",
+                  "fromName": "Reichertshausen(Ilm)",
+                  "toName": "Paindorf"
                 }
               ]
             },
@@ -360,42 +378,58 @@
                 {
                   "fromEvaNumber": "8000498",
                   "singleDirection": true,
-                  "toEvaNumber": "8003256"
+                  "toEvaNumber": "8003256",
+                  "fromName": "Allersberg(Rothsee)",
+                  "toName": "Kinding(Altmühltal)"
                 },
                 {
                   "fromEvaNumber": "8004775",
                   "singleDirection": true,
-                  "toEvaNumber": "8004781"
+                  "toEvaNumber": "8004781",
+                  "fromName": "Petershausen(Obb)",
+                  "toName": "Pfaffenhofen(Ilm)"
                 },
                 {
                   "fromEvaNumber": "8003076",
                   "singleDirection": true,
-                  "toEvaNumber": "8003256"
+                  "toEvaNumber": "8003256",
+                  "fromName": "Ingolstadt Nord",
+                  "toName": "Kinding(Altmühltal)"
                 },
                 {
                   "fromEvaNumber": "8004775",
                   "singleDirection": true,
-                  "toEvaNumber": "8000261"
+                  "toEvaNumber": "8000261",
+                  "fromName": "Petershausen(Obb)",
+                  "toName": "München Hbf"
                 },
                 {
                   "fromEvaNumber": "8000256",
                   "singleDirection": true,
-                  "toEvaNumber": "8000183"
+                  "toEvaNumber": "8000183",
+                  "fromName": "Rohrbach(Ilm)",
+                  "toName": "Ingolstadt Hbf"
                 },
                 {
                   "fromEvaNumber": "8003076",
                   "singleDirection": true,
-                  "toEvaNumber": "8000183"
+                  "toEvaNumber": "8000183",
+                  "fromName": "Ingolstadt Nord",
+                  "toName": "Ingolstadt Hbf"
                 },
                 {
                   "fromEvaNumber": "8000498",
                   "singleDirection": true,
-                  "toEvaNumber": "8000284"
+                  "toEvaNumber": "8000284",
+                  "fromName": "Allersberg(Rothsee)",
+                  "toName": "Nürnberg Hbf"
                 },
                 {
                   "fromEvaNumber": "8000256",
                   "singleDirection": true,
-                  "toEvaNumber": "8004781"
+                  "toEvaNumber": "8004781",
+                  "fromName": "Rohrbach(Ilm)",
+                  "toName": "Pfaffenhofen(Ilm)"
                 }
               ]
             },
@@ -409,7 +443,9 @@
                 {
                   "fromEvaNumber": "8000498",
                   "singleDirection": true,
-                  "toEvaNumber": "8000284"
+                  "toEvaNumber": "8000284",
+                  "fromName": "Allersberg(Rothsee)",
+                  "toName": "Nürnberg Hbf"
                 }
               ]
             }
