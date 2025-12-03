@@ -147,7 +147,6 @@ function App() {
                   />
                 )}
                 <div className="overflow-y-auto">
-                  {/* The hidden part gives the correctb space for the fixed part */}
                   {
                     <DisruptedRoute className="sticky top-0 z-50 shrink-0 grow-0 bg-white pb-4 shadow" />
                   }
