@@ -113,7 +113,7 @@ function Alro({
           {headwayDetails.map((val: string, index: number) => {
             return (
               <p className="text-xs font-normal" key={index + val}>
-                {index > 0 && "Additional: "} {val}
+                {val}
               </p>
             );
           })}
