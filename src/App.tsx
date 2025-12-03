@@ -19,6 +19,7 @@ import layers, {
 } from "./layers";
 import Loading from "./Loading";
 import Map from "./Map";
+import ToggleAlrosButton from "./ToggleAlrosButton";
 import { AlternativeRoutesResponse, AnnotatedAlternativeRoutes } from "./types";
 import { Button } from "./ui/button";
 
@@ -138,47 +139,13 @@ function App() {
                 }
               >
                 {isSm && (
-                  <Button
-                    className="!h-4"
+                  <ToggleAlrosButton
+                    isToggle={isToggle}
                     onClick={() => {
                       setToggle(!isToggle);
                     }}
-                    plain
-                  >
-                    {!isToggle ? (
-                      <svg
-                        className="size-6"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={1.5}
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    ) : (
-                      <svg
-                        className="size-6"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={1.5}
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    )}
-                  </Button>
+                  />
                 )}
-
                 <div className="overflow-y-auto">
                   {/* The hidden part gives the correctb space for the fixed part */}
                   {
@@ -186,13 +153,6 @@ function App() {
                   }
                   <div className="flex flex-col gap-4">
                     {isLoading && <Loading />}
-                    {!isLoading && <Alros />}
-                    {!isLoading && <Alros />}
-                    {!isLoading && <Alros />}
-                    {!isLoading && <Alros />}
-                    {!isLoading && <Alros />}
-                    {!isLoading && <Alros />}
-                    {!isLoading && <Alros />}
                     {!isLoading && <Alros />}
                   </div>
                 </div>

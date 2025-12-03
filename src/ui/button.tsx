@@ -159,7 +159,7 @@ const styles = {
   ],
 };
 
-type ButtonProps = { children: React.ReactNode; className?: string } & (
+export type ButtonProps = { children: React.ReactNode; className?: string } & (
   | { color?: keyof typeof styles.colors; outline?: never; plain?: never }
   | { color?: never; outline: true; plain?: never }
   | { color?: never; outline?: never; plain: true }
