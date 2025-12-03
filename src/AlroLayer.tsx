@@ -80,12 +80,6 @@ function AlroLayer() {
             feature.properties.color = getColorFromFeature(feature);
             feature.properties.icon = getIconNameFromFeature(feature);
           }
-          console.log(
-            "feature",
-            feature.properties.color,
-            feature.properties,
-            evaNummers,
-          );
         }
       });
       sourceGeojson.setData(featureCollection as GeoJSON.GeoJSON);
