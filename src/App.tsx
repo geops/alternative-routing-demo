@@ -124,6 +124,7 @@ function App() {
                 placeholder="Paste Alternative Routes JSON here"
               ></Headless.Textarea>
               <Button
+                className="cursor-pointer"
                 onClick={() => {
                   setSelectedExample(examples[0] as AlternativeRoutesResponse);
                   document.querySelector("textarea")!.value = JSON.stringify(
