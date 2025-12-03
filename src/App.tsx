@@ -126,6 +126,9 @@ function App() {
               <Button
                 onClick={() => {
                   setSelectedExample(examples[0] as AlternativeRoutesResponse);
+                  document.querySelector("textarea")!.value = JSON.stringify(
+                    examples[0],
+                  );
                 }}
               >
                 Load demo data
