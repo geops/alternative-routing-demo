@@ -110,8 +110,12 @@ function Alro({
             })}
           </p>
 
-          {headwayDetails.map((val: string) => {
-            return <p className="text-xs font-normal">{val}</p>;
+          {headwayDetails.map((val: string, index: number) => {
+            return (
+              <p className="text-xs font-normal" key={index + val}>
+                {index > 0 && "Additional: "} {val}
+              </p>
+            );
           })}
           <p className="text-xs font-normal">
             Duration: {hours ? hours + "h " : ""}
