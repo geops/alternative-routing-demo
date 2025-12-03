@@ -40,25 +40,24 @@ function DisruptedRoute(props: JSX.IntrinsicElements["div"]) {
   const lines = [...new Set(linesNames)].sort(); // unique
   const affectedLinesText = `Affected lines: ${lines.join(", ")}`;
 
-  // @ts-expect-error - we know
-  const stopsNames = addInfo?.disruption_scenario.lineDisruptions.flatMap(
-    // @ts-expect-error - we know
-    (lineDisruption) => {
-      return lineDisruption.disruptedLines.flatMap(
-        // @ts-expect-error - we know
-        (disruptedLine) => {
-          const sections = disruptedLine.sections;
-          // @ts-expect-error - we know
-          return sections.flatMap((section) => {
-            return [section.fromEvaNumber, section.toEvaNumber];
-          });
-        },
-      );
-    },
-  );
+  // const stopsNames = addInfo?.disruption_scenario.lineDisruptions.flatMap(
+  //   // @ts-expect-error - we know
+  //   (lineDisruption) => {
+  //     return lineDisruption.disruptedLines.flatMap(
+  //       // @ts-expect-error - we know
+  //       (disruptedLine) => {
+  //         const sections = disruptedLine.sections;
+  //         // @ts-expect-error - we know
+  //         return sections.flatMap((section) => {
+  //           return [section.fromEvaNumber, section.toEvaNumber];
+  //         });
+  //       },
+  //     );
+  //   },
+  // );
 
-  const stops = [...new Set(stopsNames)].sort(); // unique
-  const affectedStopsText = `Affected stops: ${stops.join(", ")}`;
+  // const stops = [...new Set(stopsNames)].sort(); // unique
+  // const affectedStopsText = `Affected stops: ${stops.join(", ")}`;
 
   // @ts-expect-error - we know
   const requestedStopsText = `Requested stops: ${(addInfo?.requested_stops || []).join(", ")}`;
@@ -68,7 +67,7 @@ function DisruptedRoute(props: JSX.IntrinsicElements["div"]) {
       <div className="text-xs">{timeIntervalsText}</div>
       <div className="text-xs">{requestedStopsText}</div>
       <div className="text-xs">{affectedLinesText}</div>
-      <div className="text-xs">{affectedStopsText}</div>
+      {/* <div className="text-xs">{affectedStopsText}</div> */}
     </div>
   );
 }
