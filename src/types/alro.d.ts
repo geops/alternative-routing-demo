@@ -24,6 +24,51 @@ export interface paths {
     put?: never;
     trace?: never;
   };
+  "/v1/alternatives/by_disruption_communication_id/{disruption_communication_id}": {
+    delete?: never;
+    /**
+     * By Disruption Communication Id
+     * @deprecated
+     * @description Get alternative routes for a specific disruption communication ID
+     *
+     *     This is intended for testing and debugging purposes only. The disruption
+     *     scenario are the corresponing lines with the disruption interval, sections
+     *     to cover are the longest sections list of the corresponing lines.
+     */
+    get: operations["by_disruption_communication_id_v1_alternatives_by_disruption_communication_id__disruption_communication_id__get"];
+    head?: never;
+    options?: never;
+    parameters: {
+      cookie?: never;
+      header?: never;
+      path?: never;
+      query?: never;
+    };
+    patch?: never;
+    post?: never;
+    put?: never;
+    trace?: never;
+  };
+  "/v1/disruptions-metadata": {
+    delete?: never;
+    /**
+     * Disruptions Metadata
+     * @deprecated
+     */
+    get: operations["disruptions_metadata_v1_disruptions_metadata_get"];
+    head?: never;
+    options?: never;
+    parameters: {
+      cookie?: never;
+      header?: never;
+      path?: never;
+      query?: never;
+    };
+    patch?: never;
+    post?: never;
+    put?: never;
+    trace?: never;
+  };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -87,7 +132,7 @@ export interface components {
        * @description Unspecified additional information for debugging. Do not use in production code.
        */
       additionalInfo?: {
-        [key: string]: string;
+        [key: string]: unknown;
       } | null;
       /** Annotatedalternativeroutes */
       annotatedAlternativeRoutes: components["schemas"]["AnnotatedAlternativeRoutes"][];
@@ -99,6 +144,13 @@ export interface components {
      * @description Alternative route collection consisting of one or more legs
      */
     AnnotatedAlternativeRoutes: {
+      /**
+       * Additionalinfo
+       * @description Unspecified additional information for debugging. Do not use in production code.
+       */
+      additionalInfo?: {
+        [key: string]: unknown;
+      } | null;
       /**
        * Alternativerouteparts
        * @description List of alternative routes in the RIS-API format.
@@ -120,10 +172,10 @@ export interface components {
        */
       estimatedTravelTime?: null | number;
       /**
-       * Headway
-       * @description Time between individual connections (this may change to be an averrage or median).
+       * Headwaydetails
+       * @description A list of intervals with corresponding headways.
        */
-      headway?: null | number;
+      headwayDetails?: components["schemas"]["IntervalHeadway"][] | null;
       /**
        * Intervals
        * @description Optional intervals in OSM opening hours format where the alternative is available.
@@ -201,6 +253,24 @@ export interface components {
     HTTPValidationError: {
       /** Detail */
       detail?: components["schemas"]["ValidationError"][];
+    };
+    /**
+     * IntervalHeadway
+     * @description Individual intervals and its corresponding headway
+     */
+    IntervalHeadway: {
+      /**
+       * Headway
+       * @description Time between individual connections.
+       */
+      headway?: null | number;
+      /**
+       * Interval
+       * @description Optional intervals in OSM opening hours format where the alternative is available.
+       *
+       *     Only the weekday and time features of the 'opening hours' specification is used.
+       */
+      interval?: null | string;
     };
     /**
      * LineDisruptions
@@ -406,6 +476,61 @@ export interface operations {
       422: {
         content: {
           "application/json": components["schemas"]["HTTPValidationError"];
+        };
+        headers: {
+          [name: string]: unknown;
+        };
+      };
+    };
+  };
+  by_disruption_communication_id_v1_alternatives_by_disruption_communication_id__disruption_communication_id__get: {
+    parameters: {
+      cookie?: never;
+      header?: never;
+      path: {
+        disruption_communication_id: string;
+      };
+      query?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description Successful Response */
+      200: {
+        content: {
+          "application/json": components["schemas"]["AlternativeRoutesResponse"];
+        };
+        headers: {
+          [name: string]: unknown;
+        };
+      };
+      /** @description Validation Error */
+      422: {
+        content: {
+          "application/json": components["schemas"]["HTTPValidationError"];
+        };
+        headers: {
+          [name: string]: unknown;
+        };
+      };
+    };
+  };
+  disruptions_metadata_v1_disruptions_metadata_get: {
+    parameters: {
+      cookie?: never;
+      header?: never;
+      path?: never;
+      query?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description Successful Response */
+      200: {
+        content: {
+          "application/json": {
+            [key: string]: {
+              [key: string]: unknown;
+            };
+          };
         };
         headers: {
           [name: string]: unknown;

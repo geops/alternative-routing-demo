@@ -2,7 +2,6 @@ import { AlternativeRoutesResponse } from "../types";
 import ruoying_demo from "./ruoying_demo.json";
 
 const examples: AlternativeRoutesResponse[] = [
-  // @ts-expect-error - bad type definitinons
   ruoying_demo as AlternativeRoutesResponse,
   // {
   //   name: "München -> Regensburg",

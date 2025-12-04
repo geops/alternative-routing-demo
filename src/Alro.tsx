@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 
 import AlroPartsSchema from "./AlroPartsSchema";
-import getColorFromAlroPart from "./getColorFromAlroPart";
-import getReplacementTransportsAsText from "./getReplacementTransportsAsText";
+// import getColorFromAlroPart from "./getColorFromAlroPart";
+// import getReplacementTransportsAsText from "./getReplacementTransportsAsText";
 import useAlroContext from "./hooks/useAlroContext";
 import useMapContext from "./hooks/useMapContext";
 // import { alroLayer } from "./layers";
@@ -22,13 +22,13 @@ function Alro({
   const texts = alternativeRouteParts.map((part) => {
     return (
       <>
-        <span
+        {/* <span
           style={{ color: getColorFromAlroPart(part) }}
           title={getReplacementTransportsAsText(part.replacementTransports)}
         >
           {part.replacementTransports[0].line?.category || ""}{" "}
           {part.replacementTransports[0].line?.line || ""}{" "}
-        </span>
+        </span> */}
         <span>
           {part.from.name} – {part.to.name}
         </span>
@@ -36,29 +36,25 @@ function Alro({
     );
   });
   const headwayDetails: string[] =
-    // @ts-expect-error - we know
-    alro.headwayDetails?.map(
-      // @ts-expect-error - we know
-      ({ headway, interval }) => {
-        const everyHours = Math.floor((headway || 0) / 3600);
-        const everyMinutes = Math.floor(((headway || 0) % 3600) / 60);
-        const everyText =
-          everyHours || everyMinutes
-            ? "every " +
-              (everyHours ? `${everyHours}h` : "") +
-              (everyMinutes ? `${everyMinutes}min` : "")
-            : "";
-        return interval + ", " + everyText;
-      },
-    ) || [];
+    alro.headwayDetails?.map(({ headway, interval }) => {
+      const everyHours = Math.floor((headway || 0) / 3600);
+      const everyMinutes = Math.floor(((headway || 0) % 3600) / 60);
+      const everyText =
+        everyHours || everyMinutes
+          ? "every " +
+            (everyHours ? `${everyHours}h` : "") +
+            (everyMinutes ? `${everyMinutes}min` : "")
+          : "";
+      return interval + ", " + everyText;
+    }) || [];
 
   let affectedStopsText: string | undefined;
   let nbMMatchedStopsProRoute: string | undefined;
   let nbRoutes: string | undefined;
   let priority: string | undefined;
-  // @ts-expect-error - we know
   const addInfo = alro.additionalInfo;
   if (addInfo) {
+    // @ts-expect-error - we know
     const coveredStops = addInfo.covered_stops.join(", ");
     if (coveredStops) {
       affectedStopsText = `Affected stops: ${coveredStops}`;

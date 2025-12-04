@@ -8,8 +8,10 @@ function DisruptedRoute(props: JSX.IntrinsicElements["div"]) {
   let timeIntervalsText;
   const addInfo = selectedExample?.additionalInfo;
   const label = [
-    addInfo?.requested_stops[0],
-    addInfo?.requested_stops[addInfo?.requested_stops.length - 1],
+    ((addInfo?.requested_stops as string[])?.[0] as string) || "",
+    ((addInfo?.requested_stops as string[])?.[
+      (addInfo?.requested_stops as string[]).length - 1
+    ] as string) || "",
   ].join(" → ");
 
   const timeIntervals = // @ts-expect-error - we know
@@ -37,8 +39,7 @@ function DisruptedRoute(props: JSX.IntrinsicElements["div"]) {
       },
     );
 
-  const lines = [...new Set(linesNames)].sort(); // unique
-  const affectedLinesText = `Affected lines: ${lines.join(", ")}`;
+  const affectedLines = [...new Set(linesNames)].sort(); // unique
 
   // @ts-expect-error - we know
   const stopsNames = addInfo?.disruption_scenario.lineDisruptions.flatMap(
@@ -57,24 +58,35 @@ function DisruptedRoute(props: JSX.IntrinsicElements["div"]) {
     },
   );
 
-  const stops = [
+  const affectedStops = [
     ...new Set(
       stopsNames.filter((s?: string) => {
         return !!s;
       }),
     ),
   ].sort(); // unique
-  const affectedStopsText = `Affected stops: ${stops.join(", ")}`;
 
-  // @ts-expect-error - we know
-  const requestedStopsText = `Requested stops: ${(addInfo?.requested_stops || []).join(", ")}`;
   return (
     <div {...props}>
       <div className="overflow-hidden text-ellipsis font-bold">{label}</div>
       <div className="text-xs">{timeIntervalsText}</div>
-      <div className="text-xs">{requestedStopsText}</div>
-      <div className="text-xs">{affectedLinesText}</div>
-      {!!stops?.length && <div className="text-xs">{affectedStopsText}</div>}
+      <div className="text-xs">
+        {/* @ts-expect-error - we know */}
+        Requested stops: {addInfo?.requested_stops?.join(", ") || ""}
+      </div>
+      <div className="text-xs">Affected lines: {affectedLines.join(", ")}</div>
+      <div className="text-xs">Affected stops: {affectedStops?.join(", ")}</div>
+      <div className="text-xs">
+        {/* @ts-expect-error - we know */}
+        Transport types : {addInfo?.transport_types?.join(", ") || ""}
+      </div>
+
+      <div className="text-xs">
+        Min Duration : {(addInfo?.min_duration as number) ?? ""}
+      </div>
+      <div className="text-xs">
+        Max Duration : {(addInfo?.max_duration as number) ?? ""}
+      </div>
     </div>
   );
 }
