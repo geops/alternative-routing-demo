@@ -19,7 +19,7 @@ function useRouting(
 
     // Routing logic here
     fetch(
-      `https://api.geops.io/routing/v1/?via=${evaNummers.join("|")}&mot=rail&resolve-hops=true&key=${apiKey}`,
+      `https://api.geops.io/routing/v1/?via=${evaNummers.join("|")}&mot=rail&prefagencies=db&resolve-hops=true&key=${apiKey}`,
       {
         signal: abortController.signal,
       },
