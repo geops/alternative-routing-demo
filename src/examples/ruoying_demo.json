@@ -10,48 +10,28 @@
           },
           "replacementTransports": [
             {
-              "begin": "2026-02-23T09:12:00Z",
-              "end": "2026-02-23T10:25:00Z",
+              "begin": "2025-12-04T12:32:00Z",
+              "end": "2025-12-04T13:38:00Z",
               "line": {
                 "administrationID": "80",
                 "category": "ICE",
-                "line": "880"
+                "line": "536"
               },
               "type": "HIGH_SPEED_TRAIN"
             },
             {
-              "begin": "2026-02-23T10:18:00Z",
-              "end": "2026-02-23T11:33:00Z",
+              "begin": "2025-12-04T12:53:00Z",
+              "end": "2025-12-04T14:02:00Z",
               "line": {
                 "administrationID": "80",
                 "category": "ICE",
-                "line": "1008"
+                "line": "706"
               },
               "type": "HIGH_SPEED_TRAIN"
             },
             {
-              "begin": "2026-02-23T11:06:00Z",
-              "end": "2026-02-23T12:25:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "788"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2026-02-23T12:17:00Z",
-              "end": "2026-02-23T13:33:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "1006"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2026-02-23T13:06:00Z",
-              "end": "2026-02-23T14:25:00Z",
+              "begin": "2025-12-04T13:20:00Z",
+              "end": "2025-12-04T14:31:00Z",
               "line": {
                 "administrationID": "80",
                 "category": "ICE",
@@ -60,98 +40,28 @@
               "type": "HIGH_SPEED_TRAIN"
             },
             {
-              "begin": "2026-02-23T14:17:00Z",
-              "end": "2026-02-23T15:33:00Z",
+              "begin": "2025-12-04T14:17:00Z",
+              "end": "2025-12-04T15:30:00Z",
               "line": {
                 "administrationID": "80",
                 "category": "ICE",
-                "line": "1004"
+                "line": "584"
               },
               "type": "HIGH_SPEED_TRAIN"
             },
             {
-              "begin": "2026-02-23T15:06:00Z",
-              "end": "2026-02-23T16:25:00Z",
+              "begin": "2025-12-04T15:18:00Z",
+              "end": "2025-12-04T16:33:00Z",
               "line": {
                 "administrationID": "80",
                 "category": "ICE",
-                "line": "784"
+                "line": "1204"
               },
               "type": "HIGH_SPEED_TRAIN"
             },
             {
-              "begin": "2026-02-23T09:22:00Z",
-              "end": "2026-02-23T10:33:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "1600"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2026-02-23T09:45:00Z",
-              "end": "2026-02-23T10:57:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "720"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2026-02-23T09:48:00Z",
-              "end": "2026-02-23T11:02:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "508"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2026-02-23T10:12:00Z",
-              "end": "2026-02-23T11:28:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "680"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2026-02-23T10:45:00Z",
-              "end": "2026-02-23T11:57:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "628"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2026-02-23T11:21:00Z",
-              "end": "2026-02-23T12:33:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "1508"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2026-02-23T11:45:00Z",
-              "end": "2026-02-23T12:57:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "626"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2026-02-23T11:48:00Z",
-              "end": "2026-02-23T13:02:00Z",
+              "begin": "2025-12-04T11:54:00Z",
+              "end": "2025-12-04T13:02:00Z",
               "line": {
                 "administrationID": "80",
                 "category": "ICE",
@@ -160,18 +70,18 @@
               "type": "HIGH_SPEED_TRAIN"
             },
             {
-              "begin": "2026-02-23T12:10:00Z",
-              "end": "2026-02-23T13:26:00Z",
+              "begin": "2025-12-04T12:22:00Z",
+              "end": "2025-12-04T13:25:00Z",
               "line": {
                 "administrationID": "80",
                 "category": "ICE",
-                "line": "588"
+                "line": "626"
               },
               "type": "HIGH_SPEED_TRAIN"
             },
             {
-              "begin": "2026-02-23T12:45:00Z",
-              "end": "2026-02-23T13:56:00Z",
+              "begin": "2025-12-04T12:50:00Z",
+              "end": "2025-12-04T13:55:00Z",
               "line": {
                 "administrationID": "80",
                 "category": "ICE",
@@ -180,18 +90,8 @@
               "type": "HIGH_SPEED_TRAIN"
             },
             {
-              "begin": "2026-02-23T13:21:00Z",
-              "end": "2026-02-23T14:33:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "1506"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2026-02-23T13:45:00Z",
-              "end": "2026-02-23T14:57:00Z",
+              "begin": "2025-12-04T13:47:00Z",
+              "end": "2025-12-04T14:54:00Z",
               "line": {
                 "administrationID": "80",
                 "category": "ICE",
@@ -200,8 +100,8 @@
               "type": "HIGH_SPEED_TRAIN"
             },
             {
-              "begin": "2026-02-23T13:48:00Z",
-              "end": "2026-02-23T15:02:00Z",
+              "begin": "2025-12-04T13:56:00Z",
+              "end": "2025-12-04T15:02:00Z",
               "line": {
                 "administrationID": "80",
                 "category": "ICE",
@@ -210,22 +110,22 @@
               "type": "HIGH_SPEED_TRAIN"
             },
             {
-              "begin": "2026-02-23T14:12:00Z",
-              "end": "2026-02-23T15:29:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "586"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2026-02-23T14:45:00Z",
-              "end": "2026-02-23T15:57:00Z",
+              "begin": "2025-12-04T14:50:00Z",
+              "end": "2025-12-04T15:55:00Z",
               "line": {
                 "administrationID": "80",
                 "category": "ICE",
                 "line": "620"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T14:56:00Z",
+              "end": "2025-12-04T15:59:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "1002"
               },
               "type": "HIGH_SPEED_TRAIN"
             }
@@ -236,49 +136,211 @@
           }
         }
       ],
-      "intervals": "Mo 10:11-16:05",
-      "estimatedTravelTime": 4500,
-      "begin": "2026-02-23T10:11:00+01:00",
-      "end": "2026-02-23T16:05:00+01:00",
+      "intervals": null,
+      "estimatedTravelTime": 4140,
+      "begin": "2025-12-04T12:53:00+01:00",
+      "end": "2025-12-04T16:17:00+01:00",
       "headwayDetails": [
         {
-          "interval": "Mo 10:44-15:44",
-          "headway": 3600
+          "interval": "Th 12:53-13:49",
+          "headway": 1680
         },
         {
-          "interval": "Mo 10:47-14:47",
-          "headway": 7200
+          "interval": "Th 13:52-14:46",
+          "headway": 1620
         },
         {
-          "interval": "Mo 12:05-16:05",
-          "headway": 7200
+          "interval": "Th 13:31-14:55",
+          "headway": 5040
         },
         {
-          "interval": "Mo 10:11-10:21",
-          "headway": 600
+          "interval": "Th 15:16-15:49",
+          "headway": 1980
         },
         {
-          "interval": "Mo 11:11-11:17",
-          "headway": 360
-        },
-        {
-          "interval": "Mo 12:20-13:09",
-          "headway": 2940
-        },
-        {
-          "interval": "Mo 13:16-14:20",
-          "headway": 3840
-        },
-        {
-          "interval": "Mo 15:11-15:16",
-          "headway": 300
+          "interval": "Th 15:55-16:17",
+          "headway": 1320
         }
       ],
       "additionalInfo": {
         "covered_stops": ["München Hbf", "Nürnberg Hbf"],
+        "transport_types": ["HIGH_SPEED_TRAIN"],
+        "min_duration": "PT1H5M",
+        "max_duration": "PT1H17M",
         "number_of_matched_stops_per_route": 2,
-        "number_of_routes": 22,
-        "priority": 44
+        "number_of_routes": 12,
+        "priority": 24
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8000284",
+            "name": "Nürnberg Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T12:04:00Z",
+              "end": "2025-12-04T13:15:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "1621"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T12:34:00Z",
+              "end": "2025-12-04T13:45:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "535"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T13:29:00Z",
+              "end": "2025-12-04T14:44:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "787"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T14:29:00Z",
+              "end": "2025-12-04T15:43:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "537"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T12:01:00Z",
+              "end": "2025-12-04T13:05:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "529"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T12:19:00Z",
+              "end": "2025-12-04T13:23:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "621"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T13:00:00Z",
+              "end": "2025-12-04T14:04:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "507"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T13:43:00Z",
+              "end": "2025-12-04T14:47:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "623"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T14:00:00Z",
+              "end": "2025-12-04T15:04:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "1005"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T14:03:00Z",
+              "end": "2025-12-04T15:08:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "625"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T14:55:00Z",
+              "end": "2025-12-04T16:00:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "509"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T15:02:00Z",
+              "end": "2025-12-04T16:07:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "627"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8000261",
+            "name": "München Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4020,
+      "begin": "2025-12-04T13:00:00+01:00",
+      "end": "2025-12-04T16:01:00+01:00",
+      "headwayDetails": [
+        {
+          "interval": "Th 13:03-13:33",
+          "headway": 900
+        },
+        {
+          "interval": "Th 15:02-15:54",
+          "headway": 1560
+        },
+        {
+          "interval": "Th 13:00-13:59",
+          "headway": 3540
+        },
+        {
+          "interval": "Th 14:28-14:42",
+          "headway": 840
+        },
+        {
+          "interval": "Th 14:59-16:01",
+          "headway": 3720
+        }
+      ],
+      "additionalInfo": {
+        "covered_stops": ["Nürnberg Hbf", "München Hbf"],
+        "transport_types": ["HIGH_SPEED_TRAIN"],
+        "min_duration": "PT1H6M",
+        "max_duration": "PT1H17M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 12,
+        "priority": 24
       }
     }
   ],
@@ -290,8 +352,8 @@
         {
           "timeIntervals": [
             {
-              "begin": "2026-02-23T09:01:58.047000Z",
-              "end": "2026-02-23T15:00:00Z",
+              "begin": "2025-12-04T09:01:58.047000Z",
+              "end": "2025-12-04T15:00:00Z",
               "intervals": "Mo-Fr 08:00-18:00"
             }
           ],

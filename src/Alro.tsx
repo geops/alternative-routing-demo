@@ -95,8 +95,8 @@ function Alro({
           }
         }}
       >
-        <div className="w-full">
-          <p className="font-bold">
+        <div className="w-full text-xs font-normal">
+          <p className="text-sm font-bold">
             {texts.map((text, index) => {
               return (
                 <Fragment>
@@ -107,24 +107,23 @@ function Alro({
           </p>
 
           {headwayDetails.map((val: string, index: number) => {
-            return (
-              <p className="text-xs font-normal" key={index + val}>
-                {val}
-              </p>
-            );
+            return <p key={index + val}>{val}</p>;
           })}
-          <p className="text-xs font-normal">
+          <p>
             Duration: {hours ? hours + "h " : ""}
             {minutes ? minutes + "min" : ""}
           </p>
-          {!!affectedStopsText && (
-            <p className="text-xs font-normal">{affectedStopsText}</p>
-          )}
-          {!!nbMMatchedStopsProRoute && (
-            <p className="text-xs font-normal">{nbMMatchedStopsProRoute}</p>
-          )}
-          {!!nbRoutes && <p className="text-xs font-normal">{nbRoutes}</p>}
-          {!!priority && <p className="text-xs font-normal">{priority}</p>}
+          {!!affectedStopsText && <p>{affectedStopsText}</p>}
+          {!!nbMMatchedStopsProRoute && <p>{nbMMatchedStopsProRoute}</p>}
+          {!!nbRoutes && <p>{nbRoutes}</p>}
+          {!!priority && <p>{priority}</p>}
+          <p>
+            {/* @ts-expect-error - we know */}
+            Transport types : {addInfo?.transport_types?.join(", ") || ""}
+          </p>
+
+          <p>Min Duration : {(addInfo?.min_duration as number) ?? ""}</p>
+          <p>Max Duration : {(addInfo?.max_duration as number) ?? ""}</p>
           <AlroPartsSchema alro={alro}></AlroPartsSchema>
         </div>
       </Button>

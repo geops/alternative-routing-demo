@@ -76,17 +76,6 @@ function DisruptedRoute(props: JSX.IntrinsicElements["div"]) {
       </div>
       <div className="text-xs">Affected lines: {affectedLines.join(", ")}</div>
       <div className="text-xs">Affected stops: {affectedStops?.join(", ")}</div>
-      <div className="text-xs">
-        {/* @ts-expect-error - we know */}
-        Transport types : {addInfo?.transport_types?.join(", ") || ""}
-      </div>
-
-      <div className="text-xs">
-        Min Duration : {(addInfo?.min_duration as number) ?? ""}
-      </div>
-      <div className="text-xs">
-        Max Duration : {(addInfo?.max_duration as number) ?? ""}
-      </div>
     </div>
   );
 }
