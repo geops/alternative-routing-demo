@@ -23,6 +23,8 @@ import ToggleAlrosButton from "./ToggleAlrosButton";
 import { AlternativeRoutesResponse, AnnotatedAlternativeRoutes } from "./types";
 import { Button } from "./ui/button";
 
+const isDebug = window.location.search.includes("debug=true");
+
 function App() {
   const [url] = useState(import.meta.env.VITE_ALRO_API_URL as string);
   const [isToggle, setToggle] = useState<boolean>();
@@ -108,7 +110,7 @@ function App() {
               </div>
               <Headless.Textarea
                 className={clsx(
-                  "h-9 w-full resize flex-col gap-2 rounded-[calc(theme(borderRadius.lg)-1px)] border px-2 py-1 text-base/6 text-zinc-500 shadow sm:text-sm/6",
+                  "h-20 w-full resize flex-col gap-2 rounded-[calc(theme(borderRadius.lg)-1px)] border px-2 py-1 text-base/6 text-zinc-500 shadow sm:text-sm/6",
                 )}
                 onChange={(evt) => {
                   const json = evt.target.value;
@@ -123,17 +125,46 @@ function App() {
                 }}
                 placeholder="Paste Alternative Routes JSON here"
               ></Headless.Textarea>
-              <Button
-                className="cursor-pointer"
-                onClick={() => {
-                  setSelectedExample(examples[0] as AlternativeRoutesResponse);
-                  document.querySelector("textarea")!.value = JSON.stringify(
-                    examples[0],
-                  );
-                }}
-              >
-                Load demo data
-              </Button>
+              {isDebug && (
+                <>
+                  <Button
+                    className="cursor-pointer"
+                    onClick={() => {
+                      setSelectedExample(
+                        examples[0] as AlternativeRoutesResponse,
+                      );
+                      document.querySelector("textarea")!.value =
+                        JSON.stringify(examples[0]);
+                    }}
+                  >
+                    Load demo data
+                  </Button>
+                  <Button
+                    className="cursor-pointer"
+                    onClick={() => {
+                      setSelectedExample(
+                        examples[1] as AlternativeRoutesResponse,
+                      );
+                      document.querySelector("textarea")!.value =
+                        JSON.stringify(examples[1]);
+                    }}
+                  >
+                    Load Leipzig-Cottbus data
+                  </Button>
+                  <Button
+                    className="cursor-pointer"
+                    onClick={() => {
+                      setSelectedExample(
+                        examples[2] as AlternativeRoutesResponse,
+                      );
+                      document.querySelector("textarea")!.value =
+                        JSON.stringify(examples[2]);
+                    }}
+                  >
+                    Load Frankfurt-Mainz data
+                  </Button>
+                </>
+              )}
             </div>
             {!!alros?.length && (
               <div

@@ -46,16 +46,23 @@ function DisruptedRouteLayer() {
             return (
               lineDisruption.disruptedLines
                 // .slice(0, 1)
-                .slice(1, 2)
+                // .slice(1, 2)
                 // @ts-expect-error - bad type definition
                 .flatMap((disruptedLine) => {
-                  // @ts-expect-error - bad type definition
-                  return disruptedLine.sections.map((section) => {
-                    return [
-                      "!" + section.fromEvaNumber,
-                      "!" + section.toEvaNumber,
-                    ];
-                  });
+                  return (
+                    disruptedLine.sections
+                      // .filter((section) => {
+                      //   return section.singleDirection === false;
+                      // })
+                      // @ts-expect-error - bad type definition
+
+                      .map((section) => {
+                        return [
+                          "!" + section.fromEvaNumber,
+                          "!" + section.toEvaNumber,
+                        ];
+                      })
+                  );
                 })
             );
           },

@@ -1,8 +1,12 @@
 import { AlternativeRoutesResponse } from "../types";
+import FrankfurtMainz from "./Frankfurt-Mainz.json";
+import LeipzigCottbus from "./Leipzig-Cottbus.json";
 import ruoying_demo from "./ruoying_demo.json";
 
 const examples: AlternativeRoutesResponse[] = [
   ruoying_demo as AlternativeRoutesResponse,
+  LeipzigCottbus as AlternativeRoutesResponse,
+  FrankfurtMainz as AlternativeRoutesResponse,
   // {
   //   name: "München -> Regensburg",
   //   uuid: "66619d28-f0e8-43ef-8bdb-25d709405c7b",
