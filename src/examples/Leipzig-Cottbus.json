@@ -1,0 +1,2288 @@
+{
+  "status": "FOUND_ALTERNATIVES",
+  "annotatedAlternativeRoutes": [
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T18:19:00Z",
+              "end": "2025-12-04T18:24:00Z",
+              "line": {
+                "administrationID": "AMRB",
+                "category": "RB",
+                "line": "20"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-05T04:19:00Z",
+              "end": "2025-12-05T04:24:00Z",
+              "line": {
+                "administrationID": "AMRB",
+                "category": "RB",
+                "line": "20"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8012193",
+            "name": "Leipzig-Möckern"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8012193",
+            "name": "Leipzig-Möckern"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T18:34:00Z",
+              "end": "2025-12-04T18:39:00Z",
+              "line": {
+                "administrationID": "AMRB",
+                "category": "RB",
+                "line": "20"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-05T04:36:00Z",
+              "end": "2025-12-05T04:41:00Z",
+              "line": {
+                "administrationID": "AMRB",
+                "category": "RB",
+                "line": "20"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8098205",
+            "name": "Leipzig Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T18:58:00Z",
+              "end": "2025-12-04T20:03:00Z",
+              "line": {
+                "administrationID": "800486",
+                "category": null,
+                "line": "S4"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-05T04:58:00Z",
+              "end": "2025-12-05T06:03:00Z",
+              "line": {
+                "administrationID": "800486",
+                "category": null,
+                "line": "S4"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010103",
+            "name": "Falkenberg (Elster)"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010103",
+            "name": "Falkenberg(Elster)"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T20:16:00Z",
+              "end": "2025-12-04T21:40:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RB",
+                "line": "49"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-05T06:16:00Z",
+              "end": "2025-12-05T07:42:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RB",
+                "line": "49"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 12300,
+      "begin": "2025-12-04T19:18:00+01:00",
+      "end": "2025-12-05T05:18:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Leipzig Hbf", "Leipzig Hbf", "Cottbus Hbf"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT3H23M",
+        "max_duration": "PT3H25M",
+        "number_of_matched_stops_per_route": 3,
+        "number_of_routes": 2,
+        "priority": 6
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T19:16:00Z",
+              "end": "2025-12-04T20:27:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RB",
+                "line": "49"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T20:16:00Z",
+              "end": "2025-12-04T21:26:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RB",
+                "line": "49"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010100",
+            "name": "Elsterwerda-Biehla"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010100",
+            "name": "Elsterwerda-Biehla"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T20:37:00Z",
+              "end": "2025-12-04T21:07:00Z",
+              "line": {
+                "administrationID": "800159",
+                "category": "RB",
+                "line": "31"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T22:39:00Z",
+              "end": "2025-12-04T23:07:00Z",
+              "line": {
+                "administrationID": "800159",
+                "category": "RB",
+                "line": "31"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010285",
+            "name": "Priestewitz"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010285",
+            "name": "Priestewitz"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T21:51:00Z",
+              "end": "2025-12-04T22:50:00Z",
+              "line": {
+                "administrationID": "800456",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-05T03:51:00Z",
+              "end": "2025-12-05T04:50:00Z",
+              "line": {
+                "administrationID": "800456",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 30960,
+      "begin": "2025-12-04T20:15:00+01:00",
+      "end": "2025-12-04T21:15:00+01:00",
+      "headwayDetails": [
+        {
+          "interval": "Th 20:15-21:15",
+          "headway": 3600
+        }
+      ],
+      "additionalInfo": {
+        "covered_stops": ["Cottbus Hbf", "Leipzig Hbf"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT3H36M",
+        "max_duration": "PT8H36M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T03:14:00Z",
+              "end": "2025-12-05T04:33:00Z",
+              "line": {
+                "administrationID": "800159",
+                "category": "RE",
+                "line": "18"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:16:00Z",
+              "end": "2025-12-04T18:39:00Z",
+              "line": {
+                "administrationID": "800159",
+                "category": "RE",
+                "line": "18"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010285",
+            "name": "Priestewitz"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010285",
+            "name": "Priestewitz"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T04:51:00Z",
+              "end": "2025-12-05T05:50:00Z",
+              "line": {
+                "administrationID": "800456",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T18:51:00Z",
+              "end": "2025-12-04T19:50:00Z",
+              "line": {
+                "administrationID": "800456",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 9480,
+      "begin": "2025-12-04T18:15:00+01:00",
+      "end": "2025-12-05T04:13:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Cottbus Hbf", "Leipzig Hbf"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT2H36M",
+        "max_duration": "PT2H38M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:50:00Z",
+              "end": "2025-12-04T18:26:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RE",
+                "line": "13"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T18:50:00Z",
+              "end": "2025-12-04T19:28:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RE",
+                "line": "13"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010308",
+            "name": "Ruhland"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010308",
+            "name": "Ruhland"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T19:01:00Z",
+              "end": "2025-12-04T19:33:00Z",
+              "line": {
+                "administrationID": "800159",
+                "category": "RE",
+                "line": "15"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T20:01:00Z",
+              "end": "2025-12-04T20:33:00Z",
+              "line": {
+                "administrationID": "800159",
+                "category": "RE",
+                "line": "15"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010285",
+            "name": "Priestewitz"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010285",
+            "name": "Priestewitz"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T19:51:00Z",
+              "end": "2025-12-04T20:50:00Z",
+              "line": {
+                "administrationID": "800456",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T20:51:00Z",
+              "end": "2025-12-04T21:50:00Z",
+              "line": {
+                "administrationID": "800456",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 10920,
+      "begin": "2025-12-04T18:49:00+01:00",
+      "end": "2025-12-04T19:49:00+01:00",
+      "headwayDetails": [
+        {
+          "interval": "Th 18:49-19:49",
+          "headway": 3600
+        }
+      ],
+      "additionalInfo": {
+        "covered_stops": ["Cottbus Hbf", "Leipzig Hbf"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT3H2M",
+        "max_duration": "PT3H2M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T20:07:00Z",
+              "end": "2025-12-04T20:10:00Z",
+              "line": {
+                "administrationID": "OWRB",
+                "category": "RB",
+                "line": "46"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8011318",
+            "name": "Cottbus-Sandow"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8011318",
+            "name": "Cottbus-Sandow"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T20:48:00Z",
+              "end": "2025-12-04T20:51:00Z",
+              "line": {
+                "administrationID": "OWRB",
+                "category": "RB",
+                "line": "46"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8071202",
+            "name": "Cottbus Busbahnhof"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T21:02:00Z",
+              "end": "2025-12-04T22:24:00Z",
+              "line": {
+                "administrationID": "BB",
+                "category": "BUS",
+                "line": "RE2"
+              },
+              "type": "BUS"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010217",
+            "name": "Lübben (Spreewald)"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010217",
+            "name": "Lübben (Spreewald)"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T22:35:00Z",
+              "end": "2025-12-04T23:12:00Z",
+              "line": {
+                "administrationID": "800165",
+                "category": null,
+                "line": "RE2"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010193",
+            "name": "Königs Wusterhausen"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010193",
+            "name": "Königs Wusterhausen"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T23:34:00Z",
+              "end": "2025-12-04T23:38:00Z",
+              "line": {
+                "administrationID": "080001",
+                "category": "BUS",
+                "line": "S46"
+              },
+              "type": "BUS"
+            }
+          ],
+          "to": {
+            "evaNumber": "8081540",
+            "name": "Wildau"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8081540",
+            "name": "Wildau"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T23:44:00Z",
+              "end": "2025-12-05T00:10:00Z",
+              "line": {
+                "administrationID": "08",
+                "category": null,
+                "line": "S46"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8089104",
+            "name": "Berlin Köllnische Heide"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "732089",
+            "name": "Köllnische Heide (S), Berlin"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T00:32:00Z",
+              "end": "2025-12-05T01:06:00Z",
+              "line": null,
+              "type": "BUS"
+            }
+          ],
+          "to": {
+            "evaNumber": "730749",
+            "name": "Berlin Hauptbahnhof (S+U), Berlin"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8011160",
+            "name": "Berlin Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T02:52:00Z",
+              "end": "2025-12-05T04:42:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "501"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 31020,
+      "begin": "2025-12-04T21:06:00+01:00",
+      "end": "2025-12-04T21:06:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Cottbus Hbf", "Cottbus Hbf", "Leipzig Hbf"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "BUS",
+          "INTER_REGIONAL_TRAIN",
+          "BUS",
+          "INTER_REGIONAL_TRAIN",
+          "BUS",
+          "HIGH_SPEED_TRAIN"
+        ],
+        "min_duration": "PT8H37M",
+        "max_duration": "PT8H37M",
+        "number_of_matched_stops_per_route": 3,
+        "number_of_routes": 1,
+        "priority": 3
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T18:16:00Z",
+              "end": "2025-12-04T19:46:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RB",
+                "line": "49"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010103",
+            "name": "Falkenberg (Elster)"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010103",
+            "name": "Falkenberg(Elster)"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T19:57:00Z",
+              "end": "2025-12-04T21:03:00Z",
+              "line": {
+                "administrationID": "800486",
+                "category": null,
+                "line": "S4"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8098205",
+            "name": "Leipzig Hbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8098205",
+            "name": "Leipzig Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T21:13:00Z",
+              "end": "2025-12-04T21:20:00Z",
+              "line": {
+                "administrationID": "800486",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8012193",
+            "name": "Leipzig-Möckern"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8012193",
+            "name": "Leipzig-Möckern"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T21:34:00Z",
+              "end": "2025-12-04T21:39:00Z",
+              "line": {
+                "administrationID": "AMRB",
+                "category": "RB",
+                "line": "20"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 12300,
+      "begin": "2025-12-04T19:15:00+01:00",
+      "end": "2025-12-04T19:15:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Cottbus Hbf", "Leipzig Hbf"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT3H25M",
+        "max_duration": "PT3H25M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T21:16:00Z",
+              "end": "2025-12-04T21:58:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RB",
+                "line": "49"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010308",
+            "name": "Ruhland"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010308",
+            "name": "Ruhland"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T03:05:00Z",
+              "end": "2025-12-05T03:26:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RB",
+                "line": "49"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010100",
+            "name": "Elsterwerda-Biehla"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010100",
+            "name": "Elsterwerda-Biehla"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T03:39:00Z",
+              "end": "2025-12-05T03:42:00Z",
+              "line": {
+                "administrationID": "800159",
+                "category": "RB",
+                "line": "31"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010099",
+            "name": "Elsterwerda"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010099",
+            "name": "Elsterwerda"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T04:13:00Z",
+              "end": "2025-12-05T04:38:00Z",
+              "line": {
+                "administrationID": "CXRB",
+                "category": "RB",
+                "line": "45"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010297",
+            "name": "Riesa"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010297",
+            "name": "Riesa"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T04:47:00Z",
+              "end": "2025-12-05T05:21:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "IC",
+                "line": "2044"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 29220,
+      "begin": "2025-12-04T22:15:00+01:00",
+      "end": "2025-12-04T22:15:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Cottbus Hbf", "Leipzig Hbf"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT8H7M",
+        "max_duration": "PT8H7M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T04:14:00Z",
+              "end": "2025-12-05T05:26:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RB",
+                "line": "49"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010100",
+            "name": "Elsterwerda-Biehla"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010100",
+            "name": "Elsterwerda-Biehla"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T05:39:00Z",
+              "end": "2025-12-05T05:42:00Z",
+              "line": {
+                "administrationID": "800159",
+                "category": "RB",
+                "line": "31"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010099",
+            "name": "Elsterwerda"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010099",
+            "name": "Elsterwerda"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T06:13:00Z",
+              "end": "2025-12-05T06:38:00Z",
+              "line": {
+                "administrationID": "CXRB",
+                "category": "RB",
+                "line": "45"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010297",
+            "name": "Riesa"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010297",
+            "name": "Riesa"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T06:47:00Z",
+              "end": "2025-12-05T07:21:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "IC",
+                "line": "2046"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 11340,
+      "begin": "2025-12-05T05:13:00+01:00",
+      "end": "2025-12-05T05:13:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Cottbus Hbf", "Leipzig Hbf"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT3H9M",
+        "max_duration": "PT3H9M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T06:03:00Z",
+              "end": "2025-12-05T07:50:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RE",
+                "line": "10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 6540,
+      "begin": "2025-12-05T07:02:00+01:00",
+      "end": "2025-12-05T07:02:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Cottbus Hbf", "Leipzig Hbf"],
+        "transport_types": ["INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H49M",
+        "max_duration": "PT1H49M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T22:08:00Z",
+              "end": "2025-12-04T23:38:00Z",
+              "line": {
+                "administrationID": "800456",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010089",
+            "name": "Dresden-Neustadt"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010089",
+            "name": "Dresden-Neustadt"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T03:02:00Z",
+              "end": "2025-12-05T04:31:00Z",
+              "line": {
+                "administrationID": "LD",
+                "category": "TLR",
+                "line": "B60"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010131",
+            "name": "Görlitz"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010131",
+            "name": "Görlitz"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T04:43:00Z",
+              "end": "2025-12-05T05:56:00Z",
+              "line": {
+                "administrationID": "OWRB",
+                "category": "RB",
+                "line": "65"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 28200,
+      "begin": "2025-12-04T23:07:00+01:00",
+      "end": "2025-12-04T23:07:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Leipzig Hbf", "Cottbus Hbf"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT7H50M",
+        "max_duration": "PT7H50M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T21:44:00Z",
+              "end": "2025-12-04T22:44:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "1657"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010089",
+            "name": "Dresden-Neustadt"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010089",
+            "name": "Dresden-Neustadt"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T22:55:00Z",
+              "end": "2025-12-05T00:24:00Z",
+              "line": {
+                "administrationID": "LD",
+                "category": "TLR",
+                "line": "B60"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010131",
+            "name": "Görlitz"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010131",
+            "name": "Görlitz"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T02:44:00Z",
+              "end": "2025-12-05T03:53:00Z",
+              "line": {
+                "administrationID": "OWRB",
+                "category": "RB",
+                "line": "65"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 22260,
+      "begin": "2025-12-04T22:43:00+01:00",
+      "end": "2025-12-04T22:43:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Leipzig Hbf", "Cottbus Hbf"],
+        "transport_types": [
+          "HIGH_SPEED_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT6H11M",
+        "max_duration": "PT6H11M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T21:00:00Z",
+              "end": "2025-12-04T21:44:00Z",
+              "line": {
+                "administrationID": "800456",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010297",
+            "name": "Riesa"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010297",
+            "name": "Riesa"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T21:49:00Z",
+              "end": "2025-12-04T22:11:00Z",
+              "line": {
+                "administrationID": "CXRB",
+                "category": "RB",
+                "line": "45"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010099",
+            "name": "Elsterwerda"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010099",
+            "name": "Elsterwerda"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T22:19:00Z",
+              "end": "2025-12-04T22:21:00Z",
+              "line": {
+                "administrationID": "800159",
+                "category": "RB",
+                "line": "31"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010100",
+            "name": "Elsterwerda-Biehla"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010100",
+            "name": "Elsterwerda-Biehla"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T22:34:00Z",
+              "end": "2025-12-04T23:09:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RB",
+                "line": "49"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010327",
+            "name": "Senftenberg"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010327",
+            "name": "Senftenberg"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T03:10:00Z",
+              "end": "2025-12-05T03:40:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RB",
+                "line": "49"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 24120,
+      "begin": "2025-12-04T21:59:00+01:00",
+      "end": "2025-12-04T21:59:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Leipzig Hbf", "Cottbus Hbf"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT6H42M",
+        "max_duration": "PT6H42M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T20:00:00Z",
+              "end": "2025-12-04T21:00:00Z",
+              "line": {
+                "administrationID": "800456",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010285",
+            "name": "Priestewitz"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010285",
+            "name": "Priestewitz"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T21:20:00Z",
+              "end": "2025-12-04T21:53:00Z",
+              "line": {
+                "administrationID": "800159",
+                "category": "RE",
+                "line": "15"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010308",
+            "name": "Ruhland"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010308",
+            "name": "Ruhland"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T21:59:00Z",
+              "end": "2025-12-04T22:40:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RB",
+                "line": "49"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 9720,
+      "begin": "2025-12-04T20:59:00+01:00",
+      "end": "2025-12-04T20:59:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Leipzig Hbf", "Cottbus Hbf"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT2H42M",
+        "max_duration": "PT2H42M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T03:00:00Z",
+              "end": "2025-12-05T03:44:00Z",
+              "line": {
+                "administrationID": "800456",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010297",
+            "name": "Riesa"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010297",
+            "name": "Riesa"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T04:14:00Z",
+              "end": "2025-12-05T04:36:00Z",
+              "line": {
+                "administrationID": "CXRB",
+                "category": "RB",
+                "line": "45"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010099",
+            "name": "Elsterwerda"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010099",
+            "name": "Elsterwerda"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T05:02:00Z",
+              "end": "2025-12-05T06:08:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RE",
+                "line": "13"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 11400,
+      "begin": "2025-12-05T03:59:00+01:00",
+      "end": "2025-12-05T03:59:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Leipzig Hbf", "Cottbus Hbf"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT3H10M",
+        "max_duration": "PT3H10M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T04:00:00Z",
+              "end": "2025-12-05T05:00:00Z",
+              "line": {
+                "administrationID": "800456",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010285",
+            "name": "Priestewitz"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010285",
+            "name": "Priestewitz"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T05:20:00Z",
+              "end": "2025-12-05T06:43:00Z",
+              "line": {
+                "administrationID": "800159",
+                "category": "RE",
+                "line": "18"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 9900,
+      "begin": "2025-12-05T04:59:00+01:00",
+      "end": "2025-12-05T04:59:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Leipzig Hbf", "Cottbus Hbf"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT2H45M",
+        "max_duration": "PT2H45M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:31:00Z",
+              "end": "2025-12-04T18:00:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "1653"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010297",
+            "name": "Riesa"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010297",
+            "name": "Riesa"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T18:14:00Z",
+              "end": "2025-12-04T18:36:00Z",
+              "line": {
+                "administrationID": "CXRB",
+                "category": "RB",
+                "line": "45"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010099",
+            "name": "Elsterwerda"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010099",
+            "name": "Elsterwerda"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T19:02:00Z",
+              "end": "2025-12-04T20:08:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RE",
+                "line": "13"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 9540,
+      "begin": "2025-12-04T18:30:00+01:00",
+      "end": "2025-12-04T18:30:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Leipzig Hbf", "Cottbus Hbf"],
+        "transport_types": [
+          "HIGH_SPEED_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT2H39M",
+        "max_duration": "PT2H39M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T18:12:00Z",
+              "end": "2025-12-04T19:55:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RE",
+                "line": "11"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010308",
+            "name": "Ruhland"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8010308",
+            "name": "Ruhland"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T20:00:00Z",
+              "end": "2025-12-04T20:39:00Z",
+              "line": {
+                "administrationID": "800159",
+                "category": "RE",
+                "line": "18"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 8940,
+      "begin": "2025-12-04T19:11:00+01:00",
+      "end": "2025-12-04T19:11:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Leipzig Hbf", "Cottbus Hbf"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT2H29M",
+        "max_duration": "PT2H29M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": {
+            "evaNumber": "8010205",
+            "name": "Leipzig Hbf"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-05T06:12:00Z",
+              "end": "2025-12-05T07:55:00Z",
+              "line": {
+                "administrationID": "800166",
+                "category": "RE",
+                "line": "10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8010073",
+            "name": "Cottbus Hbf"
+          }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 6300,
+      "begin": "2025-12-05T07:11:00+01:00",
+      "end": "2025-12-05T07:11:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Leipzig Hbf", "Cottbus Hbf"],
+        "transport_types": ["INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H45M",
+        "max_duration": "PT1H45M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    }
+  ],
+  "additionalInfo": {
+    "environment": "local",
+    "requested_stops": ["Cottbus Hbf", "Leipzig Hbf"],
+    "disruption_scenario": {
+      "lineDisruptions": [
+        {
+          "timeIntervals": [
+            {
+              "begin": "2025-12-04T01:12:30.591000Z",
+              "end": "2025-12-05T04:30:00Z",
+              "intervals": null
+            }
+          ],
+          "disruptedLines": [
+            {
+              "lineRelation": {
+                "administrationID": "800166",
+                "category": "RB",
+                "line": "43"
+              },
+              "sections": [
+                {
+                  "fromEvaNumber": "8012006",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011945",
+                  "fromName": "8012006",
+                  "toName": "8011945"
+                },
+                {
+                  "fromEvaNumber": "8013406",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011471",
+                  "fromName": "8013406",
+                  "toName": "8011471"
+                },
+                {
+                  "fromEvaNumber": "8012084",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010073",
+                  "fromName": "8012084",
+                  "toName": "8010073"
+                },
+                {
+                  "fromEvaNumber": "8012903",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010079",
+                  "fromName": "8012903",
+                  "toName": "8010079"
+                },
+                {
+                  "fromEvaNumber": "8012089",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010113",
+                  "fromName": "8012089",
+                  "toName": "8010113"
+                },
+                {
+                  "fromEvaNumber": "8011667",
+                  "singleDirection": true,
+                  "toEvaNumber": "8010308",
+                  "fromName": "8011667",
+                  "toName": "8010308"
+                },
+                {
+                  "fromEvaNumber": "8012341",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011318",
+                  "fromName": "8012341",
+                  "toName": "8011318"
+                },
+                {
+                  "fromEvaNumber": "8010308",
+                  "singleDirection": true,
+                  "toEvaNumber": "8011542",
+                  "fromName": "Ruhland",
+                  "toName": "Finsterwalde(Niederlausitz)"
+                },
+                {
+                  "fromEvaNumber": "8012089",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011540",
+                  "fromName": "8012089",
+                  "toName": "8011540"
+                },
+                {
+                  "fromEvaNumber": "8010069",
+                  "singleDirection": false,
+                  "toEvaNumber": "8012084",
+                  "fromName": "8010069",
+                  "toName": "8012084"
+                },
+                {
+                  "fromEvaNumber": "8010069",
+                  "singleDirection": true,
+                  "toEvaNumber": "8010327",
+                  "fromName": "Calau(Nl)",
+                  "toName": "Senftenberg"
+                },
+                {
+                  "fromEvaNumber": "8013160",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010103",
+                  "fromName": "8013160",
+                  "toName": "8010103"
+                },
+                {
+                  "fromEvaNumber": "8011667",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011542",
+                  "fromName": "8011667",
+                  "toName": "8011542"
+                },
+                {
+                  "fromEvaNumber": "8012621",
+                  "singleDirection": false,
+                  "toEvaNumber": "8012445",
+                  "fromName": "Peitz Ost",
+                  "toName": "Teichland"
+                },
+                {
+                  "fromEvaNumber": "8010327",
+                  "singleDirection": true,
+                  "toEvaNumber": "8011667",
+                  "fromName": "Senftenberg",
+                  "toName": "Gollmitz(Niederlausitz)"
+                },
+                {
+                  "fromEvaNumber": "8012903",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011179",
+                  "fromName": "Schönborn(Doberl)",
+                  "toName": "Beutersitz"
+                },
+                {
+                  "fromEvaNumber": "8013305",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011540",
+                  "fromName": "Wiesenau",
+                  "toName": "Finkenheerd"
+                },
+                {
+                  "fromEvaNumber": "8012341",
+                  "singleDirection": false,
+                  "toEvaNumber": "8081688",
+                  "fromName": "Cottbus-Merzdorf",
+                  "toName": "Cottbus-Willmersdorf Nord"
+                },
+                {
+                  "fromEvaNumber": "8011542",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010079",
+                  "fromName": "Finsterwalde(Niederlausitz)",
+                  "toName": "Doberlug-Kirchhain"
+                },
+                {
+                  "fromEvaNumber": "8010357",
+                  "singleDirection": false,
+                  "toEvaNumber": "8012006",
+                  "fromName": "8010357",
+                  "toName": "8012006"
+                },
+                {
+                  "fromEvaNumber": "8011945",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011944",
+                  "fromName": "8011945",
+                  "toName": "8011944"
+                },
+                {
+                  "fromEvaNumber": "8013272",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011319",
+                  "fromName": "8013272",
+                  "toName": "8011319"
+                },
+                {
+                  "fromEvaNumber": "8012621",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011944",
+                  "fromName": "8012621",
+                  "toName": "8011944"
+                },
+                {
+                  "fromEvaNumber": "8081688",
+                  "singleDirection": false,
+                  "toEvaNumber": "8012445",
+                  "fromName": "Cottbus-Willmersdorf Nord",
+                  "toName": "Teichland"
+                },
+                {
+                  "fromEvaNumber": "8011667",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010069",
+                  "fromName": "Gollmitz(Niederlausitz)",
+                  "toName": "Calau(Nl)"
+                },
+                {
+                  "fromEvaNumber": "8011179",
+                  "singleDirection": false,
+                  "toEvaNumber": "8013160",
+                  "fromName": "Beutersitz",
+                  "toName": "Uebigau"
+                },
+                {
+                  "fromEvaNumber": "8011471",
+                  "singleDirection": false,
+                  "toEvaNumber": "8012479",
+                  "fromName": "Eisenhüttenstadt",
+                  "toName": "Neuzelle"
+                },
+                {
+                  "fromEvaNumber": "8013272",
+                  "singleDirection": false,
+                  "toEvaNumber": "8012479",
+                  "fromName": "Wellmitz",
+                  "toName": "Neuzelle"
+                },
+                {
+                  "fromEvaNumber": "8010357",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011319",
+                  "fromName": "Guben",
+                  "toName": "Coschen"
+                },
+                {
+                  "fromEvaNumber": "8011318",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010073",
+                  "fromName": "Cottbus-Sandow",
+                  "toName": "Cottbus Hbf"
+                },
+                {
+                  "fromEvaNumber": "8013305",
+                  "singleDirection": false,
+                  "toEvaNumber": "8013406",
+                  "fromName": "Wiesenau",
+                  "toName": "Ziltendorf"
+                }
+              ]
+            },
+            {
+              "lineRelation": {
+                "administrationID": "800166",
+                "category": "RE",
+                "line": "10"
+              },
+              "sections": [
+                {
+                  "fromEvaNumber": "8012006",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011945",
+                  "fromName": "Kerkwitz",
+                  "toName": "Jänschwalde Ost"
+                },
+                {
+                  "fromEvaNumber": "8013406",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011471",
+                  "fromName": "Ziltendorf",
+                  "toName": "Eisenhüttenstadt"
+                },
+                {
+                  "fromEvaNumber": "8011131",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010351",
+                  "fromName": "Beilrode",
+                  "toName": "Torgau"
+                },
+                {
+                  "fromEvaNumber": "8012089",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010113",
+                  "fromName": "Kraftwerk Finkenheerd",
+                  "toName": "Frankfurt(Oder)"
+                },
+                {
+                  "fromEvaNumber": "8012371",
+                  "singleDirection": true,
+                  "toEvaNumber": "8010351",
+                  "fromName": "Mockrehna",
+                  "toName": "Torgau"
+                },
+                {
+                  "fromEvaNumber": "8011542",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010069",
+                  "fromName": "Finsterwalde(Niederlausitz)",
+                  "toName": "Calau(Nl)"
+                },
+                {
+                  "fromEvaNumber": "8010161",
+                  "singleDirection": true,
+                  "toEvaNumber": "8011387",
+                  "fromName": "Eilenburg Ost",
+                  "toName": "Doberschütz"
+                },
+                {
+                  "fromEvaNumber": "8012341",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011318",
+                  "fromName": "Cottbus-Merzdorf",
+                  "toName": "Cottbus-Sandow"
+                },
+                {
+                  "fromEvaNumber": "8010095",
+                  "singleDirection": true,
+                  "toEvaNumber": "8010161",
+                  "fromName": "Eilenburg",
+                  "toName": "Eilenburg Ost"
+                },
+                {
+                  "fromEvaNumber": "8012089",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011540",
+                  "fromName": "Kraftwerk Finkenheerd",
+                  "toName": "Finkenheerd"
+                },
+                {
+                  "fromEvaNumber": "8010103",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011131",
+                  "fromName": "Falkenberg(Elster)",
+                  "toName": "Beilrode"
+                },
+                {
+                  "fromEvaNumber": "8012621",
+                  "singleDirection": false,
+                  "toEvaNumber": "8012445",
+                  "fromName": "Peitz Ost",
+                  "toName": "Teichland"
+                },
+                {
+                  "fromEvaNumber": "8010095",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010351",
+                  "fromName": "Eilenburg",
+                  "toName": "Torgau"
+                },
+                {
+                  "fromEvaNumber": "8013305",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011540",
+                  "fromName": "Wiesenau",
+                  "toName": "Finkenheerd"
+                },
+                {
+                  "fromEvaNumber": "8011387",
+                  "singleDirection": true,
+                  "toEvaNumber": "8012371",
+                  "fromName": "Doberschütz",
+                  "toName": "Mockrehna"
+                },
+                {
+                  "fromEvaNumber": "8012341",
+                  "singleDirection": false,
+                  "toEvaNumber": "8081688",
+                  "fromName": "Cottbus-Merzdorf",
+                  "toName": "Cottbus-Willmersdorf Nord"
+                },
+                {
+                  "fromEvaNumber": "8011542",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010079",
+                  "fromName": "Finsterwalde(Niederlausitz)",
+                  "toName": "Doberlug-Kirchhain"
+                },
+                {
+                  "fromEvaNumber": "8010079",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010103",
+                  "fromName": "Doberlug-Kirchhain",
+                  "toName": "Falkenberg(Elster)"
+                },
+                {
+                  "fromEvaNumber": "8010357",
+                  "singleDirection": false,
+                  "toEvaNumber": "8012006",
+                  "fromName": "Guben",
+                  "toName": "Kerkwitz"
+                },
+                {
+                  "fromEvaNumber": "8011945",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011944",
+                  "fromName": "8011945",
+                  "toName": "8011944"
+                },
+                {
+                  "fromEvaNumber": "8013272",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011319",
+                  "fromName": "Wellmitz",
+                  "toName": "Coschen"
+                },
+                {
+                  "fromEvaNumber": "8010095",
+                  "singleDirection": false,
+                  "toEvaNumber": "8013093",
+                  "fromName": "Eilenburg",
+                  "toName": "Taucha(Leipzig)"
+                },
+                {
+                  "fromEvaNumber": "8012621",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011944",
+                  "fromName": "8012621",
+                  "toName": "8011944"
+                },
+                {
+                  "fromEvaNumber": "8081688",
+                  "singleDirection": false,
+                  "toEvaNumber": "8012445",
+                  "fromName": "Cottbus-Willmersdorf Nord",
+                  "toName": "Teichland"
+                },
+                {
+                  "fromEvaNumber": "8013093",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010205",
+                  "fromName": "Taucha(Leipzig)",
+                  "toName": "Leipzig Hbf"
+                },
+                {
+                  "fromEvaNumber": "8010069",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010073",
+                  "fromName": "Calau(Nl)",
+                  "toName": "Cottbus Hbf"
+                },
+                {
+                  "fromEvaNumber": "8011471",
+                  "singleDirection": false,
+                  "toEvaNumber": "8012479",
+                  "fromName": "Eisenhüttenstadt",
+                  "toName": "Neuzelle"
+                },
+                {
+                  "fromEvaNumber": "8013272",
+                  "singleDirection": false,
+                  "toEvaNumber": "8012479",
+                  "fromName": "Wellmitz",
+                  "toName": "Neuzelle"
+                },
+                {
+                  "fromEvaNumber": "8010357",
+                  "singleDirection": false,
+                  "toEvaNumber": "8011319",
+                  "fromName": "Guben",
+                  "toName": "Coschen"
+                },
+                {
+                  "fromEvaNumber": "8011318",
+                  "singleDirection": false,
+                  "toEvaNumber": "8010073",
+                  "fromName": "Cottbus-Sandow",
+                  "toName": "Cottbus Hbf"
+                },
+                {
+                  "fromEvaNumber": "8013305",
+                  "singleDirection": false,
+                  "toEvaNumber": "8013406",
+                  "fromName": "Wiesenau",
+                  "toName": "Ziltendorf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
