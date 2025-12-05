@@ -1,39 +1,68 @@
 import { GeoJSONFeatureCollection } from "ol/format/GeoJSON";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const apiKey = import.meta.env.VITE_API_KEY;
 
 function useRouting(
-  evaNummers?: string[],
+  evaNummers?: string[] | string[][],
 ): GeoJSONFeatureCollection | undefined {
   const [featureCollection, setFeatureCollection] =
     useState<GeoJSONFeatureCollection>();
 
+  console.log("evaNummers", evaNummers);
+
+  const listEvaNummers: string[][] = useMemo(() => {
+    let list: unknown = evaNummers;
+    if (evaNummers && !Array.isArray(evaNummers?.[0])) {
+      list = [evaNummers];
+    }
+    return list as string[][];
+  }, [evaNummers]);
+
   useEffect(() => {
-    if (!evaNummers || evaNummers.length === 0) {
+    if (!listEvaNummers || listEvaNummers.length === 0) {
       setFeatureCollection(undefined);
       return;
     }
 
     const abortController = new AbortController();
 
-    // Routing logic here
-    fetch(
-      `https://api.geops.io/routing/v1/?via=${evaNummers.join("|")}&mot=rail&prefagencies=db&resolve-hops=true&key=${apiKey}`,
-      {
-        signal: abortController.signal,
-      },
-    )
-      .then((response) => {
+    console.log("evaNummersByLine", listEvaNummers);
+    const promises = listEvaNummers.map((evaNummers) => {
+      // Routing logic here
+      return fetch(
+        `https://api.geops.io/routing/v1/?via=${evaNummers.join("|")}&mot=rail&prefagencies=db&resolve-hops=true&key=${apiKey}`,
+        {
+          signal: abortController.signal,
+        },
+      ).then((response) => {
         return response.json();
-      })
-      .then((featureCollection) => {
-        setFeatureCollection(featureCollection);
       });
+    });
+
+    Promise.all(promises)
+      .then((featureCollections: GeoJSONFeatureCollection[]) => {
+        console.log("Fetched all routing data:", featureCollections);
+        setFeatureCollection({
+          features: featureCollections.flatMap((fc) => {
+            if (!fc.features) {
+              return [];
+            }
+            return fc.features;
+          }),
+          type: "FeatureCollection",
+        });
+      })
+      .catch((error) => {
+        if (error.name !== "AbortError") {
+          console.error("Error fetching routing data:", error);
+        }
+      });
+
     return () => {
       abortController.abort();
     };
-  }, [evaNummers]);
+  }, [listEvaNummers]);
 
   return featureCollection;
 }

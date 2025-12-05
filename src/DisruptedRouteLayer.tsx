@@ -38,23 +38,34 @@ function DisruptedRouteLayer() {
       return;
     }
     const evaNummersByLine = // @ts-expect-error - bad type definition
-      alroResponse.additionalInfo?.disruption_scenario?.lineDisruptions.map(
-        // @ts-expect-error - bad type definition
-        (lineDisruption) => {
+      alroResponse.additionalInfo?.disruption_scenario?.lineDisruptions
+        .slice(0, 1)
+        .flatMap(
           // @ts-expect-error - bad type definition
-          return lineDisruption.disruptedLines.flatMap((disruptedLine) => {
-            // @ts-expect-error - bad type definition
-            return disruptedLine.sections.flatMap((section) => {
-              return ["!" + section.fromEvaNumber, "!" + section.toEvaNumber];
-            });
-          });
-        },
-      );
+          (lineDisruption) => {
+            return (
+              lineDisruption.disruptedLines
+                // .slice(0, 1)
+                .slice(1, 2)
+                // @ts-expect-error - bad type definition
+                .flatMap((disruptedLine) => {
+                  // @ts-expect-error - bad type definition
+                  return disruptedLine.sections.map((section) => {
+                    return [
+                      "!" + section.fromEvaNumber,
+                      "!" + section.toEvaNumber,
+                    ];
+                  });
+                })
+            );
+          },
+        );
     if (!evaNummersByLine?.length) {
       setEvaNummers(undefined);
       return;
     }
-    setEvaNummers(evaNummersByLine[0]);
+    console.log("evaNummersByLine", evaNummersByLine);
+    setEvaNummers(evaNummersByLine);
   }, [selectedExample]);
 
   useEffect(() => {

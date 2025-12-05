@@ -28,11 +28,11 @@ function AlroLayer() {
       return;
     }
 
-    const evaNummers = selectedAlro.alternativeRouteParts.flatMap(
-      (routePart) => {
-        return ["!" + routePart.from.evaNumber, "!" + routePart.to.evaNumber];
-      },
-    );
+    let evaNummers = selectedAlro.alternativeRouteParts.flatMap((routePart) => {
+      return ["!" + routePart.from.evaNumber, "!" + routePart.to.evaNumber];
+    });
+    evaNummers = [...new Set(evaNummers)];
+    console.log("Alro evaNummers", evaNummers);
     setEvaNummers(evaNummers);
   }, [selectedAlro]);
 

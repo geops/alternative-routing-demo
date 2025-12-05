@@ -10,7 +10,7 @@ import zoomOnFeatureCollection from "./zoomOnFeatureCollection";
 function AlrosLayer() {
   const { alros, isSm } = useAlroContext();
   const { alrosLayer, map } = useMapContext();
-  const [evaNummers, setEvaNummers] = useState<string[] | undefined>();
+  const [evaNummers, setEvaNummers] = useState<string[][] | undefined>();
   const featureCollection = useRouting(evaNummers);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function AlrosLayer() {
       return;
     }
     const evaNummers = alros.flatMap((alro) => {
-      return alro.alternativeRouteParts.flatMap((routePart) => {
+      return alro.alternativeRouteParts.map((routePart) => {
         return ["!" + routePart.from.evaNumber, "!" + routePart.to.evaNumber];
       });
     });

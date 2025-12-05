@@ -4,510 +4,3793 @@
     {
       "alternativeRouteParts": [
         {
-          "from": {
-            "evaNumber": "8000261",
-            "name": "München Hbf"
-          },
+          "from": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" },
           "replacementTransports": [
             {
-              "begin": "2025-12-04T12:32:00Z",
-              "end": "2025-12-04T13:38:00Z",
+              "begin": "2025-12-04T16:58:00Z",
+              "end": "2025-12-04T17:22:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "536"
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
               },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
             },
             {
-              "begin": "2025-12-04T12:53:00Z",
-              "end": "2025-12-04T14:02:00Z",
+              "begin": "2025-12-04T17:13:00Z",
+              "end": "2025-12-04T17:37:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "706"
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
               },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
             },
             {
-              "begin": "2025-12-04T13:20:00Z",
-              "end": "2025-12-04T14:31:00Z",
+              "begin": "2025-12-04T17:28:00Z",
+              "end": "2025-12-04T17:52:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "786"
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
               },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
             },
             {
-              "begin": "2025-12-04T14:17:00Z",
-              "end": "2025-12-04T15:30:00Z",
+              "begin": "2025-12-04T17:43:00Z",
+              "end": "2025-12-04T18:07:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "584"
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
               },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2025-12-04T15:18:00Z",
-              "end": "2025-12-04T16:33:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "1204"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2025-12-04T11:54:00Z",
-              "end": "2025-12-04T13:02:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "506"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2025-12-04T12:22:00Z",
-              "end": "2025-12-04T13:25:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "626"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2025-12-04T12:50:00Z",
-              "end": "2025-12-04T13:55:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "624"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2025-12-04T13:47:00Z",
-              "end": "2025-12-04T14:54:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "622"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2025-12-04T13:56:00Z",
-              "end": "2025-12-04T15:02:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "504"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2025-12-04T14:50:00Z",
-              "end": "2025-12-04T15:55:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "620"
-              },
-              "type": "HIGH_SPEED_TRAIN"
-            },
-            {
-              "begin": "2025-12-04T14:56:00Z",
-              "end": "2025-12-04T15:59:00Z",
-              "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "1002"
-              },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
             }
           ],
-          "to": {
-            "evaNumber": "8000284",
-            "name": "Nürnberg Hbf"
-          }
+          "to": { "evaNumber": "8004645", "name": "Offenbach (Main) Ost" }
+        },
+        {
+          "from": { "evaNumber": "8004645", "name": "Offenbach(Main)Ost" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:33:00Z",
+              "end": "2025-12-04T17:45:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:48:00Z",
+              "end": "2025-12-04T17:59:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T18:03:00Z",
+              "end": "2025-12-04T18:14:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T18:18:00Z",
+              "end": "2025-12-04T18:29:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000150", "name": "Hanau Hbf" }
         }
       ],
       "intervals": null,
-      "estimatedTravelTime": 4140,
-      "begin": "2025-12-04T12:53:00+01:00",
-      "end": "2025-12-04T16:17:00+01:00",
-      "headwayDetails": [
-        {
-          "interval": "Th 12:53-13:49",
-          "headway": 1680
-        },
-        {
-          "interval": "Th 13:52-14:46",
-          "headway": 1620
-        },
-        {
-          "interval": "Th 13:31-14:55",
-          "headway": 5040
-        },
-        {
-          "interval": "Th 15:16-15:49",
-          "headway": 1980
-        },
-        {
-          "interval": "Th 15:55-16:17",
-          "headway": 1320
-        }
-      ],
+      "estimatedTravelTime": 2880.0,
+      "begin": "2025-12-04T17:57:00+01:00",
+      "end": "2025-12-04T18:42:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:57-18:42", "headway": 900.0 }],
       "additionalInfo": {
-        "covered_stops": ["München Hbf", "Nürnberg Hbf"],
-        "transport_types": ["HIGH_SPEED_TRAIN"],
-        "min_duration": "PT1H5M",
-        "max_duration": "PT1H17M",
+        "covered_stops": ["Rödermark-Ober Roden", "Hanau Hbf"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT48M",
+        "max_duration": "PT49M",
         "number_of_matched_stops_per_route": 2,
-        "number_of_routes": 12,
-        "priority": 24
+        "number_of_routes": 4,
+        "priority": 8
       }
     },
     {
       "alternativeRouteParts": [
         {
-          "from": {
-            "evaNumber": "8000284",
-            "name": "Nürnberg Hbf"
-          },
+          "from": { "evaNumber": "8000150", "name": "Hanau Hbf" },
           "replacementTransports": [
             {
-              "begin": "2025-12-04T12:04:00Z",
-              "end": "2025-12-04T13:15:00Z",
+              "begin": "2025-12-04T16:31:00Z",
+              "end": "2025-12-04T17:40:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "1621"
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
               },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
             },
             {
-              "begin": "2025-12-04T12:34:00Z",
-              "end": "2025-12-04T13:45:00Z",
+              "begin": "2025-12-04T17:01:00Z",
+              "end": "2025-12-04T18:09:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "535"
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
               },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000615", "name": "Mainz-Kastel" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4260.0,
+      "begin": "2025-12-04T17:30:00+01:00",
+      "end": "2025-12-04T18:00:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:30-18:00", "headway": 1800.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Hanau Hbf", "Mainz-Bischofsheim", "Mainz-Kastel"],
+        "transport_types": ["INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H10M",
+        "max_duration": "PT1H11M",
+        "number_of_matched_stops_per_route": 3,
+        "number_of_routes": 2,
+        "priority": 6
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000150", "name": "Hanau Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:06:00Z",
+              "end": "2025-12-04T17:17:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
             },
             {
-              "begin": "2025-12-04T13:29:00Z",
-              "end": "2025-12-04T14:44:00Z",
+              "begin": "2025-12-04T17:16:00Z",
+              "end": "2025-12-04T17:26:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "787"
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
               },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
             },
             {
-              "begin": "2025-12-04T14:29:00Z",
-              "end": "2025-12-04T15:43:00Z",
+              "begin": "2025-12-04T17:31:00Z",
+              "end": "2025-12-04T17:41:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "537"
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
               },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8004645", "name": "Offenbach(Main)Ost" }
+        },
+        {
+          "from": { "evaNumber": "8004645", "name": "Offenbach(Main)Ost" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:23:00Z",
+              "end": "2025-12-04T17:48:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
             },
             {
-              "begin": "2025-12-04T12:01:00Z",
-              "end": "2025-12-04T13:05:00Z",
+              "begin": "2025-12-04T17:38:00Z",
+              "end": "2025-12-04T18:03:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "529"
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
               },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
             },
             {
-              "begin": "2025-12-04T12:19:00Z",
-              "end": "2025-12-04T13:23:00Z",
+              "begin": "2025-12-04T17:53:00Z",
+              "end": "2025-12-04T18:18:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "621"
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
               },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 2940.0,
+      "begin": "2025-12-04T18:05:00+01:00",
+      "end": "2025-12-04T18:30:00+01:00",
+      "headwayDetails": [{ "interval": "Th 18:05-18:15", "headway": 600.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Hanau Hbf", "Rödermark-Ober Roden"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT44M",
+        "max_duration": "PT49M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 3,
+        "priority": 6
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:01:00Z",
+              "end": "2025-12-04T17:27:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RB75"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
             },
             {
-              "begin": "2025-12-04T13:00:00Z",
-              "end": "2025-12-04T14:04:00Z",
+              "begin": "2025-12-04T16:36:00Z",
+              "end": "2025-12-04T16:55:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "507"
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RB75"
               },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
             },
             {
-              "begin": "2025-12-04T13:43:00Z",
-              "end": "2025-12-04T14:47:00Z",
+              "begin": "2025-12-04T17:36:00Z",
+              "end": "2025-12-04T17:55:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "623"
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RB75"
               },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000250", "name": "Wiesbaden Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000250", "name": "Wiesbaden Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:32:00Z",
+              "end": "2025-12-04T17:38:00Z",
+              "line": {
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
             },
             {
-              "begin": "2025-12-04T14:00:00Z",
-              "end": "2025-12-04T15:04:00Z",
+              "begin": "2025-12-04T17:02:00Z",
+              "end": "2025-12-04T17:08:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "1005"
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
               },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
             },
             {
-              "begin": "2025-12-04T14:03:00Z",
-              "end": "2025-12-04T15:08:00Z",
+              "begin": "2025-12-04T18:02:00Z",
+              "end": "2025-12-04T18:08:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "625"
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
               },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000615", "name": "Mainz-Kastel" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 2040.0,
+      "begin": "2025-12-04T17:35:00+01:00",
+      "end": "2025-12-04T18:35:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:35-18:00", "headway": 1500.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Bischofsheim", "Mainz-Kastel"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT34M",
+        "max_duration": "PT39M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 3,
+        "priority": 6
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:34:00Z",
+              "end": "2025-12-04T16:47:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RE9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
             },
             {
-              "begin": "2025-12-04T14:55:00Z",
-              "end": "2025-12-04T16:00:00Z",
+              "begin": "2025-12-04T17:04:00Z",
+              "end": "2025-12-04T17:19:00Z",
               "line": {
-                "administrationID": "80",
-                "category": "ICE",
-                "line": "509"
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
               },
-              "type": "HIGH_SPEED_TRAIN"
+              "type": "INTER_REGIONAL_TRAIN"
             },
             {
-              "begin": "2025-12-04T15:02:00Z",
-              "end": "2025-12-04T16:07:00Z",
+              "begin": "2025-12-04T17:34:00Z",
+              "end": "2025-12-04T17:49:00Z",
+              "line": {
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000615", "name": "Mainz-Kastel" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 1020.0,
+      "begin": "2025-12-04T17:33:00+01:00",
+      "end": "2025-12-04T18:33:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:33-18:33", "headway": 1800.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Frankfurt-Höchst", "Mainz-Kastel"],
+        "transport_types": ["INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT15M",
+        "max_duration": "PT17M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 3,
+        "priority": 6
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000615", "name": "Mainz-Kastel" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:11:00Z",
+              "end": "2025-12-04T16:35:00Z",
+              "line": {
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:09:00Z",
+              "end": "2025-12-04T17:34:00Z",
+              "line": {
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T16:40:00Z",
+              "end": "2025-12-04T17:05:00Z",
+              "line": {
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:47:00Z",
+              "end": "2025-12-04T17:06:00Z",
+              "line": {
+                "administrationID": "8005KG",
+                "category": "RB",
+                "line": "51"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:42:00Z",
+              "end": "2025-12-04T18:01:00Z",
+              "line": {
+                "administrationID": "8005KG",
+                "category": "RB",
+                "line": "51"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:18:00Z",
+              "end": "2025-12-04T17:39:00Z",
+              "line": {
+                "administrationID": "8005KG",
+                "category": null,
+                "line": "RE5"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000150", "name": "Hanau Hbf" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3420.0,
+      "begin": "2025-12-04T17:10:00+01:00",
+      "end": "2025-12-04T18:08:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:10-18:08", "headway": 1740.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Kastel", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT54M",
+        "max_duration": "PT1H1M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 3,
+        "priority": 6
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000615", "name": "Mainz-Kastel" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:11:00Z",
+              "end": "2025-12-04T16:26:00Z",
+              "line": {
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T16:40:00Z",
+              "end": "2025-12-04T16:55:00Z",
+              "line": {
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:09:00Z",
+              "end": "2025-12-04T17:25:00Z",
+              "line": {
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 1020.0,
+      "begin": "2025-12-04T17:10:00+01:00",
+      "end": "2025-12-04T18:08:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:10-18:08", "headway": 1740.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Kastel", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT17M",
+        "max_duration": "PT18M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 3,
+        "priority": 6
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000615", "name": "Mainz-Kastel" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:47:00Z",
+              "end": "2025-12-04T17:54:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T18:17:00Z",
+              "end": "2025-12-04T18:24:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T18:47:00Z",
+              "end": "2025-12-04T18:54:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 540.0,
+      "begin": "2025-12-04T18:46:00+01:00",
+      "end": "2025-12-04T19:46:00+01:00",
+      "headwayDetails": [{ "interval": "Th 18:46-19:46", "headway": 1800.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Kastel", "Mainz-Bischofsheim"],
+        "transport_types": ["INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT9M",
+        "max_duration": "PT9M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 3,
+        "priority": 6
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:58:00Z",
+              "end": "2025-12-04T17:22:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:13:00Z",
+              "end": "2025-12-04T17:37:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:28:00Z",
+              "end": "2025-12-04T17:52:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8004645", "name": "Offenbach(Main)Ost" }
+        },
+        {
+          "from": { "evaNumber": "8004645", "name": "Offenbach(Main)Ost" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:28:00Z",
+              "end": "2025-12-04T18:16:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:43:00Z",
+              "end": "2025-12-04T18:32:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:58:00Z",
+              "end": "2025-12-04T18:46:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4800.0,
+      "begin": "2025-12-04T17:57:00+01:00",
+      "end": "2025-12-04T18:27:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:57-18:27", "headway": 900.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Rödermark-Ober Roden", "Mainz-Bischofsheim"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H20M",
+        "max_duration": "PT1H21M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 3,
+        "priority": 6
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:58:00Z",
+              "end": "2025-12-04T17:52:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:28:00Z",
+              "end": "2025-12-04T18:22:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:58:00Z",
+              "end": "2025-12-04T18:52:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3360.0,
+      "begin": "2025-12-04T17:57:00+01:00",
+      "end": "2025-12-04T18:57:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:57-18:57", "headway": 1800.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Rödermark-Ober Roden", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT56M",
+        "max_duration": "PT56M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 3,
+        "priority": 6
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:43:00Z",
+              "end": "2025-12-04T17:07:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:13:00Z",
+              "end": "2025-12-04T17:37:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8004645", "name": "Offenbach (Main) Ost" }
+        },
+        {
+          "from": { "evaNumber": "8004645", "name": "Offenbach(Main)Ost" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:13:00Z",
+              "end": "2025-12-04T18:09:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:43:00Z",
+              "end": "2025-12-04T18:39:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000615", "name": "Mainz-Kastel" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 5280.0,
+      "begin": "2025-12-04T17:42:00+01:00",
+      "end": "2025-12-04T18:12:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:42-18:12", "headway": 1800.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Rödermark-Ober Roden", "Mainz-Kastel"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H28M",
+        "max_duration": "PT1H28M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:58:00Z",
+              "end": "2025-12-04T18:15:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:28:00Z",
+              "end": "2025-12-04T18:45:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000615", "name": "Mainz-Kastel" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4740.0,
+      "begin": "2025-12-04T17:57:00+01:00",
+      "end": "2025-12-04T18:27:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:57-18:27", "headway": 1800.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Rödermark-Ober Roden", "Mainz-Kastel"],
+        "transport_types": ["INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H19M",
+        "max_duration": "PT1H19M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:41:00Z",
+              "end": "2025-12-04T17:13:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T16:55:00Z",
+              "end": "2025-12-04T17:28:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" }
+        },
+        {
+          "from": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:19:00Z",
+              "end": "2025-12-04T18:03:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:34:00Z",
+              "end": "2025-12-04T18:18:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 5100.0,
+      "begin": "2025-12-04T17:40:00+01:00",
+      "end": "2025-12-04T17:54:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:40-17:54", "headway": 840.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Bischofsheim", "Rödermark-Ober Roden"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H24M",
+        "max_duration": "PT1H25M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:41:00Z",
+              "end": "2025-12-04T16:52:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RE9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:21:00Z",
+              "end": "2025-12-04T17:29:00Z",
+              "line": {
+                "administrationID": "800553",
+                "category": "RB",
+                "line": "22"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:04:00Z",
+              "end": "2025-12-04T17:48:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:34:00Z",
+              "end": "2025-12-04T18:18:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4140.0,
+      "begin": "2025-12-04T17:40:00+01:00",
+      "end": "2025-12-04T18:20:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:40-18:20", "headway": 2400.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Frankfurt-Höchst", "Rödermark-Ober Roden"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT59M",
+        "max_duration": "PT1H9M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:41:00Z",
+              "end": "2025-12-04T16:52:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RE9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:21:00Z",
+              "end": "2025-12-04T17:29:00Z",
+              "line": {
+                "administrationID": "800553",
+                "category": "RB",
+                "line": "22"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:02:00Z",
+              "end": "2025-12-04T17:33:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:36:00Z",
+              "end": "2025-12-04T18:06:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3240.0,
+      "begin": "2025-12-04T17:40:00+01:00",
+      "end": "2025-12-04T18:20:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:40-18:20", "headway": 2400.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Frankfurt-Höchst", "Mainz-Bischofsheim"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT47M",
+        "max_duration": "PT54M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:29:00Z",
+              "end": "2025-12-04T16:39:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S2"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:09:00Z",
+              "end": "2025-12-04T17:18:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:47:00Z",
+              "end": "2025-12-04T17:06:00Z",
+              "line": {
+                "administrationID": "8005KG",
+                "category": "RB",
+                "line": "51"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:26:00Z",
+              "end": "2025-12-04T17:46:00Z",
+              "line": {
+                "administrationID": "8005KG",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000150", "name": "Hanau Hbf" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 2340.0,
+      "begin": "2025-12-04T17:28:00+01:00",
+      "end": "2025-12-04T18:08:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:28-18:08", "headway": 2400.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Frankfurt-Höchst", "Hanau Hbf"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT39M",
+        "max_duration": "PT39M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:21:00Z",
+              "end": "2025-12-04T16:30:00Z",
+              "line": {
+                "administrationID": "800553",
+                "category": "RB",
+                "line": "22"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T16:59:00Z",
+              "end": "2025-12-04T17:10:00Z",
+              "line": {
+                "administrationID": "RSTN",
+                "category": "STN",
+                "line": "RB12"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:38:00Z",
+              "end": "2025-12-04T17:01:00Z",
+              "line": {
+                "administrationID": "8005KG",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:18:00Z",
+              "end": "2025-12-04T17:39:00Z",
+              "line": {
+                "administrationID": "8005KG",
+                "category": null,
+                "line": "RE5"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000150", "name": "Hanau Hbf" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 2520.0,
+      "begin": "2025-12-04T17:20:00+01:00",
+      "end": "2025-12-04T17:58:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:20-17:58", "headway": 2280.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Frankfurt-Höchst", "Hanau Hbf"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT42M",
+        "max_duration": "PT42M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:34:00Z",
+              "end": "2025-12-04T16:47:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RE9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:20:00Z",
+              "end": "2025-12-04T17:34:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RE9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000615", "name": "Mainz-Kastel" }
+        },
+        {
+          "from": { "evaNumber": "8000615", "name": "Mainz-Kastel" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:17:00Z",
+              "end": "2025-12-04T17:24:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:47:00Z",
+              "end": "2025-12-04T17:54:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3120.0,
+      "begin": "2025-12-04T17:33:00+01:00",
+      "end": "2025-12-04T18:19:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:33-18:19", "headway": 2760.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Frankfurt-Höchst", "Mainz-Kastel"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT36M",
+        "max_duration": "PT52M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000615", "name": "Mainz-Kastel" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:43:00Z",
+              "end": "2025-12-04T18:03:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:13:00Z",
+              "end": "2025-12-04T18:33:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4920.0,
+      "begin": "2025-12-04T17:42:00+01:00",
+      "end": "2025-12-04T18:12:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:42-18:12", "headway": 1800.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Kastel", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H22M",
+        "max_duration": "PT1H22M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:12:00Z",
+              "end": "2025-12-04T17:15:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T16:41:00Z",
+              "end": "2025-12-04T17:45:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000150", "name": "Hanau Hbf" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3960.0,
+      "begin": "2025-12-04T17:11:00+01:00",
+      "end": "2025-12-04T17:40:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:11-17:40", "headway": 1740.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Bischofsheim", "Hanau Hbf"],
+        "transport_types": ["INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H5M",
+        "max_duration": "PT1H6M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000150", "name": "Hanau Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:11:00Z",
+              "end": "2025-12-04T16:37:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RB58"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T16:53:00Z",
+              "end": "2025-12-04T17:19:00Z",
+              "line": {
+                "administrationID": "R4",
+                "category": "VIA",
+                "line": "RE85"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:47:00Z",
+              "end": "2025-12-04T16:58:00Z",
+              "line": {
+                "administrationID": "RSTN",
+                "category": "STN",
+                "line": "RB12"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:29:00Z",
+              "end": "2025-12-04T17:38:00Z",
+              "line": {
+                "administrationID": "800553",
+                "category": "RB",
+                "line": "22"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 2940.0,
+      "begin": "2025-12-04T17:10:00+01:00",
+      "end": "2025-12-04T17:52:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:10-17:52", "headway": 2520.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Hanau Hbf", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT47M",
+        "max_duration": "PT49M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:12:00Z",
+              "end": "2025-12-04T16:44:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T16:41:00Z",
+              "end": "2025-12-04T17:13:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" }
+        },
+        {
+          "from": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:52:00Z",
+              "end": "2025-12-04T17:01:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S2"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            },
+            {
+              "begin": "2025-12-04T17:22:00Z",
+              "end": "2025-12-04T17:31:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S2"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3120.0,
+      "begin": "2025-12-04T17:11:00+01:00",
+      "end": "2025-12-04T17:40:00+01:00",
+      "headwayDetails": [{ "interval": "Th 17:11-17:40", "headway": 1740.0 }],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Bischofsheim", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT51M",
+        "max_duration": "PT52M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 2,
+        "priority": 4
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000150", "name": "Hanau Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:34:00Z",
+              "end": "2025-12-04T17:24:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RB58"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8005221", "name": "Rüsselsheim Opelwerk" }
+        },
+        {
+          "from": { "evaNumber": "8005221", "name": "Rüsselsheim Opelwerk" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:29:00Z",
+              "end": "2025-12-04T17:40:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000615", "name": "Mainz-Kastel" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4080.0,
+      "begin": "2025-12-04T17:33:00+01:00",
+      "end": "2025-12-04T17:33:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Hanau Hbf", "Mainz-Bischofsheim", "Mainz-Kastel"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H8M",
+        "max_duration": "PT1H8M",
+        "number_of_matched_stops_per_route": 3,
+        "number_of_routes": 1,
+        "priority": 3
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000615", "name": "Mainz-Kastel" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:47:00Z",
+              "end": "2025-12-04T17:59:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000150", "name": "Hanau Hbf" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4440.0,
+      "begin": "2025-12-04T17:46:00+01:00",
+      "end": "2025-12-04T17:46:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Kastel", "Mainz-Bischofsheim", "Hanau Hbf"],
+        "transport_types": ["INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H14M",
+        "max_duration": "PT1H14M",
+        "number_of_matched_stops_per_route": 3,
+        "number_of_routes": 1,
+        "priority": 3
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:28:00Z",
+              "end": "2025-12-04T17:01:00Z",
+              "line": {
+                "administrationID": "8005A4",
+                "category": "RB",
+                "line": "61"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:12:00Z",
+              "end": "2025-12-04T17:34:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RE9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000615", "name": "Mainz-Kastel" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4080.0,
+      "begin": "2025-12-04T17:27:00+01:00",
+      "end": "2025-12-04T17:27:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Rödermark-Ober Roden", "Mainz-Kastel"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H8M",
+        "max_duration": "PT1H8M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:19:00Z",
+              "end": "2025-12-04T16:48:00Z",
+              "line": {
+                "administrationID": "V6RE",
+                "category": null,
+                "line": "RE3"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:04:00Z",
+              "end": "2025-12-04T17:48:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 5460.0,
+      "begin": "2025-12-04T17:18:00+01:00",
+      "end": "2025-12-04T17:18:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Bischofsheim", "Rödermark-Ober Roden"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H31M",
+        "max_duration": "PT1H31M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:30:00Z",
+              "end": "2025-12-04T16:50:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RB75"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000068", "name": "Darmstadt Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000068", "name": "Darmstadt Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:05:00Z",
+              "end": "2025-12-04T17:23:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S6"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8001236", "name": "Dreieich-Buchschlag" }
+        },
+        {
+          "from": { "evaNumber": "8001236", "name": "Dreieich-Buchschlag" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:28:00Z",
+              "end": "2025-12-04T17:50:00Z",
+              "line": {
+                "administrationID": "8005A4",
+                "category": "RB",
+                "line": "61"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4920.0,
+      "begin": "2025-12-04T17:29:00+01:00",
+      "end": "2025-12-04T17:29:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Bischofsheim", "Rödermark-Ober Roden"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT1H22M",
+        "max_duration": "PT1H22M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:13:00Z",
+              "end": "2025-12-04T16:51:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RB75"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000362", "name": "Dieburg" }
+        },
+        {
+          "from": { "evaNumber": "8000362", "name": "Dieburg" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:13:00Z",
+              "end": "2025-12-04T17:24:00Z",
+              "line": {
+                "administrationID": "8005A4",
+                "category": "RB",
+                "line": "61"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4380.0,
+      "begin": "2025-12-04T17:12:00+01:00",
+      "end": "2025-12-04T17:12:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Bischofsheim", "Rödermark-Ober Roden"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H13M",
+        "max_duration": "PT1H13M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000150", "name": "Hanau Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:16:00Z",
+              "end": "2025-12-04T17:17:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3780.0,
+      "begin": "2025-12-04T17:15:00+01:00",
+      "end": "2025-12-04T17:15:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Hanau Hbf", "Mainz-Bischofsheim"],
+        "transport_types": ["INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H3M",
+        "max_duration": "PT1H3M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000150", "name": "Hanau Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:35:00Z",
+              "end": "2025-12-04T16:56:00Z",
+              "line": {
+                "administrationID": "R4",
+                "category": "VIA",
+                "line": "RB86"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000015", "name": "Babenhausen(Hess)" }
+        },
+        {
+          "from": { "evaNumber": "8000015", "name": "Babenhausen(Hess)" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:00:00Z",
+              "end": "2025-12-04T18:00:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RB75"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 5220.0,
+      "begin": "2025-12-04T17:34:00+01:00",
+      "end": "2025-12-04T17:34:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Hanau Hbf", "Mainz-Bischofsheim"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H27M",
+        "max_duration": "PT1H27M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:09:00Z",
+              "end": "2025-12-04T18:03:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3360.0,
+      "begin": "2025-12-04T18:08:00+01:00",
+      "end": "2025-12-04T18:08:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Frankfurt-Höchst", "Rödermark-Ober Roden"],
+        "transport_types": ["INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT56M",
+        "max_duration": "PT56M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:06:00Z",
+              "end": "2025-12-04T16:14:00Z",
+              "line": {
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:22:00Z",
+              "end": "2025-12-04T16:32:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S4"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8002041", "name": "Frankfurt(Main)Süd" }
+        },
+        {
+          "from": { "evaNumber": "8002041", "name": "Frankfurt(Main)Süd" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:47:00Z",
+              "end": "2025-12-04T17:20:00Z",
+              "line": {
+                "administrationID": "8005A4",
+                "category": "RB",
+                "line": "61"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4560.0,
+      "begin": "2025-12-04T17:05:00+01:00",
+      "end": "2025-12-04T17:05:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Frankfurt-Höchst", "Rödermark-Ober Roden"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT1H16M",
+        "max_duration": "PT1H16M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:57:00Z",
+              "end": "2025-12-04T17:05:00Z",
+              "line": {
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:15:00Z",
+              "end": "2025-12-04T17:50:00Z",
+              "line": {
+                "administrationID": "8005A4",
+                "category": "RB",
+                "line": "61"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3300.0,
+      "begin": "2025-12-04T17:56:00+01:00",
+      "end": "2025-12-04T17:56:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Frankfurt-Höchst", "Rödermark-Ober Roden"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT55M",
+        "max_duration": "PT55M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000150", "name": "Hanau Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:31:00Z",
+              "end": "2025-12-04T17:01:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:12:00Z",
+              "end": "2025-12-04T17:34:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RE9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000615", "name": "Mainz-Kastel" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3900.0,
+      "begin": "2025-12-04T17:30:00+01:00",
+      "end": "2025-12-04T17:30:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Hanau Hbf", "Mainz-Kastel"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H5M",
+        "max_duration": "PT1H5M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000150", "name": "Hanau Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:22:00Z",
+              "end": "2025-12-04T16:44:00Z",
+              "line": {
+                "administrationID": "81",
+                "category": "ICE",
+                "line": "26"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:53:00Z",
+              "end": "2025-12-04T17:19:00Z",
+              "line": {
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000615", "name": "Mainz-Kastel" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3540.0,
+      "begin": "2025-12-04T17:21:00+01:00",
+      "end": "2025-12-04T17:21:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Hanau Hbf", "Mainz-Kastel"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT59M",
+        "max_duration": "PT59M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000150", "name": "Hanau Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:11:00Z",
+              "end": "2025-12-04T16:30:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RB58"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8002041", "name": "Frankfurt(Main)Süd" }
+        },
+        {
+          "from": { "evaNumber": "8002041", "name": "Frankfurt(Main)Süd" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:47:00Z",
+              "end": "2025-12-04T17:20:00Z",
+              "line": {
+                "administrationID": "8005A4",
+                "category": "RB",
+                "line": "61"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4260.0,
+      "begin": "2025-12-04T17:10:00+01:00",
+      "end": "2025-12-04T17:10:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Hanau Hbf", "Rödermark-Ober Roden"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H11M",
+        "max_duration": "PT1H11M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000150", "name": "Hanau Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:35:00Z",
+              "end": "2025-12-04T16:56:00Z",
+              "line": {
+                "administrationID": "R4",
+                "category": "VIA",
+                "line": "RB86"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000015", "name": "Babenhausen(Hess)" }
+        },
+        {
+          "from": { "evaNumber": "8000015", "name": "Babenhausen(Hess)" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:00:00Z",
+              "end": "2025-12-04T17:09:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RB75"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000362", "name": "Dieburg" }
+        },
+        {
+          "from": { "evaNumber": "8000362", "name": "Dieburg" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:13:00Z",
+              "end": "2025-12-04T17:24:00Z",
+              "line": {
+                "administrationID": "8005A4",
+                "category": "RB",
+                "line": "61"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3060.0,
+      "begin": "2025-12-04T17:34:00+01:00",
+      "end": "2025-12-04T17:34:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Hanau Hbf", "Rödermark-Ober Roden"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT51M",
+        "max_duration": "PT51M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:29:00Z",
+              "end": "2025-12-04T16:39:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S2"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" }
+        },
+        {
+          "from": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:47:00Z",
+              "end": "2025-12-04T17:17:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3000.0,
+      "begin": "2025-12-04T17:28:00+01:00",
+      "end": "2025-12-04T17:28:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Frankfurt-Höchst", "Mainz-Bischofsheim"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT50M",
+        "max_duration": "PT50M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:06:00Z",
+              "end": "2025-12-04T16:14:00Z",
+              "line": {
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:24:00Z",
+              "end": "2025-12-04T16:38:00Z",
               "line": {
                 "administrationID": "80",
                 "category": "ICE",
-                "line": "627"
+                "line": "276"
               },
               "type": "HIGH_SPEED_TRAIN"
             }
           ],
-          "to": {
-            "evaNumber": "8000261",
-            "name": "München Hbf"
-          }
+          "to": { "evaNumber": "8000150", "name": "Hanau Hbf" }
         }
       ],
       "intervals": null,
-      "estimatedTravelTime": 4020,
-      "begin": "2025-12-04T13:00:00+01:00",
-      "end": "2025-12-04T16:01:00+01:00",
-      "headwayDetails": [
+      "estimatedTravelTime": 2040.0,
+      "begin": "2025-12-04T17:05:00+01:00",
+      "end": "2025-12-04T17:05:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Frankfurt-Höchst", "Hanau Hbf"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "HIGH_SPEED_TRAIN"],
+        "min_duration": "PT34M",
+        "max_duration": "PT34M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
         {
-          "interval": "Th 13:03-13:33",
-          "headway": 900
+          "from": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:49:00Z",
+              "end": "2025-12-04T17:07:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8006404", "name": "Wiesbaden Ost" }
         },
         {
-          "interval": "Th 15:02-15:54",
-          "headway": 1560
-        },
-        {
-          "interval": "Th 13:00-13:59",
-          "headway": 3540
-        },
-        {
-          "interval": "Th 14:28-14:42",
-          "headway": 840
-        },
-        {
-          "interval": "Th 14:59-16:01",
-          "headway": 3720
+          "from": { "evaNumber": "8006404", "name": "Wiesbaden Ost" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:13:00Z",
+              "end": "2025-12-04T17:16:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000615", "name": "Mainz-Kastel" }
         }
       ],
+      "intervals": null,
+      "estimatedTravelTime": 1740.0,
+      "begin": "2025-12-04T17:48:00+01:00",
+      "end": "2025-12-04T17:48:00+01:00",
+      "headwayDetails": [],
       "additionalInfo": {
-        "covered_stops": ["Nürnberg Hbf", "München Hbf"],
-        "transport_types": ["HIGH_SPEED_TRAIN"],
-        "min_duration": "PT1H6M",
-        "max_duration": "PT1H17M",
+        "covered_stops": ["Mainz-Bischofsheim", "Mainz-Kastel"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT29M",
+        "max_duration": "PT29M",
         "number_of_matched_stops_per_route": 2,
-        "number_of_routes": 12,
-        "priority": 24
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000615", "name": "Mainz-Kastel" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:22:00Z",
+              "end": "2025-12-04T16:52:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RE9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:04:00Z",
+              "end": "2025-12-04T17:48:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 5280.0,
+      "begin": "2025-12-04T17:21:00+01:00",
+      "end": "2025-12-04T17:21:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Kastel", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H28M",
+        "max_duration": "PT1H28M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000615", "name": "Mainz-Kastel" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:43:00Z",
+              "end": "2025-12-04T17:18:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:26:00Z",
+              "end": "2025-12-04T17:46:00Z",
+              "line": {
+                "administrationID": "8005KG",
+                "category": "RE",
+                "line": "50"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000150", "name": "Hanau Hbf" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3900.0,
+      "begin": "2025-12-04T17:42:00+01:00",
+      "end": "2025-12-04T17:42:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Kastel", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H5M",
+        "max_duration": "PT1H5M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000615", "name": "Mainz-Kastel" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:40:00Z",
+              "end": "2025-12-04T17:05:00Z",
+              "line": {
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:15:00Z",
+              "end": "2025-12-04T17:50:00Z",
+              "line": {
+                "administrationID": "8005A4",
+                "category": "RB",
+                "line": "61"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4320.0,
+      "begin": "2025-12-04T17:39:00+01:00",
+      "end": "2025-12-04T17:39:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Kastel", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H12M",
+        "max_duration": "PT1H12M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000615", "name": "Mainz-Kastel" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:47:00Z",
+              "end": "2025-12-04T17:28:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" }
+        },
+        {
+          "from": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:34:00Z",
+              "end": "2025-12-04T18:18:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 5580.0,
+      "begin": "2025-12-04T17:46:00+01:00",
+      "end": "2025-12-04T17:46:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Kastel", "Mainz-Bischofsheim"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H33M",
+        "max_duration": "PT1H33M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:28:00Z",
+              "end": "2025-12-04T17:01:00Z",
+              "line": {
+                "administrationID": "8005A4",
+                "category": "RB",
+                "line": "61"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:08:00Z",
+              "end": "2025-12-04T17:39:00Z",
+              "line": {
+                "administrationID": "V6RE",
+                "category": null,
+                "line": "RE3"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4380.0,
+      "begin": "2025-12-04T17:27:00+01:00",
+      "end": "2025-12-04T17:27:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Rödermark-Ober Roden", "Mainz-Bischofsheim"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H13M",
+        "max_duration": "PT1H13M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:53:00Z",
+              "end": "2025-12-04T17:04:00Z",
+              "line": {
+                "administrationID": "8005A4",
+                "category": "RB",
+                "line": "61"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000362", "name": "Dieburg" }
+        },
+        {
+          "from": { "evaNumber": "8000362", "name": "Dieburg" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:10:00Z",
+              "end": "2025-12-04T18:00:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RB75"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4140.0,
+      "begin": "2025-12-04T17:52:00+01:00",
+      "end": "2025-12-04T17:52:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Rödermark-Ober Roden", "Mainz-Bischofsheim"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H9M",
+        "max_duration": "PT1H9M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:19:00Z",
+              "end": "2025-12-04T16:33:00Z",
+              "line": {
+                "administrationID": "V6RE",
+                "category": null,
+                "line": "RE3"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8070004",
+            "name": "Frankfurt(M) Flughafen Regionalbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8070003",
+            "name": "Frankfurt am Main Flughafen Fernbahnhof"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:46:00Z",
+              "end": "2025-12-04T17:23:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RB58"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000150", "name": "Hanau Hbf" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3960.0,
+      "begin": "2025-12-04T17:18:00+01:00",
+      "end": "2025-12-04T17:18:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Bischofsheim", "Hanau Hbf"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H6M",
+        "max_duration": "PT1H6M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:41:00Z",
+              "end": "2025-12-04T17:00:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8070004",
+            "name": "Frankfurt(M) Flughafen Regionalbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8070003",
+            "name": "Frankfurt am Main Flughafen Fernbahnhof"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:09:00Z",
+              "end": "2025-12-04T17:18:00Z",
+              "line": {
+                "administrationID": "80",
+                "category": "ICE",
+                "line": "792"
+              },
+              "type": "HIGH_SPEED_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8002041", "name": "Frankfurt(Main)Süd" }
+        },
+        {
+          "from": { "evaNumber": "8002041", "name": "Frankfurt(Main)Süd" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:25:00Z",
+              "end": "2025-12-04T17:39:00Z",
+              "line": {
+                "administrationID": "8005KG",
+                "category": null,
+                "line": "RE5"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000150", "name": "Hanau Hbf" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3600.0,
+      "begin": "2025-12-04T17:40:00+01:00",
+      "end": "2025-12-04T17:40:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Bischofsheim", "Hanau Hbf"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "HIGH_SPEED_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT1H",
+        "max_duration": "PT1H",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:19:00Z",
+              "end": "2025-12-04T16:33:00Z",
+              "line": {
+                "administrationID": "V6RE",
+                "category": null,
+                "line": "RE3"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": {
+            "evaNumber": "8070004",
+            "name": "Frankfurt(M) Flughafen Regionalbf"
+          }
+        },
+        {
+          "from": {
+            "evaNumber": "8070003",
+            "name": "Frankfurt am Main Flughafen Fernbahnhof"
+          },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:46:00Z",
+              "end": "2025-12-04T17:00:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RB58"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8002041", "name": "Frankfurt(Main)Süd" }
+        },
+        {
+          "from": { "evaNumber": "8002041", "name": "Frankfurt(Main)Süd" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:09:00Z",
+              "end": "2025-12-04T17:21:00Z",
+              "line": {
+                "administrationID": "8005KG",
+                "category": "RB",
+                "line": "51"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000150", "name": "Hanau Hbf" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3840.0,
+      "begin": "2025-12-04T17:18:00+01:00",
+      "end": "2025-12-04T17:18:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Bischofsheim", "Hanau Hbf"],
+        "transport_types": [
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN",
+          "INTER_REGIONAL_TRAIN"
+        ],
+        "min_duration": "PT1H4M",
+        "max_duration": "PT1H4M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:43:00Z",
+              "end": "2025-12-04T17:26:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:38:00Z",
+              "end": "2025-12-04T17:47:00Z",
+              "line": {
+                "administrationID": "800640",
+                "category": "RE",
+                "line": "14"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3960.0,
+      "begin": "2025-12-04T17:42:00+01:00",
+      "end": "2025-12-04T17:42:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Rödermark-Ober Roden", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H6M",
+        "max_duration": "PT1H6M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:28:00Z",
+              "end": "2025-12-04T17:01:00Z",
+              "line": {
+                "administrationID": "8005A4",
+                "category": "RB",
+                "line": "61"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:12:00Z",
+              "end": "2025-12-04T17:20:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RE9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3240.0,
+      "begin": "2025-12-04T17:27:00+01:00",
+      "end": "2025-12-04T17:27:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Rödermark-Ober Roden", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT54M",
+        "max_duration": "PT54M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000150", "name": "Hanau Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:06:00Z",
+              "end": "2025-12-04T17:35:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" }
+        },
+        {
+          "from": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:42:00Z",
+              "end": "2025-12-04T17:52:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S1"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 2880.0,
+      "begin": "2025-12-04T18:05:00+01:00",
+      "end": "2025-12-04T18:05:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Hanau Hbf", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT48M",
+        "max_duration": "PT48M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000150", "name": "Hanau Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:31:00Z",
+              "end": "2025-12-04T17:01:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:12:00Z",
+              "end": "2025-12-04T17:20:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RE9"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3060.0,
+      "begin": "2025-12-04T17:30:00+01:00",
+      "end": "2025-12-04T17:30:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Hanau Hbf", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT51M",
+        "max_duration": "PT51M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000150", "name": "Hanau Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:22:00Z",
+              "end": "2025-12-04T16:44:00Z",
+              "line": {
+                "administrationID": "81",
+                "category": "ICE",
+                "line": "26"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8098105", "name": "Frankfurt Hbf (tief)" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:52:00Z",
+              "end": "2025-12-04T17:01:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S2"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 2460.0,
+      "begin": "2025-12-04T17:21:00+01:00",
+      "end": "2025-12-04T17:21:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Hanau Hbf", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT41M",
+        "max_duration": "PT41M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000285", "name": "Rödermark-Ober Roden" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:28:00Z",
+              "end": "2025-12-04T17:01:00Z",
+              "line": {
+                "administrationID": "8005A4",
+                "category": "RB",
+                "line": "61"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:18:00Z",
+              "end": "2025-12-04T17:39:00Z",
+              "line": {
+                "administrationID": "8005KG",
+                "category": null,
+                "line": "RE5"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000150", "name": "Hanau Hbf" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 4380.0,
+      "begin": "2025-12-04T17:27:00+01:00",
+      "end": "2025-12-04T17:27:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Rödermark-Ober Roden", "Hanau Hbf"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT1H13M",
+        "max_duration": "PT1H13M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:19:00Z",
+              "end": "2025-12-04T16:48:00Z",
+              "line": {
+                "administrationID": "V6RE",
+                "category": null,
+                "line": "RE3"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000105", "name": "Frankfurt(Main)Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:59:00Z",
+              "end": "2025-12-04T17:08:00Z",
+              "line": {
+                "administrationID": "800553",
+                "category": "RE",
+                "line": "20"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3060.0,
+      "begin": "2025-12-04T17:18:00+01:00",
+      "end": "2025-12-04T17:18:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Bischofsheim", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT51M",
+        "max_duration": "PT51M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:36:00Z",
+              "end": "2025-12-04T16:55:00Z",
+              "line": {
+                "administrationID": "K4RB",
+                "category": "HLB",
+                "line": "RB75"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000250", "name": "Wiesbaden Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000250", "name": "Wiesbaden Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T17:02:00Z",
+              "end": "2025-12-04T17:25:00Z",
+              "line": {
+                "administrationID": "R4RH",
+                "category": "VIA",
+                "line": "RB10"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 3060.0,
+      "begin": "2025-12-04T17:35:00+01:00",
+      "end": "2025-12-04T17:35:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Bischofsheim", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT51M",
+        "max_duration": "PT51M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
+      }
+    },
+    {
+      "alternativeRouteParts": [
+        {
+          "from": { "evaNumber": "8000241", "name": "Mainz-Bischofsheim" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:33:00Z",
+              "end": "2025-12-04T16:41:00Z",
+              "line": {
+                "administrationID": "800528",
+                "category": null,
+                "line": "S8"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000240", "name": "Mainz Hbf" }
+        },
+        {
+          "from": { "evaNumber": "8000240", "name": "Mainz Hbf" },
+          "replacementTransports": [
+            {
+              "begin": "2025-12-04T16:49:00Z",
+              "end": "2025-12-04T17:14:00Z",
+              "line": {
+                "administrationID": "800640",
+                "category": null,
+                "line": "RE4"
+              },
+              "type": "INTER_REGIONAL_TRAIN"
+            }
+          ],
+          "to": { "evaNumber": "8000106", "name": "Frankfurt-Höchst" }
+        }
+      ],
+      "intervals": null,
+      "estimatedTravelTime": 2580.0,
+      "begin": "2025-12-04T17:32:00+01:00",
+      "end": "2025-12-04T17:32:00+01:00",
+      "headwayDetails": [],
+      "additionalInfo": {
+        "covered_stops": ["Mainz-Bischofsheim", "Frankfurt-Höchst"],
+        "transport_types": ["INTER_REGIONAL_TRAIN", "INTER_REGIONAL_TRAIN"],
+        "min_duration": "PT43M",
+        "max_duration": "PT43M",
+        "number_of_matched_stops_per_route": 2,
+        "number_of_routes": 1,
+        "priority": 2
       }
     }
   ],
   "additionalInfo": {
     "environment": "local",
-    "requested_stops": ["München Hbf", "Nürnberg Hbf"],
+    "requested_stops": [
+      "Frankfurt-Höchst",
+      "Hanau Hbf",
+      "Mainz-Bischofsheim",
+      "Rödermark-Ober Roden",
+      "Mainz-Kastel"
+    ],
     "disruption_scenario": {
       "lineDisruptions": [
         {
           "timeIntervals": [
             {
-              "begin": "2025-12-04T09:01:58.047000Z",
-              "end": "2025-12-04T15:00:00Z",
-              "intervals": "Mo-Fr 08:00-18:00"
+              "begin": "2025-12-04T14:55:02.954000Z",
+              "end": "2025-12-04T16:30:00Z",
+              "intervals": null
             }
           ],
           "disruptedLines": [
             {
               "lineRelation": {
-                "administrationID": "800765",
-                "category": "RB",
-                "line": "16"
-              },
-              "sections": [
-                {
-                  "fromEvaNumber": "8004747",
-                  "singleDirection": true,
-                  "toEvaNumber": "8004775",
-                  "fromName": "Paindorf",
-                  "toName": "Petershausen(Obb)"
-                },
-                {
-                  "fromEvaNumber": "8000678",
-                  "singleDirection": true,
-                  "toEvaNumber": "8000183",
-                  "fromName": "Baar-Ebenhausen",
-                  "toName": "Ingolstadt Hbf"
-                },
-                {
-                  "fromEvaNumber": "8000261",
-                  "singleDirection": true,
-                  "toEvaNumber": "8001354",
-                  "fromName": "München Hbf",
-                  "toName": "Dachau Bahnhof"
-                },
-                {
-                  "fromEvaNumber": "8004775",
-                  "singleDirection": true,
-                  "toEvaNumber": "8001354",
-                  "fromName": "Petershausen(Obb)",
-                  "toName": "Dachau Bahnhof"
-                },
-                {
-                  "fromEvaNumber": "8004781",
-                  "singleDirection": true,
-                  "toEvaNumber": "8005008",
-                  "fromName": "Pfaffenhofen(Ilm)",
-                  "toName": "Reichertshausen(Ilm)"
-                },
-                {
-                  "fromEvaNumber": "8000678",
-                  "singleDirection": true,
-                  "toEvaNumber": "8000256",
-                  "fromName": "Baar-Ebenhausen",
-                  "toName": "Rohrbach(Ilm)"
-                },
-                {
-                  "fromEvaNumber": "8003076",
-                  "singleDirection": true,
-                  "toEvaNumber": "8000183",
-                  "fromName": "Ingolstadt Nord",
-                  "toName": "Ingolstadt Hbf"
-                },
-                {
-                  "fromEvaNumber": "8000256",
-                  "singleDirection": true,
-                  "toEvaNumber": "8004781",
-                  "fromName": "Rohrbach(Ilm)",
-                  "toName": "Pfaffenhofen(Ilm)"
-                },
-                {
-                  "fromEvaNumber": "8005008",
-                  "singleDirection": true,
-                  "toEvaNumber": "8004747",
-                  "fromName": "Reichertshausen(Ilm)",
-                  "toName": "Paindorf"
-                }
-              ]
-            },
-            {
-              "lineRelation": {
-                "administrationID": "800765",
-                "category": "RE",
+                "administrationID": "800528",
+                "category": "S",
                 "line": "1"
               },
               "sections": [
                 {
-                  "fromEvaNumber": "8000498",
-                  "singleDirection": true,
-                  "toEvaNumber": "8003256",
-                  "fromName": "Allersberg(Rothsee)",
-                  "toName": "Kinding(Altmühltal)"
+                  "fromEvaNumber": "8002046",
+                  "singleDirection": false,
+                  "toEvaNumber": "8098105",
+                  "fromName": "Frankfurt-Griesheim",
+                  "toName": "Frankfurt Hbf (tief)"
                 },
                 {
-                  "fromEvaNumber": "8004775",
-                  "singleDirection": true,
-                  "toEvaNumber": "8004781",
-                  "fromName": "Petershausen(Obb)",
-                  "toName": "Pfaffenhofen(Ilm)"
+                  "fromEvaNumber": "8004429",
+                  "singleDirection": false,
+                  "toEvaNumber": "8006692",
+                  "fromName": "Frankfurt(M)Konstablerwache",
+                  "toName": "Frankfurt(M)Hauptwache"
                 },
                 {
-                  "fromEvaNumber": "8003076",
-                  "singleDirection": true,
-                  "toEvaNumber": "8003256",
-                  "fromName": "Ingolstadt Nord",
-                  "toName": "Kinding(Altmühltal)"
+                  "fromEvaNumber": "8001659",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002013",
+                  "fromName": "Eddersheim",
+                  "toName": "Flörsheim(Main)"
                 },
                 {
-                  "fromEvaNumber": "8004775",
-                  "singleDirection": true,
-                  "toEvaNumber": "8000261",
-                  "fromName": "Petershausen(Obb)",
-                  "toName": "München Hbf"
+                  "fromEvaNumber": "8002013",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002872",
+                  "fromName": "Flörsheim(Main)",
+                  "toName": "Hochheim(Main)"
                 },
                 {
-                  "fromEvaNumber": "8000256",
-                  "singleDirection": true,
-                  "toEvaNumber": "8000183",
-                  "fromName": "Rohrbach(Ilm)",
-                  "toName": "Ingolstadt Hbf"
+                  "fromEvaNumber": "8006691",
+                  "singleDirection": false,
+                  "toEvaNumber": "8098105",
+                  "fromName": "Frankfurt(M)Taunusanlage",
+                  "toName": "Frankfurt Hbf (tief)"
                 },
                 {
-                  "fromEvaNumber": "8003076",
-                  "singleDirection": true,
-                  "toEvaNumber": "8000183",
-                  "fromName": "Ingolstadt Nord",
-                  "toName": "Ingolstadt Hbf"
+                  "fromEvaNumber": "8001659",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002637",
+                  "fromName": "Eddersheim",
+                  "toName": "Hattersheim(Main)"
                 },
                 {
-                  "fromEvaNumber": "8000498",
-                  "singleDirection": true,
-                  "toEvaNumber": "8000284",
-                  "fromName": "Allersberg(Rothsee)",
-                  "toName": "Nürnberg Hbf"
+                  "fromEvaNumber": "8070090",
+                  "singleDirection": false,
+                  "toEvaNumber": "8004645",
+                  "fromName": "Offenbach(Main) Marktplatz",
+                  "toName": "Offenbach(Main)Ost"
                 },
                 {
-                  "fromEvaNumber": "8000256",
-                  "singleDirection": true,
-                  "toEvaNumber": "8004781",
-                  "fromName": "Rohrbach(Ilm)",
-                  "toName": "Pfaffenhofen(Ilm)"
+                  "fromEvaNumber": "8006404",
+                  "singleDirection": false,
+                  "toEvaNumber": "8000250",
+                  "fromName": "Wiesbaden Ost",
+                  "toName": "Wiesbaden Hbf"
+                },
+                {
+                  "fromEvaNumber": "8004645",
+                  "singleDirection": false,
+                  "toEvaNumber": "8004647",
+                  "fromName": "Offenbach(Main)Ost",
+                  "toName": "Offenbach-Bieber"
+                },
+                {
+                  "fromEvaNumber": "8002049",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002046",
+                  "fromName": "Frankfurt-Nied",
+                  "toName": "Frankfurt-Griesheim"
+                },
+                {
+                  "fromEvaNumber": "8070091",
+                  "singleDirection": false,
+                  "toEvaNumber": "8070092",
+                  "fromName": "Offenbach(Main) Ledermuseum",
+                  "toName": "Offenbach(Main) Kaiserlei"
+                },
+                {
+                  "fromEvaNumber": "8004351",
+                  "singleDirection": false,
+                  "toEvaNumber": "8005156",
+                  "fromName": "Rodgau-Nieder Roden",
+                  "toName": "Rodgau-Rollwald"
+                },
+                {
+                  "fromEvaNumber": "8004640",
+                  "singleDirection": false,
+                  "toEvaNumber": "8004593",
+                  "fromName": "Offenbach-Waldhof",
+                  "toName": "Obertshausen(Kr Of)"
+                },
+                {
+                  "fromEvaNumber": "8000615",
+                  "singleDirection": false,
+                  "toEvaNumber": "8006404",
+                  "fromName": "Mainz-Kastel",
+                  "toName": "Wiesbaden Ost"
+                },
+                {
+                  "fromEvaNumber": "8002637",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002053",
+                  "fromName": "Hattersheim(Main)",
+                  "toName": "Frankfurt-Sindlingen"
+                },
+                {
+                  "fromEvaNumber": "8002872",
+                  "singleDirection": false,
+                  "toEvaNumber": "8000615",
+                  "fromName": "Hochheim(Main)",
+                  "toName": "Mainz-Kastel"
+                },
+                {
+                  "fromEvaNumber": "8004647",
+                  "singleDirection": false,
+                  "toEvaNumber": "8004640",
+                  "fromName": "Offenbach-Bieber",
+                  "toName": "Offenbach-Waldhof"
+                },
+                {
+                  "fromEvaNumber": "8006691",
+                  "singleDirection": false,
+                  "toEvaNumber": "8006692",
+                  "fromName": "Frankfurt(M)Taunusanlage",
+                  "toName": "Frankfurt(M)Hauptwache"
+                },
+                {
+                  "fromEvaNumber": "8005156",
+                  "singleDirection": false,
+                  "toEvaNumber": "8000285",
+                  "fromName": "Rodgau-Rollwald",
+                  "toName": "Rödermark-Ober Roden"
+                },
+                {
+                  "fromEvaNumber": "8070090",
+                  "singleDirection": false,
+                  "toEvaNumber": "8070091",
+                  "fromName": "Offenbach(Main) Marktplatz",
+                  "toName": "Offenbach(Main) Ledermuseum"
+                },
+                {
+                  "fromEvaNumber": "8002051",
+                  "singleDirection": false,
+                  "toEvaNumber": "8000106",
+                  "fromName": "Frankfurt-Höchst Farbwerke",
+                  "toName": "Frankfurt-Höchst"
+                },
+                {
+                  "fromEvaNumber": "8001567",
+                  "singleDirection": false,
+                  "toEvaNumber": "8004351",
+                  "fromName": "Rodgau-Dudenhofen",
+                  "toName": "Rodgau-Nieder Roden"
+                },
+                {
+                  "fromEvaNumber": "8002034",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002058",
+                  "fromName": "Frankfurt(M)Mühlberg",
+                  "toName": "Frankfurt(M)Ostendstraße"
+                },
+                {
+                  "fromEvaNumber": "8002053",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002051",
+                  "fromName": "Frankfurt-Sindlingen",
+                  "toName": "Frankfurt-Höchst Farbwerke"
+                },
+                {
+                  "fromEvaNumber": "8006293",
+                  "singleDirection": false,
+                  "toEvaNumber": "8004593",
+                  "fromName": "Rodgau-Weiskirchen",
+                  "toName": "Obertshausen(Kr Of)"
+                },
+                {
+                  "fromEvaNumber": "8002034",
+                  "singleDirection": false,
+                  "toEvaNumber": "8070092",
+                  "fromName": "Frankfurt(M)Mühlberg",
+                  "toName": "Offenbach(Main) Kaiserlei"
+                },
+                {
+                  "fromEvaNumber": "8003131",
+                  "singleDirection": false,
+                  "toEvaNumber": "8001567",
+                  "fromName": "Rodgau-Jügesheim",
+                  "toName": "Rodgau-Dudenhofen"
+                },
+                {
+                  "fromEvaNumber": "8000106",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002049",
+                  "fromName": "Frankfurt-Höchst",
+                  "toName": "Frankfurt-Nied"
+                },
+                {
+                  "fromEvaNumber": "8002528",
+                  "singleDirection": false,
+                  "toEvaNumber": "8003131",
+                  "fromName": "Rodgau-Hainhausen",
+                  "toName": "Rodgau-Jügesheim"
+                },
+                {
+                  "fromEvaNumber": "8004429",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002058",
+                  "fromName": "Frankfurt(M)Konstablerwache",
+                  "toName": "Frankfurt(M)Ostendstraße"
+                },
+                {
+                  "fromEvaNumber": "8006293",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002528",
+                  "fromName": "Rodgau-Weiskirchen",
+                  "toName": "Rodgau-Hainhausen"
                 }
               ]
             },
             {
               "lineRelation": {
-                "administrationID": "800721",
+                "administrationID": "800528",
                 "category": "S",
-                "line": "5"
+                "line": "9"
               },
               "sections": [
                 {
-                  "fromEvaNumber": "8000498",
-                  "singleDirection": true,
-                  "toEvaNumber": "8000284",
-                  "fromName": "Allersberg(Rothsee)",
-                  "toName": "Nürnberg Hbf"
+                  "fromEvaNumber": "8070004",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002060",
+                  "fromName": "Frankfurt(M) Flughafen Regionalbf",
+                  "toName": "Frankfurt(Main)-Gateway Gardens"
+                },
+                {
+                  "fromEvaNumber": "8004429",
+                  "singleDirection": false,
+                  "toEvaNumber": "8006692",
+                  "fromName": "Frankfurt(M)Konstablerwache",
+                  "toName": "Frankfurt(M)Hauptwache"
+                },
+                {
+                  "fromEvaNumber": "8004962",
+                  "singleDirection": false,
+                  "toEvaNumber": "8005220",
+                  "fromName": "Raunheim",
+                  "toName": "Rüsselsheim"
+                },
+                {
+                  "fromEvaNumber": "8005221",
+                  "singleDirection": false,
+                  "toEvaNumber": "8000241",
+                  "fromName": "Rüsselsheim Opelwerk",
+                  "toName": "Mainz-Bischofsheim"
+                },
+                {
+                  "fromEvaNumber": "8006691",
+                  "singleDirection": false,
+                  "toEvaNumber": "8098105",
+                  "fromName": "Frankfurt(M)Taunusanlage",
+                  "toName": "Frankfurt Hbf (tief)"
+                },
+                {
+                  "fromEvaNumber": "8000241",
+                  "singleDirection": false,
+                  "toEvaNumber": "8000615",
+                  "fromName": "Mainz-Bischofsheim",
+                  "toName": "Mainz-Kastel"
+                },
+                {
+                  "fromEvaNumber": "8070090",
+                  "singleDirection": false,
+                  "toEvaNumber": "8004645",
+                  "fromName": "Offenbach(Main) Marktplatz",
+                  "toName": "Offenbach(Main)Ost"
+                },
+                {
+                  "fromEvaNumber": "8000150",
+                  "singleDirection": false,
+                  "toEvaNumber": "8005706",
+                  "fromName": "Hanau Hbf",
+                  "toName": "Steinheim(Main)"
+                },
+                {
+                  "fromEvaNumber": "8006404",
+                  "singleDirection": false,
+                  "toEvaNumber": "8000250",
+                  "fromName": "Wiesbaden Ost",
+                  "toName": "Wiesbaden Hbf"
+                },
+                {
+                  "fromEvaNumber": "8070091",
+                  "singleDirection": false,
+                  "toEvaNumber": "8070092",
+                  "fromName": "Offenbach(Main) Ledermuseum",
+                  "toName": "Offenbach(Main) Kaiserlei"
+                },
+                {
+                  "fromEvaNumber": "8070088",
+                  "singleDirection": false,
+                  "toEvaNumber": "8005706",
+                  "fromName": "Mühlheim(Main)-Dietesheim",
+                  "toName": "Steinheim(Main)"
+                },
+                {
+                  "fromEvaNumber": "8000615",
+                  "singleDirection": false,
+                  "toEvaNumber": "8006404",
+                  "fromName": "Mainz-Kastel",
+                  "toName": "Wiesbaden Ost"
+                },
+                {
+                  "fromEvaNumber": "8003228",
+                  "singleDirection": false,
+                  "toEvaNumber": "8070004",
+                  "fromName": "Kelsterbach",
+                  "toName": "Frankfurt(M) Flughafen Regionalbf"
+                },
+                {
+                  "fromEvaNumber": "8002040",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002050",
+                  "fromName": "Frankfurt am Main - Stadion",
+                  "toName": "Frankfurt-Niederrad"
+                },
+                {
+                  "fromEvaNumber": "8004645",
+                  "singleDirection": false,
+                  "toEvaNumber": "8004112",
+                  "fromName": "8004645",
+                  "toName": "8004112"
+                },
+                {
+                  "fromEvaNumber": "8006691",
+                  "singleDirection": false,
+                  "toEvaNumber": "8006692",
+                  "fromName": "Frankfurt(M)Taunusanlage",
+                  "toName": "Frankfurt(M)Hauptwache"
+                },
+                {
+                  "fromEvaNumber": "8070090",
+                  "singleDirection": false,
+                  "toEvaNumber": "8070091",
+                  "fromName": "Offenbach(Main) Marktplatz",
+                  "toName": "Offenbach(Main) Ledermuseum"
+                },
+                {
+                  "fromEvaNumber": "8004962",
+                  "singleDirection": false,
+                  "toEvaNumber": "8003228",
+                  "fromName": "Raunheim",
+                  "toName": "Kelsterbach"
+                },
+                {
+                  "fromEvaNumber": "8002034",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002058",
+                  "fromName": "Frankfurt(M)Mühlberg",
+                  "toName": "Frankfurt(M)Ostendstraße"
+                },
+                {
+                  "fromEvaNumber": "8002034",
+                  "singleDirection": false,
+                  "toEvaNumber": "8070092",
+                  "fromName": "Frankfurt(M)Mühlberg",
+                  "toName": "Offenbach(Main) Kaiserlei"
+                },
+                {
+                  "fromEvaNumber": "8070088",
+                  "singleDirection": false,
+                  "toEvaNumber": "8004112",
+                  "fromName": "8070088",
+                  "toName": "8004112"
+                },
+                {
+                  "fromEvaNumber": "8005221",
+                  "singleDirection": false,
+                  "toEvaNumber": "8005220",
+                  "fromName": "Rüsselsheim Opelwerk",
+                  "toName": "Rüsselsheim"
+                },
+                {
+                  "fromEvaNumber": "8002050",
+                  "singleDirection": false,
+                  "toEvaNumber": "8098105",
+                  "fromName": "Frankfurt-Niederrad",
+                  "toName": "Frankfurt Hbf (tief)"
+                },
+                {
+                  "fromEvaNumber": "8002040",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002060",
+                  "fromName": "Frankfurt am Main - Stadion",
+                  "toName": "Frankfurt(Main)-Gateway Gardens"
+                },
+                {
+                  "fromEvaNumber": "8004429",
+                  "singleDirection": false,
+                  "toEvaNumber": "8002058",
+                  "fromName": "Frankfurt(M)Konstablerwache",
+                  "toName": "Frankfurt(M)Ostendstraße"
                 }
               ]
             }

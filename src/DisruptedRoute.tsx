@@ -75,7 +75,12 @@ function DisruptedRoute(props: JSX.IntrinsicElements["div"]) {
         Requested stops: {addInfo?.requested_stops?.join(", ") || ""}
       </div>
       <div className="text-xs">Affected lines: {affectedLines.join(", ")}</div>
-      <div className="text-xs">Affected stops: {affectedStops?.join(", ")}</div>
+      <div
+        className="max-h-14 overflow-y-auto text-ellipsis text-xs"
+        title={affectedStops?.join(", ") || ""}
+      >
+        Affected stops: {affectedStops?.join(", ")}
+      </div>
     </div>
   );
 }
