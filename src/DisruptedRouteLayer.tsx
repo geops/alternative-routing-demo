@@ -71,7 +71,6 @@ function DisruptedRouteLayer() {
       setEvaNummers(undefined);
       return;
     }
-    console.log("evaNummersByLine", evaNummersByLine);
     setEvaNummers(evaNummersByLine);
   }, [selectedExample]);
 

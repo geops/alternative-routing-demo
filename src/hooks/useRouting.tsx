@@ -9,8 +9,6 @@ function useRouting(
   const [featureCollection, setFeatureCollection] =
     useState<GeoJSONFeatureCollection>();
 
-  console.log("evaNummers", evaNummers);
-
   const listEvaNummers: string[][] = useMemo(() => {
     let list: unknown = evaNummers;
     if (evaNummers && !Array.isArray(evaNummers?.[0])) {
@@ -27,7 +25,6 @@ function useRouting(
 
     const abortController = new AbortController();
 
-    console.log("evaNummersByLine", listEvaNummers);
     const promises = listEvaNummers.map((evaNummers) => {
       // Routing logic here
       return fetch(
@@ -42,7 +39,6 @@ function useRouting(
 
     Promise.all(promises)
       .then((featureCollections: GeoJSONFeatureCollection[]) => {
-        console.log("Fetched all routing data:", featureCollections);
         setFeatureCollection({
           features: featureCollections.flatMap((fc) => {
             if (!fc.features) {

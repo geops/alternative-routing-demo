@@ -32,7 +32,6 @@ function AlroLayer() {
       return ["!" + routePart.from.evaNumber, "!" + routePart.to.evaNumber];
     });
     evaNummers = [...new Set(evaNummers)];
-    console.log("Alro evaNummers", evaNummers);
     setEvaNummers(evaNummers);
   }, [selectedAlro]);
 
@@ -67,9 +66,9 @@ function AlroLayer() {
           const alroPart = alternativeRouteParts.find((part) => {
             return (
               // @ts-expect-error - we know
-              part.from.name === feature.properties.station_from.name &&
+              part.from.evaNumber === feature.properties.station_from.id &&
               // @ts-expect-error - we know
-              part.to.name === feature.properties.station_to.name
+              part.to.evaNumber === feature.properties.station_to.id
             );
           });
           if (alroPart) {
