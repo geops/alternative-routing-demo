@@ -90,7 +90,7 @@ function DisruptedRoute(props: JSX.IntrinsicElements["div"]) {
         const stopsNames = sections.flatMap((section) => {
           return [section.fromName || "", section.toName || ""];
         });
-        const affectedStops = [...new Set(stopsNames)].sort(); // unique
+        // const affectedStops = [...new Set(stopsNames)].sort(); // unique
 
         return (
           <div className="text-xs" key={category + line}>
@@ -98,7 +98,7 @@ function DisruptedRoute(props: JSX.IntrinsicElements["div"]) {
               Affected: {category || ""} {line || ""}
             </span>
             {" > "}
-            {affectedStops.join(" - ")}
+            {stopsNames.join(" - ")}
           </div>
         );
       })}
