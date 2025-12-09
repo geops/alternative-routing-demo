@@ -86,7 +86,7 @@ function DisruptedRoute(props: JSX.IntrinsicElements["div"]) {
         {addInfo?.requested_stops?.join(", ") || ""}
       </div>
       {disruptedLines?.map(({ lineRelation: { category, line }, sections }) => {
-        const stopsNames = sections.flatMap((section) => {
+        const stopsNames = sections.map((section) => {
           return [section.fromName || "", section.toName || ""];
         });
         // const affectedStops = [...new Set(stopsNames)].sort(); // unique
@@ -97,7 +97,9 @@ function DisruptedRoute(props: JSX.IntrinsicElements["div"]) {
               Affected: {category || ""} {line || ""}
             </span>
             {" > "}
-            {stopsNames.join(" - ")}
+            {stopsNames.map((names) => {
+              return <p>{names.join(" - ")}</p>;
+            })}
           </div>
         );
       })}
