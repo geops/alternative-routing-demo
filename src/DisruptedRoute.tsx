@@ -80,8 +80,7 @@ function DisruptedRoute(props: JSX.IntrinsicElements["div"]) {
     <div {...props}>
       <div className="overflow-hidden text-ellipsis font-bold">{label}</div>
       <div className="text-xs">{timeIntervalsText}</div>
-
-      <div className="max-h-14 overflow-y-auto text-ellipsis text-xs">
+      <div className="text-xs">
         <span className="font-semibold">Requested stops:</span>{" "}
         {/* @ts-expect-error - we know */}
         {addInfo?.requested_stops?.join(", ") || ""}
