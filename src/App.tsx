@@ -183,7 +183,10 @@ function App() {
                 )}
                 <div className="overflow-y-auto">
                   {
-                    <DisruptedRoute className="sticky top-0 z-50 shrink-0 grow-0 bg-white pb-4 shadow" />
+                    <DisruptedRoute
+                      className="space-y-2 pb-4"
+                      //className="sticky top-0 z-50 shrink-0 grow-0 space-y-2 bg-white pb-4 shadow"
+                    />
                   }
                   <div className="flex flex-col gap-4">
                     {isLoading && <Loading />}

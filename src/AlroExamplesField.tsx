@@ -73,26 +73,6 @@ function AlroExamplesField(props: JSX.IntrinsicElements["div"]) {
 
             const lines = [...new Set(linesNames)]; // unique
             affectedLinesText = `Affected lines: ${lines.join(", ")}`;
-
-            // const stopsNames =
-            //   addInfo?.disruption_scenario.lineDisruptions.flatMap(
-            //     // @ts-expect-error - we know
-            //     (lineDisruption) => {
-            //       return lineDisruption.disruptedLines.flatMap(
-            //         // @ts-expect-error - we know
-            //         (disruptedLine) => {
-            //           const sections = disruptedLine.sections;
-            //           // @ts-expect-error - we know
-            //           return sections.map((section) => {
-            //             return [section.fromEvaNumber, section.toEvaNumber];
-            //           });
-            //         },
-            //       );
-            //     },
-            //   );
-
-            // const stops = [...new Set(stopsNames)]; // unique
-            // affectedStopsText = `Affected stops: ${stops.join(", ")}`;
           }
           return (
             <ListboxOption key={label} value={value}>
